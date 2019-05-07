@@ -1,7 +1,7 @@
 
 platform :ios, '10.0'
 
-target 'RSFormView' do
+target 'RSFormViewExampleApp' do
    pod 'IQKeyboardManagerSwift'
    pod 'RSFormView', :path => '../'
 end
