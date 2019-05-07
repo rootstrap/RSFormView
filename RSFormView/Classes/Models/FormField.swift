@@ -33,6 +33,7 @@ open class FormField {
   public var isEnabled = true
   public var minimunDate: Date?
   public var maximumDate: Date?
+  public var customValidationBlock: ((String) -> (Bool))? // a block for custom validations, the result of this validation will have precedence over validationType
   
   public init(name: String, value: String,
        placeholder: String, validationType: ValidationType,

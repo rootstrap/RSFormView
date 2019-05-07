@@ -45,13 +45,8 @@ class TextFieldCell: UITableViewCell, FormViewCell {
 }
 
 extension TextFieldCell: TextFieldDelegate {
-  func didUpdate(textFieldView: TextFieldView, text: String) {
-    fieldData?.value = text
-    fieldData?.shouldDisplayError = true
-    if let fieldData = fieldData {
-      fieldData.isValid = fieldData.value.isValid(type: fieldData.validationType)
-      update(withData: fieldData)
-      delegate?.didUpdate(data: fieldData)
-    }
+  func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
+    update(withData: fieldData)
+    delegate?.didUpdate(data: fieldData)
   }
 }

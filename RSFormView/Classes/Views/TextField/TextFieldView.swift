@@ -11,7 +11,7 @@ import UIKit
 
 protocol TextFieldDelegate: class {
   func didUpdate(textFieldView: TextFieldView,
-                 text: String)
+                 with fieldData: FormField)
 }
 
 class TextFieldView: UIView {
@@ -150,6 +150,7 @@ class TextFieldView: UIView {
   func update(withData data: FormField) {
     fieldData = data
     updatePlaceHolder(withText: data.placeholder)
+    textField.clearButtonMode = data.validationType == .date ? .never : .whileEditing
     textField.isSecureTextEntry = data.isPasswordField
     textField.text = data.value
     titleLabel.text = data.name
@@ -157,7 +158,7 @@ class TextFieldView: UIView {
     titleLabel.isHidden = data.value.isEmpty
     if !data.value.isEmpty && data.oneTimeErrorMessage == nil {
       data.shouldDisplayError = true
-      data.isValid = data.value.isValid(type: data.validationType)
+      validate(with: data.value)
     }
     updateErrorState()
   }
@@ -185,9 +186,22 @@ class TextFieldView: UIView {
     }
     let isDeleting = updatedText.count < previousText.count
     data.oneTimeErrorMessage = nil
+    data.value = updatedText
+    data.shouldDisplayError = true
+    
+    validate(with: updatedText)
     saveCursorPosition()
-    delegate?.didUpdate(textFieldView: self, text: updatedText)
+    delegate?.didUpdate(textFieldView: self, with: data)
     setCursorPosition(isDeleting: isDeleting)
+  }
+  
+  func validate(with text: String) {
+    guard let data = fieldData else { return }
+    if let customValidationBlock = data.customValidationBlock {
+      data.isValid = customValidationBlock(text)
+    } else {
+      data.isValid = data.value.isValid(type: data.validationType)
+    }
   }
   
   func expirationDate(previousText: String, updatedText: String) -> String {
@@ -223,12 +237,14 @@ class TextFieldView: UIView {
 //Date picker related methods
 extension TextFieldView {
   @objc func datePickerChangedValue(sender: UIDatePicker) {
+    guard let data = fieldData else { return }
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = TextFieldView.dateFormat
     
     let dateString = dateFormatter.string(from: sender.date)
     textField.text = dateString
-    delegate?.didUpdate(textFieldView: self, text: dateString)
+    fieldData?.value = dateString
+    delegate?.didUpdate(textFieldView: self, with: data)
   }
 }
 
@@ -263,7 +279,11 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldShouldClear(_ textField: UITextField) -> Bool {
-    delegate?.didUpdate(textFieldView: self, text: "")
+    guard let data = fieldData else { return true }
+    data.value = ""
+    data.shouldDisplayError = true
+    validate(with: "")
+    delegate?.didUpdate(textFieldView: self, with: data)
     return true
   }
   

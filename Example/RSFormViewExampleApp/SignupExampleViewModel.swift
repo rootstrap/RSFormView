@@ -65,6 +65,11 @@ class SignupExampleViewModel: FormViewModel {
                                   validationType: .nonEmpty,
                                   isValid: false,
                                   errorMessage: "Please enter a last name")
+    lastNameField.customValidationBlock = { [weak self] value in
+      let nameField = self?.fields().first { $0.name == FieldName.firstName.rawValue }
+      let nameValue = nameField?.value ?? ""
+      return value.count > 5 && value == nameValue
+    }
     return lastNameField
   }
   

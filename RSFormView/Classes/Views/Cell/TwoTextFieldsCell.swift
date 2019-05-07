@@ -42,13 +42,6 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     textFieldView.update(withData: data)
   }
   
-  func update(fieldData: FormField, withText text: String) {
-    fieldData.value = text
-    fieldData.shouldDisplayError = true
-    fieldData.isValid = fieldData.value.isValid(type: fieldData.validationType)
-    delegate?.didUpdate(data: fieldData)
-  }
-  
   func updateErrorState() {
     firstTextField.updateErrorState()
     secondTextField.updateErrorState()
@@ -56,11 +49,10 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
 }
 
 extension TwoTextFieldsCell: TextFieldDelegate {
-  func didUpdate(textFieldView: TextFieldView, text: String) {
+  func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
     guard let data = textFieldView == firstTextField ?
       firstFormField : secondFormField else { return }
-    textFieldView.textField.text = text
-    update(fieldData: data, withText: text)
+    textFieldView.textField.text = fieldData.value
     update(textFieldView: textFieldView, withData: data)
   }
 }
