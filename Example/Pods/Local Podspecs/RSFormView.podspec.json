@@ -1,0 +1,24 @@
+{
+  "name": "RSFormView",
+  "version": "0.1.0",
+  "summary": "A library to easily create form views to collect user data.",
+  "description": "A library to easily create form views to collect user data.",
+  "homepage": "https://github.com/rootstrap/RSFormView",
+  "license": "MIT",
+  "authors": {
+    "Germán Stábile": "german.stabile@gmail.com"
+  },
+  "social_media_url": "https://github.com/germanStabile",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/rootstrap/RSFormView"
+  },
+  "source_files": "RSFormView/Classes/**/*",
+  "dependencies": {
+    "IQKeyboardManagerSwift": [
+      "~> 6.1.1"
+    ]
+  }
+}

@@ -35,7 +35,7 @@ import QuartzCore
 Codeless drop-in universal library allows to prevent issues of keyboard sliding up and cover UITextField/UITextView. Neither need to write any code nor any setup required and much more. A generic version of KeyboardManagement. https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html
 */
 
-@objc public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
+public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     
     /**
     Default tag for toolbar with Done button   -1002.
@@ -168,6 +168,12 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
     }
 
     /**
+    Prevent keyboard manager to slide up the rootView to more than keyboard height. Default is YES.
+    */
+    @available(*,deprecated, message: "Due to change in core-logic of handling distance between textField and keyboard distance, this tweak is no longer needed and things will just work out of the box for most of the cases.")
+    @objc public var preventShowingBottomBlankSpace = true
+    
+    /**
     Returns the default singleton instance.
     */
     @objc public class var shared: IQKeyboardManager {
@@ -295,6 +301,16 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
     /**
     If YES, then it add the textField's placeholder text on IQToolbar. Default is YES.
     */
+    @available(*,deprecated, message: "This is renamed to `shouldShowToolbarPlaceholder` for more clear naming.")
+    @objc public var shouldShowTextFieldPlaceholder: Bool {
+        
+        set {
+            shouldShowToolbarPlaceholder =  newValue
+        }
+        get {
+            return shouldShowToolbarPlaceholder
+        }
+    }
     @objc public var shouldShowToolbarPlaceholder = true
 
     /**
@@ -459,7 +475,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
             if let  textFieldRetain = _textFieldView {
                 
                 //Getting index of current textField.
-                if let index = textFields.firstIndex(of: textFieldRetain) {
+                if let index = textFields.index(of: textFieldRetain) {
                     
                     //If it is not first textField. then it's previous object canBecomeFirstResponder.
                     if index > 0 {
@@ -479,7 +495,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
         if let textFields = responderViews() {
             if let  textFieldRetain = _textFieldView {
                 //Getting index of current textField.
-                if let index = textFields.firstIndex(of: textFieldRetain) {
+                if let index = textFields.index(of: textFieldRetain) {
                     
                     //If it is not first textField. then it's previous object canBecomeFirstResponder.
                     if index < textFields.count-1 {
@@ -500,7 +516,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
         if let  textFieldRetain = _textFieldView {
             if let textFields = responderViews() {
                 //Getting index of current textField.
-                if let index = textFields.firstIndex(of: textFieldRetain) {
+                if let index = textFields.index(of: textFieldRetain) {
                     
                     //If it is not first textField. then it's previous object becomeFirstResponder.
                     if index > 0 {
@@ -535,7 +551,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
         if let  textFieldRetain = _textFieldView {
             if let textFields = responderViews() {
                 //Getting index of current textField.
-                if let index = textFields.firstIndex(of: textFieldRetain) {
+                if let index = textFields.index(of: textFieldRetain) {
                     //If it is not last textField. then it's next object becomeFirstResponder.
                     if index < textFields.count-1 {
                         
@@ -575,18 +591,15 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
                 let isAcceptAsFirstResponder = goPrevious()
                 
                 var invocation = barButton.invocation
-                var sender = textFieldRetain
-
                 //Handling search bar special case
                 do {
-                    if let searchBar = textFieldRetain.textFieldSearchBar() {
+                    if let searchBar = textFieldRetain.searchBar() {
                         invocation = searchBar.keyboardToolbar.previousBarButton.invocation
-                        sender = searchBar
                     }
                 }
 
                 if isAcceptAsFirstResponder {
-                    invocation?.invoke(from: sender)
+                    invocation?.invoke(from: textFieldRetain)
                 }
             }
         }
@@ -607,18 +620,15 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
                 let isAcceptAsFirstResponder = goNext()
                 
                 var invocation = barButton.invocation
-                var sender = textFieldRetain
-
                 //Handling search bar special case
                 do {
-                    if let searchBar = textFieldRetain.textFieldSearchBar() {
+                    if let searchBar = textFieldRetain.searchBar() {
                         invocation = searchBar.keyboardToolbar.nextBarButton.invocation
-                        sender = searchBar
                     }
                 }
 
                 if isAcceptAsFirstResponder {
-                    invocation?.invoke(from: sender)
+                    invocation?.invoke(from: textFieldRetain)
                 }
             }
         }
@@ -638,18 +648,15 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
             let isResignedFirstResponder = resignFirstResponder()
             
             var invocation = barButton.invocation
-            var sender = textFieldRetain
-
             //Handling search bar special case
             do {
-                if let searchBar = textFieldRetain.textFieldSearchBar() {
+                if let searchBar = textFieldRetain.searchBar() {
                     invocation = searchBar.keyboardToolbar.doneBarButton.invocation
-                    sender = searchBar
                 }
             }
 
             if isResignedFirstResponder {
-                invocation?.invoke(from: sender)
+                invocation?.invoke(from: textFieldRetain)
             }
         }
     }
@@ -660,7 +667,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
         if gesture.state == .ended {
 
             //Resigning currently responder textField.
-            resignFirstResponder()
+            _ = resignFirstResponder()
         }
     }
     
@@ -701,6 +708,28 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
     If YES, then calls 'setNeedsLayout' and 'layoutIfNeeded' on any frame update of to viewController's view.
     */
     @objc public var layoutIfNeededOnUpdate = false
+
+    ///-----------------------------------------------
+    /// MARK: InteractivePopGestureRecognizer handling
+    ///-----------------------------------------------
+    
+    /**
+     If YES, then always consider UINavigationController.view begin point as {0,0}, this is a workaround to fix a bug #464 because there are no notification mechanism exist when UINavigationController.view.frame gets changed internally.
+     */
+    @available(*,deprecated, message: "Due to change in core-logic of handling distance between textField and keyboard distance, this tweak is no longer needed and things will just work out of the box for most of the cases. This property will be removed in future release.")
+    @objc public var shouldFixInteractivePopGestureRecognizer = true
+    
+#if swift(>=3.2)
+    ///----------------
+    /// MARK: Safe Area
+    ///----------------
+
+    /**
+     If YES, then library will try to adjust viewController.additionalSafeAreaInsets to automatically handle layout guide. Default is NO.
+     */
+    @available(*,deprecated, message: "Due to change in core-logic of handling distance between textField and keyboard distance, this safe area tweak is no longer needed and things will just work out of the box regardless of constraint pinned with safeArea/layoutGuide/superview. This property will be removed in future release.")
+    @objc public var canAdjustAdditionalSafeAreaInsets = false
+#endif
 
     ///------------------------------------
     /// MARK: Class Level disabling methods
@@ -767,7 +796,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
     
     @objc public func unregisterTextFieldViewClass(_ aClass: UIView.Type, didBeginEditingNotificationName : String, didEndEditingNotificationName : String) {
         
-        if let index = registeredClasses.firstIndex(where: { element in
+        if let index = registeredClasses.index(where: { element in
             return element == aClass.self
         }) {
             registeredClasses.remove(at: index)
@@ -950,7 +979,7 @@ Codeless drop-in universal library allows to prevent issues of keyboard sliding 
             //Maintain keyboardDistanceFromTextField
             var specialKeyboardDistanceFromTextField = textFieldView.keyboardDistanceFromTextField
             
-            if let searchBar = textFieldView.textFieldSearchBar() {
+            if let searchBar = textFieldView.searchBar() {
                 
                 specialKeyboardDistanceFromTextField = searchBar.keyboardDistanceFromTextField
             }

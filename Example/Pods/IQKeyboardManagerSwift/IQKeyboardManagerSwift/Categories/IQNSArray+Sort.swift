@@ -36,7 +36,7 @@ internal extension Array {
     /**
     Returns the array by sorting the UIView's by their tag property.
     */
-    func sortedArrayByTag() -> [Element] {
+    internal func sortedArrayByTag() -> [Element] {
         
         return sorted(by: { (obj1 : Element, obj2 : Element) -> Bool in
             
@@ -50,7 +50,7 @@ internal extension Array {
     /**
     Returns the array by sorting the UIView's by their tag property.
     */
-    func sortedArrayByPosition() -> [Element] {
+    internal func sortedArrayByPosition() -> [Element] {
         
         return sorted(by: { (obj1 : Element, obj2 : Element) -> Bool in
             

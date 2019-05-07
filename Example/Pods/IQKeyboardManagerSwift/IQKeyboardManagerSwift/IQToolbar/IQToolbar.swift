@@ -55,7 +55,7 @@ open class IQToolbar: UIToolbar , UIInputViewAudioFeedback {
         get {
             if privatePreviousBarButton == nil {
                 privatePreviousBarButton = IQBarButtonItem(image: nil, style: .plain, target: nil, action: nil)
-                privatePreviousBarButton?.accessibilityLabel = "Previous"
+                privatePreviousBarButton?.accessibilityLabel = "Toolbar Previous Button"
             }
             return privatePreviousBarButton!
         }
@@ -73,7 +73,7 @@ open class IQToolbar: UIToolbar , UIInputViewAudioFeedback {
         get {
             if privateNextBarButton == nil {
                 privateNextBarButton = IQBarButtonItem(image: nil, style: .plain, target: nil, action: nil)
-                privateNextBarButton?.accessibilityLabel = "Next"
+                privateNextBarButton?.accessibilityLabel = "Toolbar Next Button"
             }
             return privateNextBarButton!
         }
@@ -91,7 +91,7 @@ open class IQToolbar: UIToolbar , UIInputViewAudioFeedback {
         get {
             if privateTitleBarButton == nil {
                 privateTitleBarButton = IQTitleBarButtonItem(title: nil)
-                privateTitleBarButton?.accessibilityLabel = "Title"
+                privateTitleBarButton?.accessibilityLabel = "Toolbar Title Button"
             }
             return privateTitleBarButton!
         }
@@ -109,7 +109,7 @@ open class IQToolbar: UIToolbar , UIInputViewAudioFeedback {
         get {
             if privateDoneBarButton == nil {
                 privateDoneBarButton = IQBarButtonItem(title: nil, style: .done, target: nil, action: nil)
-                privateDoneBarButton?.accessibilityLabel = "Done"
+                privateDoneBarButton?.accessibilityLabel = "Toolbar Done Button"
             }
             return privateDoneBarButton!
         }

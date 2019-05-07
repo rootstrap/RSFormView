@@ -24,9 +24,9 @@
 
 import UIKit
 
-@objc public class IQInvocation : NSObject {
-    @objc public weak var target: AnyObject?
-    @objc public var action: Selector
+public class IQInvocation : NSObject {
+    public weak var target: AnyObject?
+    public var action: Selector
     
     @objc public init(_ target: AnyObject, _ action: Selector) {
         self.target = target

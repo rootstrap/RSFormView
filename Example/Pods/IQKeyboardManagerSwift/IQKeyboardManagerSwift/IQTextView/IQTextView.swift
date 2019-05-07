@@ -71,14 +71,6 @@ open class IQTextView : UITextView {
     private var placeholderInsets : UIEdgeInsets {
         return UIEdgeInsets(top: self.textContainerInset.top, left: self.textContainerInset.left + self.textContainer.lineFragmentPadding, bottom: self.textContainerInset.bottom, right: self.textContainerInset.right + self.textContainer.lineFragmentPadding)
     }
-    
-    private var placeholderExpectedFrame : CGRect {
-        let placeholderInsets = self.placeholderInsets
-        let maxWidth = self.frame.width-placeholderInsets.left-placeholderInsets.right
-        let expectedSize = placeholderLabel.sizeThatFits(CGSize(width: maxWidth, height: self.frame.height-placeholderInsets.top-placeholderInsets.bottom))
-        
-        return CGRect(x: placeholderInsets.left, y: placeholderInsets.top, width: maxWidth, height: expectedSize.height)
-    }
 
     lazy var placeholderLabel: UILabel = {
         let label = UILabel()
@@ -120,28 +112,20 @@ open class IQTextView : UITextView {
             refreshPlaceholder()
         }
     }
-
-    /** @abstract To set textView's placeholder attributed text. Default is nil.    */
-    open var attributedPlaceholder: NSAttributedString? {
-        get {
-            return placeholderLabel.attributedText
-        }
-
-        set {
-            placeholderLabel.attributedText = newValue
-            refreshPlaceholder()
-        }
-    }
     
     @objc override open func layoutSubviews() {
         super.layoutSubviews()
         
-        placeholderLabel.frame = placeholderExpectedFrame
+        let placeholderInsets = self.placeholderInsets
+        let maxWidth = self.frame.width-placeholderInsets.left-placeholderInsets.right
+        let expectedSize = placeholderLabel.sizeThatFits(CGSize(width: maxWidth, height: self.frame.height-placeholderInsets.top-placeholderInsets.bottom))
+        
+        placeholderLabel.frame = CGRect(x: placeholderInsets.left, y: placeholderInsets.top, width: maxWidth, height: expectedSize.height)
     }
     
     @objc internal func refreshPlaceholder() {
         
-        if !text.isEmpty || !attributedText.string.isEmpty {
+        if !text.isEmpty {
             placeholderLabel.alpha = 0
         } else {
             placeholderLabel.alpha = 1
@@ -151,14 +135,9 @@ open class IQTextView : UITextView {
     @objc override open var text: String! {
         
         didSet {
+            
             refreshPlaceholder()
-        }
-    }
-    
-    open override var attributedText: NSAttributedString! {
-        
-        didSet {
-            refreshPlaceholder()
+            
         }
     }
     
@@ -191,18 +170,6 @@ open class IQTextView : UITextView {
         set {
             super.delegate = newValue
         }
-    }
-    
-    @objc override open var intrinsicContentSize: CGSize {
-        guard !hasText else {
-            return super.intrinsicContentSize
-        }
-        
-        var newSize = super.intrinsicContentSize
-        let placeholderInsets = self.placeholderInsets
-        newSize.height = placeholderExpectedFrame.height + placeholderInsets.top + placeholderInsets.bottom
-        
-        return newSize
     }
 }
 

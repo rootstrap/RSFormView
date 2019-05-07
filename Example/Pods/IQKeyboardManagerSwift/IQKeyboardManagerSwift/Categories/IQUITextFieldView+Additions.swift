@@ -37,12 +37,12 @@ private var kIQIgnoreSwitchingByNextPrevious = "kIQIgnoreSwitchingByNextPrevious
 /**
 UIView category for managing UITextField/UITextView
 */
-@objc public extension UIView {
+public extension UIView {
 
     /**
      To set customized distance from keyboard for textField/textView. Can't be less than zero
      */
-    @objc var keyboardDistanceFromTextField: CGFloat {
+    @objc public var keyboardDistanceFromTextField: CGFloat {
         get {
             
             if let aValue = objc_getAssociatedObject(self, &kIQKeyboardDistanceFromTextField) as? CGFloat {
@@ -59,7 +59,7 @@ UIView category for managing UITextField/UITextView
     /**
      If shouldIgnoreSwitchingByNextPrevious is true then library will ignore this textField/textView while moving to other textField/textView using keyboard toolbar next previous buttons. Default is false
      */
-    @objc var ignoreSwitchingByNextPrevious: Bool {
+    @objc public var ignoreSwitchingByNextPrevious: Bool {
         get {
             
             if let aValue = objc_getAssociatedObject(self, &kIQIgnoreSwitchingByNextPrevious) as? Bool {
@@ -93,7 +93,7 @@ UIView category for managing UITextField/UITextView
     /**
      Override resigns Keyboard on touching outside of UITextField/View behaviour for this particular textField.
      */
-    @objc var shouldResignOnTouchOutsideMode: IQEnableMode {
+    @objc public var shouldResignOnTouchOutsideMode: IQEnableMode {
         get {
             
             if let savedMode = objc_getAssociatedObject(self, &kIQKeyboardShouldResignOnTouchOutsideMode) as? IQEnableMode {

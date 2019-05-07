@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "959085529B56AC9C9CD0C647AFD91360"
+               BlueprintIdentifier = "07FB8478D7EACB7FA78BFF3149CCD8D9"
                BlueprintName = "Pods-RSFormViewExampleApp"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-RSFormViewExampleApp.a">
