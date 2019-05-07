@@ -1,9 +1,9 @@
 //
 //  TwoTextFieldsCell.swift
-//  Avinew
+//  RSFormView
 //
 //  Created by Germán Stábile on 1/29/19.
-//  Copyright © 2019 TopTier labs. All rights reserved.
+//  Copyright © 2019 Rootstrap. All rights reserved.
 //
 
 import Foundation

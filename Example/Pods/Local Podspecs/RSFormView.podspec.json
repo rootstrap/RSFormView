@@ -15,7 +15,8 @@
   "source": {
     "git": "https://github.com/rootstrap/RSFormView"
   },
-  "source_files": "RSFormView/Classes/**/*",
+  "source_files": "RSFormView/Classes/**/*.{h,m,swift}",
+  "resources": "RSFormView/Classes/**/*.xib",
   "dependencies": {
     "IQKeyboardManagerSwift": [
       "~> 6.1.1"

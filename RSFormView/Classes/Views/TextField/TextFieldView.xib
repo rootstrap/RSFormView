@@ -4,13 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldView" customModule="Avinew" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldView" customModule="RSFormView">
             <connections>
                 <outlet property="bottomLine" destination="RIZ-xe-aye" id="zDT-5F-QuL"/>
                 <outlet property="errorLabel" destination="Hzy-qd-h60" id="gtZ-TF-3R1"/>

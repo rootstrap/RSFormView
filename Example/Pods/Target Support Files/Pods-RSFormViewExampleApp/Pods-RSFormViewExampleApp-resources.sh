@@ -93,9 +93,19 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormTextCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormViewCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/TwoTextFieldsCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Form/FormView.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/TextField/TextFieldView.xib"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormTextCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormViewCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/TwoTextFieldsCell.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/Form/FormView.xib"
+  install_resource "${PODS_ROOT}/../../RSFormView/Classes/Views/TextField/TextFieldView.xib"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

@@ -33,7 +33,8 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "RSFormView/Classes/**/*"
+  s.source_files  = "RSFormView/Classes/**/*.{h,m,swift}"
+  s.resources = "RSFormView/Classes/**/*.xib"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
