@@ -7,50 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071CC7E62278D2B10023B402 /* FormTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071CC7E22278D2B10023B402 /* FormTextCell.xib */; };
-		071CC7E72278D2B10023B402 /* FormTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7E32278D2B10023B402 /* FormTextCell.swift */; };
-		071CC7E82278D2B10023B402 /* TwoTextFieldsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7E42278D2B10023B402 /* TwoTextFieldsCell.swift */; };
-		071CC7E92278D2B10023B402 /* TwoTextFieldsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071CC7E52278D2B10023B402 /* TwoTextFieldsCell.xib */; };
-		071CC7EC2278D4E50023B402 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7EB2278D4E50023B402 /* FormField.swift */; };
-		071CC7EF2278D5360023B402 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071CC7ED2278D5360023B402 /* TextFieldView.xib */; };
-		071CC7F02278D5360023B402 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7EE2278D5360023B402 /* TextFieldView.swift */; };
-		071CC7F32278D57F0023B402 /* FormViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071CC7F12278D57F0023B402 /* FormViewCell.xib */; };
-		071CC7F42278D57F0023B402 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7F22278D57F0023B402 /* TextFieldCell.swift */; };
-		071CC7F72278D5CB0023B402 /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071CC7F52278D5CB0023B402 /* FormView.xib */; };
-		071CC7F82278D5CB0023B402 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7F62278D5CB0023B402 /* FormView.swift */; };
-		071CC7FA2278D5E70023B402 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7F92278D5E70023B402 /* FormViewModel.swift */; };
-		071CC7FC2278D6090023B402 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7FB2278D6090023B402 /* StringExtension.swift */; };
-		071CC7FE2278D6270023B402 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7FD2278D6270023B402 /* ViewExtension.swift */; };
-		071CC8002278D9810023B402 /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC7FF2278D9810023B402 /* AddressManager.swift */; };
 		071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80B2278DCAE0023B402 /* AppDelegate.swift */; };
 		071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */; };
 		071CC8112278DCAE0023B402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC80F2278DCAE0023B402 /* Main.storyboard */; };
 		071CC8132278DCB00023B402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071CC8122278DCB00023B402 /* Assets.xcassets */; };
 		071CC8162278DCB00023B402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC8142278DCB00023B402 /* LaunchScreen.storyboard */; };
 		071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */; };
-		072B3CD62278CFFB0056DB8A /* RSFormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 072B3CD42278CFFB0056DB8A /* RSFormView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E64CF82278FE64007117D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E64CF72278FE64007117D7 /* Constants.swift */; };
 		188A7270091AF46617C45335 /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */; };
-		82FAE65245CCA145FAE97451 /* libPods-RSFormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF1C68AD1F8912FFD9D980A /* libPods-RSFormView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00CDFC5F28C5A87E092B39EE /* Pods-RSFormView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView.debug.xcconfig"; sourceTree = "<group>"; };
-		071CC7E22278D2B10023B402 /* FormTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormTextCell.xib; sourceTree = "<group>"; };
-		071CC7E32278D2B10023B402 /* FormTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextCell.swift; sourceTree = "<group>"; };
-		071CC7E42278D2B10023B402 /* TwoTextFieldsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoTextFieldsCell.swift; sourceTree = "<group>"; };
-		071CC7E52278D2B10023B402 /* TwoTextFieldsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoTextFieldsCell.xib; sourceTree = "<group>"; };
-		071CC7EB2278D4E50023B402 /* FormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
-		071CC7ED2278D5360023B402 /* TextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
-		071CC7EE2278D5360023B402 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		071CC7F12278D57F0023B402 /* FormViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormViewCell.xib; sourceTree = "<group>"; };
-		071CC7F22278D57F0023B402 /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
-		071CC7F52278D5CB0023B402 /* FormView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
-		071CC7F62278D5CB0023B402 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
-		071CC7F92278D5E70023B402 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
-		071CC7FB2278D6090023B402 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		071CC7FD2278D6270023B402 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		071CC7FF2278D9810023B402 /* AddressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressManager.swift; sourceTree = "<group>"; };
 		071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSFormViewExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071CC80B2278DCAE0023B402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewController.swift; sourceTree = "<group>"; };
@@ -59,10 +26,6 @@
 		071CC8152278DCB00023B402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071CC8172278DCB00023B402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewModel.swift; sourceTree = "<group>"; };
-		072B3CD12278CFFB0056DB8A /* RSFormView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RSFormView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		072B3CD42278CFFB0056DB8A /* RSFormView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSFormView.h; sourceTree = "<group>"; };
-		072B3CD52278CFFB0056DB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07E64CF72278FE64007117D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746099BF600E9A6BA9C13259 /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		AEC9282DDFBB11614C765AB8 /* Pods-RSFormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,85 +42,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		072B3CCE2278CFFB0056DB8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				82FAE65245CCA145FAE97451 /* libPods-RSFormView.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		071CC7DC2278D1CC0023B402 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7E12278D22C0023B402 /* Cell */,
-				071CC7E02278D2240023B402 /* TextField */,
-				071CC7DF2278D2160023B402 /* Form */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		071CC7DD2278D1D40023B402 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7F92278D5E70023B402 /* FormViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		071CC7DE2278D1DC0023B402 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7FB2278D6090023B402 /* StringExtension.swift */,
-				071CC7FD2278D6270023B402 /* ViewExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		071CC7DF2278D2160023B402 /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7F62278D5CB0023B402 /* FormView.swift */,
-				071CC7F52278D5CB0023B402 /* FormView.xib */,
-			);
-			path = Form;
-			sourceTree = "<group>";
-		};
-		071CC7E02278D2240023B402 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7EE2278D5360023B402 /* TextFieldView.swift */,
-				071CC7ED2278D5360023B402 /* TextFieldView.xib */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		071CC7E12278D22C0023B402 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7F12278D57F0023B402 /* FormViewCell.xib */,
-				071CC7F22278D57F0023B402 /* TextFieldCell.swift */,
-				071CC7E32278D2B10023B402 /* FormTextCell.swift */,
-				071CC7E22278D2B10023B402 /* FormTextCell.xib */,
-				071CC7E42278D2B10023B402 /* TwoTextFieldsCell.swift */,
-				071CC7E52278D2B10023B402 /* TwoTextFieldsCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		071CC7EA2278D4A70023B402 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7EB2278D4E50023B402 /* FormField.swift */,
-				071CC7FF2278D9810023B402 /* AddressManager.swift */,
-				07E64CF72278FE64007117D7 /* Constants.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +62,6 @@
 		072B3CC72278CFFB0056DB8A = {
 			isa = PBXGroup;
 			children = (
-				072B3CD32278CFFB0056DB8A /* RSFormView */,
 				071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */,
 				072B3CD22278CFFB0056DB8A /* Products */,
 				CC4013885E4D57FABF251752 /* Pods */,
@@ -186,23 +72,9 @@
 		072B3CD22278CFFB0056DB8A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				072B3CD12278CFFB0056DB8A /* RSFormView.framework */,
 				071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		072B3CD32278CFFB0056DB8A /* RSFormView */ = {
-			isa = PBXGroup;
-			children = (
-				071CC7EA2278D4A70023B402 /* Models */,
-				071CC7DE2278D1DC0023B402 /* Extensions */,
-				071CC7DD2278D1D40023B402 /* ViewModels */,
-				071CC7DC2278D1CC0023B402 /* Views */,
-				072B3CD42278CFFB0056DB8A /* RSFormView.h */,
-				072B3CD52278CFFB0056DB8A /* Info.plist */,
-			);
-			path = RSFormView;
 			sourceTree = "<group>";
 		};
 		CC4013885E4D57FABF251752 /* Pods */ = {
@@ -227,17 +99,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		072B3CCC2278CFFB0056DB8A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				072B3CD62278CFFB0056DB8A /* RSFormView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		071CC8082278DCAD0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXNativeTarget;
@@ -258,26 +119,6 @@
 			productReference = 071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		072B3CD02278CFFB0056DB8A /* RSFormView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 072B3CD92278CFFB0056DB8A /* Build configuration list for PBXNativeTarget "RSFormView" */;
-			buildPhases = (
-				01685A6CC3DF42F2D0EDD88E /* [CP] Check Pods Manifest.lock */,
-				072B3CCC2278CFFB0056DB8A /* Headers */,
-				072B3CCD2278CFFB0056DB8A /* Sources */,
-				072B3CCE2278CFFB0056DB8A /* Frameworks */,
-				072B3CCF2278CFFB0056DB8A /* Resources */,
-				34766B622BD81742A39499D9 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = RSFormView;
-			productName = RSFormView;
-			productReference = 072B3CD12278CFFB0056DB8A /* RSFormView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,10 +131,6 @@
 				TargetAttributes = {
 					071CC8082278DCAD0023B402 = {
 						CreatedOnToolsVersion = 10.2;
-					};
-					072B3CD02278CFFB0056DB8A = {
-						CreatedOnToolsVersion = 10.2;
-						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -310,7 +147,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				072B3CD02278CFFB0056DB8A /* RSFormView */,
 				071CC8082278DCAD0023B402 /* RSFormViewExampleApp */,
 			);
 		};
@@ -327,65 +163,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		072B3CCF2278CFFB0056DB8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				071CC7F32278D57F0023B402 /* FormViewCell.xib in Resources */,
-				071CC7EF2278D5360023B402 /* TextFieldView.xib in Resources */,
-				071CC7E92278D2B10023B402 /* TwoTextFieldsCell.xib in Resources */,
-				071CC7F72278D5CB0023B402 /* FormView.xib in Resources */,
-				071CC7E62278D2B10023B402 /* FormTextCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01685A6CC3DF42F2D0EDD88E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RSFormView-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34766B622BD81742A39499D9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView-resources.sh",
-				"${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8282FF7E21D8259251BC3DFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,24 +220,6 @@
 				071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */,
 				071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */,
 				071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		072B3CCD2278CFFB0056DB8A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				071CC7FE2278D6270023B402 /* ViewExtension.swift in Sources */,
-				07E64CF82278FE64007117D7 /* Constants.swift in Sources */,
-				071CC7F82278D5CB0023B402 /* FormView.swift in Sources */,
-				071CC7EC2278D4E50023B402 /* FormField.swift in Sources */,
-				071CC7E82278D2B10023B402 /* TwoTextFieldsCell.swift in Sources */,
-				071CC8002278D9810023B402 /* AddressManager.swift in Sources */,
-				071CC7F02278D5360023B402 /* TextFieldView.swift in Sources */,
-				071CC7FC2278D6090023B402 /* StringExtension.swift in Sources */,
-				071CC7FA2278D5E70023B402 /* FormViewModel.swift in Sources */,
-				071CC7E72278D2B10023B402 /* FormTextCell.swift in Sources */,
-				071CC7F42278D57F0023B402 /* TextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,61 +405,6 @@
 			};
 			name = Release;
 		};
-		072B3CDA2278CFFB0056DB8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00CDFC5F28C5A87E092B39EE /* Pods-RSFormView.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = V9839GT2TL;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RSFormView/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormView;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		072B3CDB2278CFFB0056DB8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEC9282DDFBB11614C765AB8 /* Pods-RSFormView.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = V9839GT2TL;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RSFormView/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormView;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -715,15 +422,6 @@
 			buildConfigurations = (
 				072B3CD72278CFFB0056DB8A /* Debug */,
 				072B3CD82278CFFB0056DB8A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		072B3CD92278CFFB0056DB8A /* Build configuration list for PBXNativeTarget "RSFormView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				072B3CDA2278CFFB0056DB8A /* Debug */,
-				072B3CDB2278CFFB0056DB8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
