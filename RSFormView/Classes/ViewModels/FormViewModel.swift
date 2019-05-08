@@ -8,16 +8,29 @@
 
 import Foundation
 
-public enum ValidationType {
+public enum FieldType {
   case email
-  case nonEmpty
   case numeric
   case date
   case usState
-  case phone
+  case usPhone
   case zip
-  case none
+  case regular
   case expiration
+  case password
+}
+
+public enum ValidationType {
+  case email
+  case nonEmpty
+  case none
+  case date
+  case usState
+  case expiration
+  case zip
+  case usPhone
+  case numeric
+  case custom(evaluator: (String) -> (Bool))
 }
 
 public protocol FormViewModel: class {

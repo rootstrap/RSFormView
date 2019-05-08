@@ -70,8 +70,8 @@ class TextFieldView: UIView {
   
   func setCursorPosition(isDeleting: Bool = false) {
     guard let lastCursorPosition = lastCursorPosition,
-      fieldData?.validationType != .phone,
-      fieldData?.validationType != .expiration,
+      fieldData?.fieldType != .usPhone,
+      fieldData?.fieldType != .expiration,
       textField.selectedTextRange != nil else {
         self.lastCursorPosition = nil
         return
@@ -116,8 +116,8 @@ class TextFieldView: UIView {
   
   fileprivate func setKeyboardType() {
     guard let fieldData = fieldData else { return }
-    switch fieldData.validationType {
-    case .numeric, .phone, .zip, .expiration:
+    switch fieldData.fieldType {
+    case .numeric, .usPhone, .zip, .expiration:
       textField.keyboardType = .numberPad
     case .email:
       textField.keyboardType = .emailAddress
@@ -128,7 +128,7 @@ class TextFieldView: UIView {
   
   func configureFormPicker() {
     guard let fieldData = fieldData,
-      fieldData.validationType == .date else {
+      fieldData.fieldType == .date else {
         textField.inputView = nil
         return
     }
@@ -154,8 +154,8 @@ class TextFieldView: UIView {
   func update(withData data: FormField) {
     fieldData = data
     updatePlaceHolder(withText: data.placeholder)
-    textField.clearButtonMode = data.validationType == .date ? .never : .whileEditing
-    textField.isSecureTextEntry = data.isPasswordField
+    textField.clearButtonMode = data.fieldType == .date ? .never : .whileEditing
+    textField.isSecureTextEntry = data.fieldType == .password
     textField.text = data.value
     titleLabel.text = data.name
     errorLabel.text = data.errorMessage
@@ -185,7 +185,7 @@ class TextFieldView: UIView {
     var updatedText = updatedText
     updatedText = data.capitalizeValue ? updatedText.capitalized : updatedText
     updatedText = data.uppercaseValue ? updatedText.uppercased() : updatedText
-    if data.validationType == .usState {
+    if data.fieldType == .usState {
       updatedText = updatedText.count > 2 ? updatedText.capitalized : updatedText.uppercased()
     }
     let isDeleting = updatedText.count < previousText.count
@@ -201,11 +201,7 @@ class TextFieldView: UIView {
   
   func validate(with text: String) {
     guard let data = fieldData else { return }
-    if let customValidationBlock = data.customValidationBlock {
-      data.isValid = customValidationBlock(text)
-    } else {
-      data.isValid = data.value.isValid(type: data.validationType)
-    }
+    data.isValid = data.value.isValid(type: data.validationType ?? data.defaultValidationType)
   }
   
   func expirationDate(previousText: String, updatedText: String) -> String {
@@ -257,7 +253,7 @@ extension TextFieldView: UITextFieldDelegate {
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool {
     guard let data = fieldData,
-      data.validationType != .date else {
+      data.fieldType != .date else {
         return false
     }
     
@@ -266,13 +262,13 @@ extension TextFieldView: UITextFieldDelegate {
       var updatedText = text.replacingCharacters(in: textRange,
                                                  with: string)
       
-      if data.validationType == .phone &&
+      if data.fieldType == .usPhone &&
         textField.text?.count ?? 0 < updatedText.count &&
         [3, 7].contains(updatedText.count) {
         updatedText += "-"
       }
       
-      if data.validationType == .expiration {
+      if data.fieldType == .expiration {
         updatedText = expirationDate(previousText: text, updatedText: updatedText)
       }
       

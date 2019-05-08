@@ -34,7 +34,6 @@ public protocol FormViewDelegate: class {
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
-    
     configureViews()
   }
   
