@@ -99,6 +99,31 @@ public protocol FormViewDelegate: class {
       }
     }
   }
+  
+  fileprivate func textFieldCell(forRowAt indexPath: IndexPath,
+                                 in tableView: UITableView,
+                                 with rowFields: [FormField]?) -> UITableViewCell {
+    if rowFields?.count == 1,
+      let fieldData = rowFields?.first,
+      let cell = tableView
+        .dequeueReusableCell(withIdentifier: TextFieldCell.reuseIdentifier,
+                             for: indexPath) as? TextFieldCell {
+      cell.update(withData: fieldData)
+      cell.delegate = self
+      return cell
+    }
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: TwoTextFieldsCell.reuseIdentifier,
+                                             for: indexPath)
+    if let formItem = viewModel?.items[indexPath.row],
+      formItem.formFields.count == 2,
+      let cell = cell as? TwoTextFieldsCell {
+      cell.delegate = self
+      cell.update(withFormItem: formItem)
+    }
+    
+    return cell
+  }
 }
 
 extension FormView: FormCellDelegate {
@@ -130,26 +155,9 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
       return cell
     }
     
-    if rowFields?.count == 1,
-      let fieldData = rowFields?.first,
-      let cell = tableView
-        .dequeueReusableCell(withIdentifier: TextFieldCell.reuseIdentifier,
-                                        for: indexPath) as? TextFieldCell {
-      cell.update(withData: fieldData)
-      cell.delegate = self
-      return cell
-    }
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier: TwoTextFieldsCell.reuseIdentifier,
-                                             for: indexPath)
-    if let formItem = viewModel?.items[indexPath.row],
-      formItem.formFields.count == 2,
-      let cell = cell as? TwoTextFieldsCell {
-      cell.delegate = self
-      cell.update(withFormItem: formItem)
-    }
-    
-    return cell
+    return textFieldCell(forRowAt: indexPath,
+                         in: tableView,
+                         with: rowFields)
   }
   
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
