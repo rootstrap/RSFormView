@@ -14,7 +14,7 @@ public enum FieldType {
   case date
   case usState
   case usPhone
-  case zip
+  case fiveDigitZipCode
   case regular
   case expiration
   case password
@@ -27,7 +27,7 @@ public enum ValidationType {
   case date
   case usState
   case expiration
-  case zip
+  case fiveDigitZipCode
   case usPhone
   case numeric
   case custom(evaluator: (String) -> (Bool))

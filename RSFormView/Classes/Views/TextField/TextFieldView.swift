@@ -117,7 +117,7 @@ class TextFieldView: UIView {
   fileprivate func setKeyboardType() {
     guard let fieldData = fieldData else { return }
     switch fieldData.fieldType {
-    case .numeric, .usPhone, .zip, .expiration:
+    case .numeric, .usPhone, .fiveDigitZipCode, .expiration:
       textField.keyboardType = .numberPad
     case .email:
       textField.keyboardType = .emailAddress

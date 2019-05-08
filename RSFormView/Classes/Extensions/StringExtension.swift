@@ -19,7 +19,7 @@ extension String {
       return AddressManager.validateState(state: self)
     case .usPhone:
       return isPhoneNumber()
-    case .zip:
+    case .fiveDigitZipCode:
       return isZipCode()
     case .expiration:
       return isExpirationDate()

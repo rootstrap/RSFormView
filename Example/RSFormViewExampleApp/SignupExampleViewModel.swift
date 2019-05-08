@@ -116,7 +116,7 @@ class SignupExampleViewModel: FormViewModel {
     let zipField = FormField(name: FieldName.zip.rawValue,
                              value: "",
                              placeholder: FieldName.zip.rawValue,
-                             fieldType: .zip,
+                             fieldType: .fiveDigitZipCode,
                              isValid: false,
                              errorMessage: "Please enter a Zip Code")
     

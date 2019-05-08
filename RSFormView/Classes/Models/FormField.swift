@@ -48,8 +48,8 @@ open class FormField {
       validationType = .expiration
     case .regular:
       validationType = .nonEmpty
-    case .zip:
-      validationType = .zip
+    case .fiveDigitZipCode:
+      validationType = .fiveDigitZipCode
     case .password:
       validationType = .nonEmpty
     case .numeric:
