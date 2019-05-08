@@ -12,8 +12,15 @@ open class FormItem {
   var formFields: [FormField]
   var attributedText: NSAttributedString?
   
-  public init(formFields: [FormField]) {
-    self.formFields = formFields
+  public init(firstField: FormField? = nil, secondField: FormField? = nil) {
+    var fields: [FormField] = []
+    [firstField, secondField].forEach {
+      if let field = $0 {
+        fields.append(field)
+      }
+    }
+    
+    self.formFields = fields
   }
 }
 
@@ -61,16 +68,17 @@ open class FormField {
     return validationType
   }
   
-  public init(name: String, value: String,
-              placeholder: String, fieldType: FieldType,
-              isValid: Bool, errorMessage: String,
-              validationMatch: String? = nil) {
+  public init(name: String,
+              initialValue: String,
+              placeholder: String,
+              fieldType: FieldType,
+              isValid: Bool,
+              errorMessage: String) {
     self.name = name
-    self.value = value
+    self.value = initialValue
     self.placeholder = placeholder
     self.isValid = isValid
     self.fieldType = fieldType
     self.errorMessage = errorMessage
-    self.validationMatch = validationMatch
   }
 }

@@ -41,12 +41,12 @@ class SignupExampleViewModel: FormViewModel {
   }
   
   func nameItem() -> FormItem {
-    return FormItem(formFields: [firstNameField(), lastNameField()])
+    return FormItem(firstField: firstNameField(), secondField: lastNameField())
   }
   
   func firstNameField() -> FormField {
     let firstNameField = FormField(name: FieldName.firstName.rawValue, //Identifier for the field
-      value: "John", //Provide a default value for the field
+      initialValue: "John", //Provide a default value for the field
       placeholder: FieldName.firstName.rawValue, //A place holder for when theres no value
       fieldType: .regular, //field type describes the behaviour the field will expect and provide a default validation
       isValid: true, //wether is valid in its initial state
@@ -57,7 +57,7 @@ class SignupExampleViewModel: FormViewModel {
   
   func emailItem() -> FormItem {
     let emailField = FormField(name: FieldName.email.rawValue,
-                               value: "",
+                               initialValue: "",
                                placeholder: FieldName.email.rawValue,
                                fieldType: .email,
                                isValid: false,
@@ -65,12 +65,12 @@ class SignupExampleViewModel: FormViewModel {
     
     emailField.capitalizeValue = false
     
-    return FormItem(formFields: [emailField])
+    return FormItem(firstField: emailField)
   }
   
   func lastNameField() -> FormField {
     let lastNameField = FormField(name: FieldName.lastName.rawValue,
-                                  value: "",
+                                  initialValue: "",
                                   placeholder: FieldName.lastName.rawValue,
                                   fieldType: .regular,
                                   isValid: false,
@@ -85,72 +85,71 @@ class SignupExampleViewModel: FormViewModel {
   
   func addressItem() -> FormItem {
     let addressField = FormField(name: FieldName.address.rawValue,
-                                 value: "",
+                                 initialValue: "",
                                  placeholder: FieldName.address.rawValue,
                                  fieldType: .regular,
                                  isValid: false,
                                  errorMessage: "Please enter an address")
     
-    return FormItem(formFields: [addressField])
+    return FormItem(firstField: addressField)
   }
   
   func cityStateItem() -> FormItem {
     let cityField = FormField(name: FieldName.city.rawValue,
-                              value: "",
+                              initialValue: "",
                               placeholder: FieldName.city.rawValue,
                               fieldType: .regular,
                               isValid: false,
                               errorMessage: "Please enter a city")
     
     let stateField = FormField(name: FieldName.state.rawValue,
-                               value: "",
+                               initialValue: "",
                                placeholder: FieldName.state.rawValue,
                                fieldType: .usState,
                                isValid: false,
                                errorMessage: "Please enter a valid state")
     
-    return FormItem(formFields: [cityField, stateField])
+    return FormItem(firstField: cityField, secondField: stateField)
   }
   
   func zipDOBItem() -> FormItem {
     let zipField = FormField(name: FieldName.zip.rawValue,
-                             value: "",
+                             initialValue: "",
                              placeholder: FieldName.zip.rawValue,
                              fieldType: .fiveDigitZipCode,
                              isValid: false,
                              errorMessage: "Please enter a Zip Code")
     
     let birthdateField = FormField(name: FieldName.birthdate.rawValue,
-                                   value: "",
+                                   initialValue: "",
                                    placeholder: FieldName.birthdate.rawValue,
                                    fieldType: .date,
                                    isValid: false,
                                    errorMessage: "Please enter a birthdate")
     
-    return FormItem(formFields: [zipField, birthdateField])
+    return FormItem(firstField: zipField, secondField: birthdateField)
   }
   
   func passwordItem() -> FormItem {
     let passwordField = FormField(name: FieldName.password.rawValue,
-                                  value: "",
+                                  initialValue: "",
                                   placeholder: FieldName.password.rawValue,
                                   fieldType: .password,
                                   isValid: false,
                                   errorMessage: "Please enter a valid password")
     
-    return FormItem(formFields: [passwordField])
+    return FormItem(firstField: passwordField)
   }
   
   func confirmPasswordItem() -> FormItem {
     let confirmPasswordField = FormField(name: FieldName.confirmPassword.rawValue,
-                                         value: "",
+                                         initialValue: "",
                                          placeholder: FieldName.confirmPassword.rawValue,
                                          fieldType: .password,
                                          isValid: false,
-                                         errorMessage: "Passwords don't match",
-                                         validationMatch: FieldName.password.rawValue)
-    
-    return FormItem(formFields: [confirmPasswordField])
+                                         errorMessage: "Passwords don't match")
+    confirmPasswordField.validationMatch = FieldName.password.rawValue
+    return FormItem(firstField: confirmPasswordField)
   }
 }
 
