@@ -24,14 +24,12 @@ class TextFieldCell: UITableViewCell, FormViewCell {
   @IBOutlet weak var textFieldView: TextFieldView!
   
   weak var delegate: FormCellDelegate?
-  var fieldData: FormField?
   
   override func awakeFromNib() {
     textFieldView.delegate = self
   }
   
   func update(withData data: FormField) {
-    fieldData = data
     textFieldView.update(withData: data)
   }
   
@@ -45,13 +43,8 @@ class TextFieldCell: UITableViewCell, FormViewCell {
 }
 
 extension TextFieldCell: TextFieldDelegate {
-  func didUpdate(textFieldView: TextFieldView, text: String) {
-    fieldData?.value = text
-    fieldData?.shouldDisplayError = true
-    if let fieldData = fieldData {
-      fieldData.isValid = fieldData.value.isValid(type: fieldData.validationType)
-      update(withData: fieldData)
-      delegate?.didUpdate(data: fieldData)
-    }
+  func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
+    update(withData: fieldData)
+    delegate?.didUpdate(data: fieldData)
   }
 }

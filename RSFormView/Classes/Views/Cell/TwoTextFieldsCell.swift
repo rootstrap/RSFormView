@@ -16,9 +16,6 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
   @IBOutlet weak var firstTextField: TextFieldView!
   @IBOutlet weak var secondTextField: TextFieldView!
   
-  var firstFormField: FormField?
-  var secondFormField: FormField?
-  var formItem: FormItem?
   weak var delegate: FormCellDelegate?
   
   override func awakeFromNib() {
@@ -27,26 +24,17 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
   }
   
   func update(withFormItem formItem: FormItem) {
-    guard formItem.formFields.count > 1 else { return }
-    self.formItem = formItem
-    firstFormField = formItem.formFields[0]
-    secondFormField = formItem.formFields[1]
+    guard formItem.formFields.count == 2 else { return }
     
-    guard let firstFormField = firstFormField,
-      let secondFormField = secondFormField else { return }
-    update(textFieldView: firstTextField, withData: firstFormField)
-    update(textFieldView: secondTextField, withData: secondFormField)
+    let firstFieldData = formItem.formFields[0]
+    let secondFieldData = formItem.formFields[1]
+    
+    update(textFieldView: firstTextField, withData: firstFieldData)
+    update(textFieldView: secondTextField, withData: secondFieldData)
   }
   
   func update(textFieldView: TextFieldView, withData data: FormField) {
     textFieldView.update(withData: data)
-  }
-  
-  func update(fieldData: FormField, withText text: String) {
-    fieldData.value = text
-    fieldData.shouldDisplayError = true
-    fieldData.isValid = fieldData.value.isValid(type: fieldData.validationType)
-    delegate?.didUpdate(data: fieldData)
   }
   
   func updateErrorState() {
@@ -56,11 +44,9 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
 }
 
 extension TwoTextFieldsCell: TextFieldDelegate {
-  func didUpdate(textFieldView: TextFieldView, text: String) {
-    guard let data = textFieldView == firstTextField ?
-      firstFormField : secondFormField else { return }
-    textFieldView.textField.text = text
-    update(fieldData: data, withText: text)
-    update(textFieldView: textFieldView, withData: data)
+  func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
+    textFieldView.textField.text = fieldData.value
+    update(textFieldView: textFieldView, withData: fieldData)
+    delegate?.didUpdate(data: fieldData)
   }
 }

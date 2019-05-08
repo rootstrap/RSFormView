@@ -34,7 +34,6 @@ public protocol FormViewDelegate: class {
   
   override public init(frame: CGRect) {
     super.init(frame: frame)
-    
     configureViews()
   }
   
@@ -72,12 +71,11 @@ public protocol FormViewDelegate: class {
   
   fileprivate func checkMatches(updatedField: FormField) {
     guard let fields =
-      viewModel?.items.flatMap({ $0.formFields }) else { return }
+      viewModel?.fields() else { return }
     if let validationMatch = updatedField.validationMatch {
       if let matchField =
         fields.first(where: { $0.name == validationMatch }) {
         updatedField.isValid = matchField.value == updatedField.value
-        reloadVisibleCells()
         return
       }
     }
@@ -86,7 +84,6 @@ public protocol FormViewDelegate: class {
     
     for validationMatch in validationMatches {
       validationMatch.isValid = validationMatch.value == updatedField.value
-      reloadVisibleCells()
     }
   }
   
@@ -108,6 +105,7 @@ extension FormView: FormCellDelegate {
   func didUpdate(data: FormField) {
     update(field: data)
     checkMatches(updatedField: data)
+    reloadVisibleCells()
     delegate?.didUpdateFields(allFieldsValid: viewModel?.validateFields() ?? false)
   }
 }

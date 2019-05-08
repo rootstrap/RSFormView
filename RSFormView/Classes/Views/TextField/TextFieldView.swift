@@ -11,7 +11,7 @@ import UIKit
 
 protocol TextFieldDelegate: class {
   func didUpdate(textFieldView: TextFieldView,
-                 text: String)
+                 with fieldData: FormField)
 }
 
 class TextFieldView: UIView {
@@ -70,8 +70,8 @@ class TextFieldView: UIView {
   
   func setCursorPosition(isDeleting: Bool = false) {
     guard let lastCursorPosition = lastCursorPosition,
-      fieldData?.validationType != .phone,
-      fieldData?.validationType != .expiration,
+      fieldData?.fieldType != .usPhone,
+      fieldData?.fieldType != .expiration,
       textField.selectedTextRange != nil else {
         self.lastCursorPosition = nil
         return
@@ -87,6 +87,10 @@ class TextFieldView: UIView {
   
   func updateErrorState() {
     guard let fieldData = fieldData else { return }
+    if fieldData.validationMatch == nil {
+      //do not override validation match validation
+      validate(with: fieldData.value)
+    }
     textField.isEnabled = fieldData.isEnabled
     errorLabel.isHidden = !fieldData.shouldDisplayError || fieldData.isValid
     
@@ -112,8 +116,8 @@ class TextFieldView: UIView {
   
   fileprivate func setKeyboardType() {
     guard let fieldData = fieldData else { return }
-    switch fieldData.validationType {
-    case .numeric, .phone, .zip, .expiration:
+    switch fieldData.fieldType {
+    case .numeric, .usPhone, .fiveDigitZipCode, .expiration:
       textField.keyboardType = .numberPad
     case .email:
       textField.keyboardType = .emailAddress
@@ -124,7 +128,7 @@ class TextFieldView: UIView {
   
   func configureFormPicker() {
     guard let fieldData = fieldData,
-      fieldData.validationType == .date else {
+      fieldData.fieldType == .date else {
         textField.inputView = nil
         return
     }
@@ -150,14 +154,15 @@ class TextFieldView: UIView {
   func update(withData data: FormField) {
     fieldData = data
     updatePlaceHolder(withText: data.placeholder)
-    textField.isSecureTextEntry = data.isPasswordField
+    textField.clearButtonMode = data.fieldType == .date ? .never : .whileEditing
+    textField.isSecureTextEntry = data.fieldType == .password
     textField.text = data.value
     titleLabel.text = data.name
     errorLabel.text = data.errorMessage
     titleLabel.isHidden = data.value.isEmpty
     if !data.value.isEmpty && data.oneTimeErrorMessage == nil {
       data.shouldDisplayError = true
-      data.isValid = data.value.isValid(type: data.validationType)
+      validate(with: data.value)
     }
     updateErrorState()
   }
@@ -180,14 +185,23 @@ class TextFieldView: UIView {
     var updatedText = updatedText
     updatedText = data.capitalizeValue ? updatedText.capitalized : updatedText
     updatedText = data.uppercaseValue ? updatedText.uppercased() : updatedText
-    if data.validationType == .usState {
+    if data.fieldType == .usState {
       updatedText = updatedText.count > 2 ? updatedText.capitalized : updatedText.uppercased()
     }
     let isDeleting = updatedText.count < previousText.count
     data.oneTimeErrorMessage = nil
+    data.value = updatedText
+    data.shouldDisplayError = true
+    
+    validate(with: updatedText)
     saveCursorPosition()
-    delegate?.didUpdate(textFieldView: self, text: updatedText)
+    delegate?.didUpdate(textFieldView: self, with: data)
     setCursorPosition(isDeleting: isDeleting)
+  }
+  
+  func validate(with text: String) {
+    guard let data = fieldData else { return }
+    data.isValid = data.value.isValid(type: data.validationType ?? data.defaultValidationType)
   }
   
   func expirationDate(previousText: String, updatedText: String) -> String {
@@ -197,7 +211,7 @@ class TextFieldView: UIView {
     }
     
     if previousText.isEmpty {
-      //if first character is bigger than 1 put cero at the begginning
+      //if first character is bigger than 1 put zero at the begginning
       //since its typing a month
       if Int(updatedText) == 1 {
         return updatedText
@@ -223,12 +237,14 @@ class TextFieldView: UIView {
 //Date picker related methods
 extension TextFieldView {
   @objc func datePickerChangedValue(sender: UIDatePicker) {
+    guard let data = fieldData else { return }
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = TextFieldView.dateFormat
     
     let dateString = dateFormatter.string(from: sender.date)
     textField.text = dateString
-    delegate?.didUpdate(textFieldView: self, text: dateString)
+    fieldData?.value = dateString
+    delegate?.didUpdate(textFieldView: self, with: data)
   }
 }
 
@@ -237,7 +253,7 @@ extension TextFieldView: UITextFieldDelegate {
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool {
     guard let data = fieldData,
-      data.validationType != .date else {
+      data.fieldType != .date else {
         return false
     }
     
@@ -246,13 +262,13 @@ extension TextFieldView: UITextFieldDelegate {
       var updatedText = text.replacingCharacters(in: textRange,
                                                  with: string)
       
-      if data.validationType == .phone &&
+      if data.fieldType == .usPhone &&
         textField.text?.count ?? 0 < updatedText.count &&
         [3, 7].contains(updatedText.count) {
         updatedText += "-"
       }
       
-      if data.validationType == .expiration {
+      if data.fieldType == .expiration {
         updatedText = expirationDate(previousText: text, updatedText: updatedText)
       }
       
@@ -263,7 +279,11 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldShouldClear(_ textField: UITextField) -> Bool {
-    delegate?.didUpdate(textFieldView: self, text: "")
+    guard let data = fieldData else { return true }
+    data.value = ""
+    data.shouldDisplayError = true
+    validate(with: "")
+    delegate?.didUpdate(textFieldView: self, with: data)
     return true
   }
   

@@ -17,16 +17,18 @@ extension String {
       return isInteger()
     case .usState:
       return AddressManager.validateState(state: self)
-    case .phone:
+    case .usPhone:
       return isPhoneNumber()
-    case .zip:
+    case .fiveDigitZipCode:
       return isZipCode()
     case .expiration:
       return isExpirationDate()
-    case .none:
-      return true
-    default:
+    case .nonEmpty:
       return !isEmpty
+    case .custom(let evaluator):
+      return evaluator(self)
+    default:
+      return true
     }
   }
   
