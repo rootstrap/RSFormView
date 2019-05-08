@@ -1,2 +1,2 @@
 exclude_patterns:
-- "Example/Pods/"
+  - "Example/Pods/"
