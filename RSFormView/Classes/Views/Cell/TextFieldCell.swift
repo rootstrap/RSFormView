@@ -24,14 +24,12 @@ class TextFieldCell: UITableViewCell, FormViewCell {
   @IBOutlet weak var textFieldView: TextFieldView!
   
   weak var delegate: FormCellDelegate?
-  var fieldData: FormField?
   
   override func awakeFromNib() {
     textFieldView.delegate = self
   }
   
   func update(withData data: FormField) {
-    fieldData = data
     textFieldView.update(withData: data)
   }
   

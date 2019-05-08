@@ -87,6 +87,10 @@ class TextFieldView: UIView {
   
   func updateErrorState() {
     guard let fieldData = fieldData else { return }
+    if fieldData.validationMatch == nil {
+      //do not override validation match validation
+      validate(with: fieldData.value)
+    }
     textField.isEnabled = fieldData.isEnabled
     errorLabel.isHidden = !fieldData.shouldDisplayError || fieldData.isValid
     
@@ -211,7 +215,7 @@ class TextFieldView: UIView {
     }
     
     if previousText.isEmpty {
-      //if first character is bigger than 1 put cero at the begginning
+      //if first character is bigger than 1 put zero at the begginning
       //since its typing a month
       if Int(updatedText) == 1 {
         return updatedText

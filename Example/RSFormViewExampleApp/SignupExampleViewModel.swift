@@ -30,6 +30,16 @@ class SignupExampleViewModel: FormViewModel {
     case address = "ADDRESS"
   }
   
+  var collectedData: String {
+    var data = ""
+    
+    fields().forEach {
+      data += "\($0.name): \($0.value) \n"
+    }
+    
+    return data
+  }
+  
   func nameItem() -> FormItem {
     return FormItem(formFields: [firstNameField(), lastNameField()])
   }

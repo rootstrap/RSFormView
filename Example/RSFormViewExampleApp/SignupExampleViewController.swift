@@ -30,7 +30,12 @@ class SignupExampleViewController: UIViewController {
   }
   
   @IBAction func getDataButtonTapped() {
+    let alert = UIAlertController(title: "Collected data",
+                                  message: viewModel.collectedData,
+                                  preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .cancel))
     
+    present(alert, animated: true)
   }
 }
 
