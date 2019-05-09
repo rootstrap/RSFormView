@@ -47,9 +47,9 @@ class TextFieldView: UIView {
     
     textField.delegate = self
     textField.font = UIFont.systemFont(ofSize: 15)
-    textField.textColor = UIColor.lightGray
+    textField.textColor = UIColor.brightGray
     
-    titleLabel.font = UIFont.systemFont(ofSize: 12)
+    titleLabel.font = UIFont.boldSystemFont(ofSize: 12)
     titleLabel.textColor = UIColor.darkGray
     
     errorLabel.font = UIFont.systemFont(ofSize: 13)
@@ -106,12 +106,12 @@ class TextFieldView: UIView {
   
   func titleValidColor() -> UIColor {
     return textField.isFirstResponder ?
-      UIColor.blue : UIColor.darkGray
+      UIColor.astralBlue.withAlphaComponent(0.8) : UIColor.darkGray
   }
   
   func bottomLineValidColor() -> UIColor {
     return textField.isFirstResponder ?
-      UIColor.blue : UIColor.lightGray
+      UIColor.blizzardBlue : UIColor.lightGray
   }
   
   fileprivate func setKeyboardType() {
@@ -172,7 +172,7 @@ class TextFieldView: UIView {
     textField.attributedPlaceholder =
       NSAttributedString(string: text,
                          attributes: [
-                          .foregroundColor: UIColor.darkGray,
+                          .foregroundColor: UIColor.brightGray,
                           .font: font
         ])
   }
@@ -295,8 +295,8 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    titleLabel.textColor = UIColor.blue
-    bottomLine.backgroundColor = UIColor.blue
+    titleLabel.textColor = UIColor.astralBlue
+    bottomLine.backgroundColor = UIColor.blizzardBlue
     textField.placeholder = ""
     titleLabel.isHidden = false
   }

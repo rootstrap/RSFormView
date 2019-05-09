@@ -10,26 +10,28 @@ import Foundation
 
 extension String {
   func isValid(type: ValidationType) -> Bool {
+    var isValid = true
     switch type {
     case .email:
-      return isEmailFormatted()
+      isValid = isEmailFormatted()
     case .numeric:
-      return isInteger()
+      isValid = isInteger()
     case .usState:
-      return AddressManager.validateState(state: self)
+      isValid = AddressManager.validateState(state: self)
     case .usPhone:
-      return isPhoneNumber()
+      isValid = isPhoneNumber()
     case .fiveDigitZipCode:
-      return isZipCode()
+      isValid = isZipCode()
     case .expiration:
-      return isExpirationDate()
+      isValid = isExpirationDate()
     case .nonEmpty:
-      return !isEmpty
+      isValid = !isEmpty
     case .custom(let evaluator):
-      return evaluator(self)
+      isValid = evaluator(self)
     default:
-      return true
+      break
     }
+    return isValid
   }
   
   //Regex fulfill RFC 5322 Internet Message format

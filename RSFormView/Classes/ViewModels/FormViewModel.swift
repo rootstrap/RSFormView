@@ -24,7 +24,6 @@ public enum ValidationType {
   case email
   case nonEmpty
   case none
-  case date
   case usState
   case expiration
   case fiveDigitZipCode

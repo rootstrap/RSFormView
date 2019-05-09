@@ -13,8 +13,9 @@ class SignupExampleViewModel: FormViewModel {
   var items: [FormItem] = []
   
   init() {
-    items = [nameItem(), emailItem(), addressItem(),
-             cityStateItem(), zipDOBItem(), passwordItem(), confirmPasswordItem()]
+    items = [nameItem(), emailItem(), passwordItem(),
+             confirmPasswordItem(), addressHeaderItem(),
+             addressItem(), cityStateItem(), zipDOBItem()]
   }
   
   enum FieldName: String {
@@ -81,6 +82,14 @@ class SignupExampleViewModel: FormViewModel {
       return value.count > 5 && value == nameValue
     })
     return lastNameField
+  }
+  
+  func addressHeaderItem() -> FormItem {
+    let item = FormItem()
+    item.attributedText = NSAttributedString(string: "Enter your address",
+                                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.8),
+                                                          NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
+    return item
   }
   
   func addressItem() -> FormItem {

@@ -10,7 +10,7 @@ import Foundation
 
 open class FormItem {
   var formFields: [FormField]
-  var attributedText: NSAttributedString?
+  public var attributedText: NSAttributedString?
   
   public init(firstField: FormField? = nil, secondField: FormField? = nil) {
     var fields: [FormField] = []
@@ -49,11 +49,9 @@ open class FormField {
       validationType = .usPhone
     case .email:
       validationType = .email
-    case .date:
-      validationType = .date
     case .expiration:
       validationType = .expiration
-    case .regular:
+    case .regular, .date:
       validationType = .nonEmpty
     case .fiveDigitZipCode:
       validationType = .fiveDigitZipCode
