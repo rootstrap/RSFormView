@@ -181,7 +181,22 @@ class TextFieldView: UIView {
     textField.becomeFirstResponder()
   }
   
-  func propagateUpdates(previousText: String, updatedText: String, data: FormField) {
+  fileprivate func processTextUpdates(with text: String, updatedText: String, data: FormField) {
+    var updatedText = updatedText
+    if data.fieldType == .usPhone &&
+      textField.text?.count ?? 0 < updatedText.count &&
+      [3, 7].contains(updatedText.count) {
+      updatedText += "-"
+    }
+    
+    if data.fieldType == .expiration {
+      updatedText = expirationDate(previousText: text, updatedText: updatedText)
+    }
+    
+    propagateUpdates(previousText: text, updatedText: updatedText, data: data)
+  }
+  
+  fileprivate func propagateUpdates(previousText: String, updatedText: String, data: FormField) {
     var updatedText = updatedText
     updatedText = data.capitalizeValue ? updatedText.capitalized : updatedText
     updatedText = data.uppercaseValue ? updatedText.uppercased() : updatedText
@@ -210,27 +225,27 @@ class TextFieldView: UIView {
       return updatedText
     }
     
-    if previousText.isEmpty {
+    var resultingText = ""
+    switch previousText.count {
+    case 0:
       //if first character is bigger than 1 put zero at the begginning
       //since its typing a month
-      if Int(updatedText) == 1 {
-        return updatedText
-      }
-      
-      if Int(updatedText) ?? 0 > 1 {
-        return "0\(updatedText)/"
-      }
-    }
-    
-    if previousText.count == 1 {
-      if Int(updatedText) ?? 0 > 12 {
-        return previousText
+      if Int(updatedText) ?? 0 <= 1 {
+        resultingText = updatedText
       } else {
-        return "\(updatedText)/"
+        resultingText = "0\(updatedText)/"
       }
+    case 1:
+      if Int(updatedText) ?? 0 > 12 {
+        resultingText = previousText
+      } else {
+        resultingText = "\(updatedText)/"
+      }
+    default:
+      resultingText = updatedText
     }
     
-    return updatedText
+    return resultingText
   }
 }
 
@@ -259,20 +274,12 @@ extension TextFieldView: UITextFieldDelegate {
     
     if let text = textField.text,
       let textRange = Range(range, in: text) {
-      var updatedText = text.replacingCharacters(in: textRange,
+      let updatedText = text.replacingCharacters(in: textRange,
                                                  with: string)
       
-      if data.fieldType == .usPhone &&
-        textField.text?.count ?? 0 < updatedText.count &&
-        [3, 7].contains(updatedText.count) {
-        updatedText += "-"
-      }
-      
-      if data.fieldType == .expiration {
-        updatedText = expirationDate(previousText: text, updatedText: updatedText)
-      }
-      
-      propagateUpdates(previousText: text, updatedText: updatedText, data: data)
+      processTextUpdates(with: text,
+                         updatedText: updatedText,
+                         data: data)
     }
     
     return false
