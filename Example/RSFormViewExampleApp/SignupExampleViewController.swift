@@ -21,11 +21,19 @@ class SignupExampleViewController: UIViewController {
     
     formView.viewModel = viewModel
     formView.delegate = self
+    
+    configureButton()
+  }
+  
+  func configureButton() {
+    getDataButton.clipsToBounds = true
+    getDataButton.layer.cornerRadius = 8
     updateButton(enabled: false)
   }
   
   func updateButton(enabled: Bool) {
-    getDataButton.backgroundColor = enabled ? UIColor.green : UIColor.gray
+    getDataButton.backgroundColor = enabled ?
+      UIColor.astralBlue : UIColor.brightGray.withAlphaComponent(0.4)
     getDataButton.isEnabled = enabled
   }
   
