@@ -34,7 +34,7 @@ class TextFieldView: UIView {
     }
   }
   
-  var formConfigurator: FormConfigurator?
+  var formConfigurator = FormConfigurator()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -50,14 +50,14 @@ class TextFieldView: UIView {
     actualView = addNibView(inBundle: Constants.formViewBundle)
     
     textField.delegate = self
-    textField.font = formConfigurator?.textFont ?? UIFont.systemFont(ofSize: 15)
-    textField.textColor = formConfigurator?.textColor ?? UIColor.brightGray
+    textField.font = formConfigurator.textFont
+    textField.textColor = formConfigurator.textColor
     
-    titleLabel.font = formConfigurator?.titleFont ?? UIFont.boldSystemFont(ofSize: 12)
-    titleLabel.textColor = formConfigurator?.textColor ?? UIColor.darkGray
+    titleLabel.font = formConfigurator.titleFont
+    titleLabel.textColor = formConfigurator.textColor
     
-    errorLabel.font = formConfigurator?.errorFont ?? UIFont.systemFont(ofSize: 13)
-    errorLabel.textColor = formConfigurator?.errorTextColor ?? UIColor.red
+    errorLabel.font = formConfigurator.errorFont
+    errorLabel.textColor = formConfigurator.errorTextColor
     
     let tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tappedView))
@@ -101,32 +101,20 @@ class TextFieldView: UIView {
     let isValid = !fieldData.shouldDisplayError || fieldData.isValid
     
     bottomLine.backgroundColor = isValid ?
-      bottomLineValidColor() : bottomLineInvalidColor()
+      bottomLineValidColor() : formConfigurator.invalidLineColor
     titleLabel.textColor = isValid ?
-      titleValidColor() : titleInvalidColor()
+      titleValidColor() : formConfigurator.invalidTitleColor
     
     errorLabel.text = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
   }
   
-  fileprivate func bottomLineInvalidColor() -> UIColor {
-    return formConfigurator?.invalidLineColor ?? UIColor.red
-  }
-  
-  fileprivate func titleInvalidColor() -> UIColor {
-    return formConfigurator?.invalidTitleColor ?? UIColor.red
-  }
-  
   fileprivate func titleValidColor() -> UIColor {
-    let validColor = formConfigurator?.validTitleColor ?? UIColor.darkGray
-    let editingColor = formConfigurator?.editingTitleColor ?? UIColor.astralBlue.withAlphaComponent(0.8)
-    return textField.isFirstResponder ? editingColor : validColor
+    return textField.isFirstResponder ? formConfigurator.editingTitleColor : formConfigurator.validTitleColor
   }
   
   fileprivate func bottomLineValidColor() -> UIColor {
-    let validColor = formConfigurator?.validLineColor ?? UIColor.lightGray
-    let editingColor = formConfigurator?.editingLineColor ?? UIColor.blizzardBlue
     return textField.isFirstResponder ?
-      editingColor : validColor
+      formConfigurator.editingLineColor : formConfigurator.validLineColor
   }
   
   fileprivate func setKeyboardType() {
@@ -166,12 +154,10 @@ class TextFieldView: UIView {
     textField.inputView = datePicker
   }
   
-  func update(withData data: FormField, formConfigurator: FormConfigurator? = nil) {
+  func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
     self.formConfigurator = formConfigurator
-    if let fieldBackgroundColor = formConfigurator?.fieldsBackgroundColor {
-      actualView?.backgroundColor = fieldBackgroundColor
-    }
+    actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
     updatePlaceHolder(withText: data.placeholder)
     textField.clearButtonMode = data.fieldType == .date ? .never : .whileEditing
     textField.isSecureTextEntry = data.fieldType == .password
@@ -187,11 +173,11 @@ class TextFieldView: UIView {
   }
   
   func updatePlaceHolder(withText text: String) {
-    let font = formConfigurator?.placeholderFont ?? UIFont.systemFont(ofSize: 14)
+    let font = formConfigurator.placeholderFont
     textField.attributedPlaceholder =
       NSAttributedString(string: text,
                          attributes: [
-                          .foregroundColor: formConfigurator?.placeholderTextColor ?? UIColor.brightGray,
+                          .foregroundColor: formConfigurator.placeholderTextColor,
                           .font: font
         ])
   }
@@ -314,8 +300,8 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    titleLabel.textColor = formConfigurator?.editingTitleColor ?? UIColor.astralBlue
-    bottomLine.backgroundColor = formConfigurator?.editingLineColor ?? UIColor.blizzardBlue
+    titleLabel.textColor = formConfigurator.editingTitleColor
+    bottomLine.backgroundColor = formConfigurator.editingLineColor
     textField.placeholder = ""
     titleLabel.isHidden = false
   }

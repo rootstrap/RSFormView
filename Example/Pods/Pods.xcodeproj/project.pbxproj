@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		26939BE6EE6866EF6441313BD75DA7D7 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5DABFFBF7F8A474306A9F264A9549E /* TextFieldCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		28F035D990738984F8D59B8725C72BB8 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F68FAC1630C255C954427A690F836 /* IQKeyboardReturnKeyHandler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2CEA2E48979918BDD3DE0061E1046B40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD90DBE73F999446D26C8425578A052 /* Constants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3706890519585E8B3D1015FD90100B02 /* FormConfiguratior.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FBE3003918BFEEF411A0220A08E42C /* FormConfiguratior.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3706890519585E8B3D1015FD90100B02 /* FormConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FBE3003918BFEEF411A0220A08E42C /* FormConfigurator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3A737A0E9032276F8F72517297CE41BF /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667F0A75AFA5862A78047382EC8759A7 /* IQUIView+Hierarchy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		459B35C6453E8340EE6F1FC48885CD72 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC6107DFB4373F975897979D9D934B4 /* IQPreviousNextView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		488ACF7668572E0B91FAA59FA856C75E /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F36FC0B674DF110E1038B0FC1009DF /* AddressManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -94,13 +94,13 @@
 		49E84B717785B3FE6F9216377100321A /* FormViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FormViewCell.xib; sourceTree = "<group>"; };
 		4D45C46349466B2D7964C1B796C7EA74 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		4D84DA677B8A7D08CEA5B0D71F3C0021 /* TwoTextFieldsCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TwoTextFieldsCell.xib; sourceTree = "<group>"; };
-		5145F4351B91AD097A6C01C71A24678B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5145F4351B91AD097A6C01C71A24678B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52C9BAF41C67DB092BBFBAF1D0ABD3A8 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		52E74445BFBD8EC45021FC401E069BFF /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
 		55FA0BE010E621EF36BA88AE8FEE146A /* FormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		5AD18C626A6B8F79EFD1DAF239AAEFF8 /* RSFormView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RSFormView-umbrella.h"; path = "../../Headers/Public/RSFormView/RSFormView-umbrella.h"; sourceTree = "<group>"; };
 		5C0F56C6F7AEB97C892C3D8CF0F122DA /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
-		5DD30B07EB4E971A810899A6E87DAD07 /* libRSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRSFormView.a; path = libRSFormView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD30B07EB4E971A810899A6E87DAD07 /* libRSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFormView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		667F0A75AFA5862A78047382EC8759A7 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		6B5DABFFBF7F8A474306A9F264A9549E /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		6FBA203BF4AD36D6012F23DB7BECD208 /* FormTextCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormTextCell.swift; sourceTree = "<group>"; };
@@ -111,16 +111,16 @@
 		785DE28DEB4AC62034383FFF3789D26F /* Pods-RSFormViewExampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RSFormViewExampleApp-umbrella.h"; sourceTree = "<group>"; };
 		896E3D5C70BD6C6F914F9DEA4D50EEBC /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		922D68E10E041B1F3BF9D7FB05A7F494 /* TextFieldView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		942F68FAC1630C255C954427A690F836 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		94FB1AEDA59A31B6490C3601D2C7A4BD /* Pods-RSFormViewExampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSFormViewExampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9660CF76D59F61776F7DBD834DA692D7 /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
 		98119E0410B34E3113EB82D8B3FAB838 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
 		99B67DF83BD65A7A3739BBB2970135C6 /* RSFormView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSFormView-dummy.m"; sourceTree = "<group>"; };
 		9A1FBC9A523DCFA833834FC91AF2F2DE /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
-		9C7D8E2943091C9041F3739A99E14C6D /* libIQKeyboardManagerSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIQKeyboardManagerSwift.a; path = libIQKeyboardManagerSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CFD2E7E2776D4BA4EC41C2B6B069806 /* RSFormView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RSFormView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A07857C7826C194C30834AA5CF358319 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9C7D8E2943091C9041F3739A99E14C6D /* libIQKeyboardManagerSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManagerSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFD2E7E2776D4BA4EC41C2B6B069806 /* RSFormView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = RSFormView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A07857C7826C194C30834AA5CF358319 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A1A94F8638CCBA0F0BB4356AB8D8CADC /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AD403F6A21DD322806AA0F2F55ADCF08 /* FormViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		AD70E5B37DD1EBA04BC19A736A065111 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
@@ -130,13 +130,13 @@
 		B75F186F99C4EEA8D0D61C15DFDF134B /* RSFormView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSFormView.xcconfig; sourceTree = "<group>"; };
 		B9F36FC0B674DF110E1038B0FC1009DF /* AddressManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AddressManager.swift; sourceTree = "<group>"; };
 		BDE3306F8A621D9277D3BF749E2587C5 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQKeyboardManagerSwift-umbrella.h"; path = "../../Headers/Public/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
-		C1FBE3003918BFEEF411A0220A08E42C /* FormConfiguratior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormConfiguratior.swift; sourceTree = "<group>"; };
+		C1FBE3003918BFEEF411A0220A08E42C /* FormConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormConfigurator.swift; sourceTree = "<group>"; };
 		C80DA5C4BC0C1D977DDC53678D406A30 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		D3D378707FD2A92265FE9C346B839F9C /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		D56348597C0DD615177C5C15A774BCF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D74326B3BAFA09FCC0363B73E16FA32E /* ViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		D7F51CC089CC357347E53E32FA40EB94 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		D800E3109ACE508DFE1646A9118E3257 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RSFormViewExampleApp.a"; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D800E3109ACE508DFE1646A9118E3257 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E002A39A6B737D9174E1DD19EC8D1842 /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
 		E89163E94743FDDD60913C47150E225B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F5CED9D026E4989B7EBE5F6983CD6D80 /* Pods-RSFormViewExampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSFormViewExampleApp-dummy.m"; sourceTree = "<group>"; };
@@ -196,7 +196,6 @@
 			children = (
 				3D0DDE0221672DE4D532BA6447787898 /* FormView.swift */,
 			);
-			name = Form;
 			path = Form;
 			sourceTree = "<group>";
 		};
@@ -263,7 +262,6 @@
 				6D4384FAE9D241CC81E3E86B32333D8D /* Resources */,
 				1ACE1A7AF0B23E52C00A70F3987AE622 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -274,7 +272,6 @@
 				6B5DABFFBF7F8A474306A9F264A9549E /* TextFieldCell.swift */,
 				2C3DBD798BAA06F75BD22E30C59B4FF7 /* TwoTextFieldsCell.swift */,
 			);
-			name = Cell;
 			path = Cell;
 			sourceTree = "<group>";
 		};
@@ -291,7 +288,7 @@
 			children = (
 				B9F36FC0B674DF110E1038B0FC1009DF /* AddressManager.swift */,
 				1BD90DBE73F999446D26C8425578A052 /* Constants.swift */,
-				C1FBE3003918BFEEF411A0220A08E42C /* FormConfiguratior.swift */,
+				C1FBE3003918BFEEF411A0220A08E42C /* FormConfigurator.swift */,
 				55FA0BE010E621EF36BA88AE8FEE146A /* FormField.swift */,
 			);
 			name = Models;
@@ -359,7 +356,6 @@
 			children = (
 				73344EBE05028B75CC3C2EDC1EBFE398 /* TextFieldView.swift */,
 			);
-			name = TextField;
 			path = TextField;
 			sourceTree = "<group>";
 		};
@@ -551,6 +547,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -589,7 +586,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 		E789768DB8D3344D5B6833D94F4D9D35 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -614,7 +610,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/RSFormView/RSFormView.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/RSFormView/RSFormView-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -658,7 +653,7 @@
 				488ACF7668572E0B91FAA59FA856C75E /* AddressManager.swift in Sources */,
 				C2E65C16FCAE3E087DA017510271605C /* ColorExtension.swift in Sources */,
 				2CEA2E48979918BDD3DE0061E1046B40 /* Constants.swift in Sources */,
-				3706890519585E8B3D1015FD90100B02 /* FormConfiguratior.swift in Sources */,
+				3706890519585E8B3D1015FD90100B02 /* FormConfigurator.swift in Sources */,
 				FC420D2E2D984EE5112E6E6C917B3686 /* FormField.swift in Sources */,
 				C93F986AA6C5983CF23201ABB6D315BA /* FormTextCell.swift in Sources */,
 				501578990FD2EF932FF8385ACADC9EE1 /* FormView.swift in Sources */,
@@ -716,8 +711,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -743,8 +737,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -771,8 +764,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

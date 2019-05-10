@@ -29,11 +29,9 @@ class TextFieldCell: UITableViewCell, FormViewCell {
     textFieldView.delegate = self
   }
   
-  func update(withData data: FormField, formConfigurator: FormConfigurator? = nil) {
-    if let cellBackgroundColor = formConfigurator?.fieldsBackgroundColor {
-      contentView.backgroundColor = cellBackgroundColor
-      backgroundColor = cellBackgroundColor
-    }
+  func update(withData data: FormField, formConfigurator: FormConfigurator) {
+    contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
+    backgroundColor = formConfigurator.fieldsBackgroundColor
     textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
   

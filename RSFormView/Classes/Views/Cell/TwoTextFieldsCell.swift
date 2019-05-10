@@ -23,16 +23,14 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     secondTextField.delegate = self
   }
   
-  func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator? = nil) {
+  func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator) {
     guard formItem.formFields.count == 2 else { return }
     
     let firstFieldData = formItem.formFields[0]
     let secondFieldData = formItem.formFields[1]
-    
-    if let cellBackgroundColor = formConfigurator?.fieldsBackgroundColor {
-      contentView.backgroundColor = cellBackgroundColor
-      backgroundColor = cellBackgroundColor
-    }
+  
+    contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
+    backgroundColor = formConfigurator.fieldsBackgroundColor
     
     update(textFieldView: firstTextField,
            withData: firstFieldData,
@@ -42,7 +40,7 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
            formConfigurator: formConfigurator)
   }
   
-  func update(textFieldView: TextFieldView, withData data: FormField, formConfigurator: FormConfigurator? = nil) {
+  func update(textFieldView: TextFieldView, withData data: FormField, formConfigurator: FormConfigurator) {
     textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
   

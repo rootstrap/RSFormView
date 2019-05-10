@@ -20,12 +20,10 @@ public protocol FormViewDelegate: class {
   
   public weak var delegate: FormViewDelegate?
   public var viewModel: FormViewModel?
-  public var formConfigurator: FormConfigurator? {
+  public var formConfigurator = FormConfigurator() {
     didSet {
-      if let formBackgroundColor = formConfigurator?.formBackgroundColor {
-        backgroundColor = formBackgroundColor
-        formTableView.backgroundColor = formBackgroundColor
-      }
+      backgroundColor = formConfigurator.formBackgroundColor
+      formTableView.backgroundColor = formConfigurator.formBackgroundColor
       formTableView.reloadData()
     }
   }
