@@ -20,6 +20,8 @@ class TextFieldView: UIView {
   @IBOutlet weak var errorLabel: UILabel!
   @IBOutlet weak var bottomLine: UIView!
   
+  var actualView: UIView?
+  
   static let dateFormat = "MM/dd/yyyy"
   
   var lastCursorPosition: Int?
@@ -32,6 +34,8 @@ class TextFieldView: UIView {
     }
   }
   
+  var formConfigurator = FormConfigurator()
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     configureViews()
@@ -43,17 +47,17 @@ class TextFieldView: UIView {
   }
   
   func configureViews() {
-    _ = addNibView(inBundle: Constants.formViewBundle)
+    actualView = addNibView(inBundle: Constants.formViewBundle)
     
     textField.delegate = self
-    textField.font = UIFont.systemFont(ofSize: 15)
-    textField.textColor = UIColor.brightGray
+    textField.font = formConfigurator.textFont
+    textField.textColor = formConfigurator.textColor
     
-    titleLabel.font = UIFont.boldSystemFont(ofSize: 12)
-    titleLabel.textColor = UIColor.darkGray
+    titleLabel.font = formConfigurator.titleFont
+    titleLabel.textColor = formConfigurator.textColor
     
-    errorLabel.font = UIFont.systemFont(ofSize: 13)
-    errorLabel.textColor = UIColor.red
+    errorLabel.font = formConfigurator.errorFont
+    errorLabel.textColor = formConfigurator.errorTextColor
     
     let tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tappedView))
@@ -97,21 +101,20 @@ class TextFieldView: UIView {
     let isValid = !fieldData.shouldDisplayError || fieldData.isValid
     
     bottomLine.backgroundColor = isValid ?
-      bottomLineValidColor() : UIColor.red
+      bottomLineValidColor() : formConfigurator.invalidLineColor
     titleLabel.textColor = isValid ?
-      titleValidColor() : UIColor.red
+      titleValidColor() : formConfigurator.invalidTitleColor
     
     errorLabel.text = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
   }
   
-  func titleValidColor() -> UIColor {
-    return textField.isFirstResponder ?
-      UIColor.astralBlue.withAlphaComponent(0.8) : UIColor.darkGray
+  fileprivate func titleValidColor() -> UIColor {
+    return textField.isFirstResponder ? formConfigurator.editingTitleColor : formConfigurator.validTitleColor
   }
   
-  func bottomLineValidColor() -> UIColor {
+  fileprivate func bottomLineValidColor() -> UIColor {
     return textField.isFirstResponder ?
-      UIColor.blizzardBlue : UIColor.lightGray
+      formConfigurator.editingLineColor : formConfigurator.validLineColor
   }
   
   fileprivate func setKeyboardType() {
@@ -151,8 +154,10 @@ class TextFieldView: UIView {
     textField.inputView = datePicker
   }
   
-  func update(withData data: FormField) {
+  func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
+    self.formConfigurator = formConfigurator
+    actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
     updatePlaceHolder(withText: data.placeholder)
     textField.clearButtonMode = data.fieldType == .date ? .never : .whileEditing
     textField.isSecureTextEntry = data.fieldType == .password
@@ -168,11 +173,11 @@ class TextFieldView: UIView {
   }
   
   func updatePlaceHolder(withText text: String) {
-    let font = UIFont.systemFont(ofSize: 14)
+    let font = formConfigurator.placeholderFont
     textField.attributedPlaceholder =
       NSAttributedString(string: text,
                          attributes: [
-                          .foregroundColor: UIColor.brightGray,
+                          .foregroundColor: formConfigurator.placeholderTextColor,
                           .font: font
         ])
   }
@@ -295,8 +300,8 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    titleLabel.textColor = UIColor.astralBlue
-    bottomLine.backgroundColor = UIColor.blizzardBlue
+    titleLabel.textColor = formConfigurator.editingTitleColor
+    bottomLine.backgroundColor = formConfigurator.editingLineColor
     textField.placeholder = ""
     titleLabel.isHidden = false
   }

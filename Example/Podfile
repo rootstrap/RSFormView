@@ -1,5 +1,6 @@
 
 platform :ios, '10.0'
+inhibit_all_warnings!
 
 target 'RSFormViewExampleApp' do
    pod 'IQKeyboardManagerSwift', '~> 6.1.1'
