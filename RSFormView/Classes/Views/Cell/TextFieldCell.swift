@@ -29,8 +29,12 @@ class TextFieldCell: UITableViewCell, FormViewCell {
     textFieldView.delegate = self
   }
   
-  func update(withData data: FormField) {
-    textFieldView.update(withData: data)
+  func update(withData data: FormField, formConfigurator: FormConfigurator? = nil) {
+    if let cellBackgroundColor = formConfigurator?.fieldsBackgroundColor {
+      contentView.backgroundColor = cellBackgroundColor
+      backgroundColor = cellBackgroundColor
+    }
+    textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
   
   func updateErrorState() {
@@ -44,7 +48,7 @@ class TextFieldCell: UITableViewCell, FormViewCell {
 
 extension TextFieldCell: TextFieldDelegate {
   func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
-    update(withData: fieldData)
+    textFieldView.textField.text = fieldData.value
     delegate?.didUpdate(data: fieldData)
   }
 }

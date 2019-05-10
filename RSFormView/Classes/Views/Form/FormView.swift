@@ -20,6 +20,15 @@ public protocol FormViewDelegate: class {
   
   public weak var delegate: FormViewDelegate?
   public var viewModel: FormViewModel?
+  public var formConfigurator: FormConfigurator? {
+    didSet {
+      if let formBackgroundColor = formConfigurator?.formBackgroundColor {
+        backgroundColor = formBackgroundColor
+        formTableView.backgroundColor = formBackgroundColor
+      }
+      formTableView.reloadData()
+    }
+  }
   
   public init(with viewModel: FormViewModel) {
     super.init(frame: CGRect.zero)
@@ -108,7 +117,7 @@ public protocol FormViewDelegate: class {
       let cell = tableView
         .dequeueReusableCell(withIdentifier: TextFieldCell.reuseIdentifier,
                              for: indexPath) as? TextFieldCell {
-      cell.update(withData: fieldData)
+      cell.update(withData: fieldData, formConfigurator: formConfigurator)
       cell.delegate = self
       return cell
     }
@@ -119,7 +128,7 @@ public protocol FormViewDelegate: class {
       formItem.formFields.count == 2,
       let cell = cell as? TwoTextFieldsCell {
       cell.delegate = self
-      cell.update(withFormItem: formItem)
+      cell.update(withFormItem: formItem, formConfigurator: formConfigurator)
     }
     
     return cell
@@ -151,7 +160,7 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
       let cell = tableView
         .dequeueReusableCell(withIdentifier: FormTextCell.reuseIdentifier,
                              for: indexPath) as? FormTextCell {
-      cell.update(withAttributedText: attributtedText)
+      cell.update(withAttributedText: attributtedText, formConfigurator: formConfigurator)
       return cell
     }
     

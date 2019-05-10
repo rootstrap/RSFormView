@@ -14,7 +14,11 @@ class FormTextCell: UITableViewCell {
   static let reuseIdentifier = "FormTextCellIdentifier"
   @IBOutlet weak var formTextLabel: UILabel!
   
-  func update(withAttributedText attributedText: NSAttributedString) {
+  func update(withAttributedText attributedText: NSAttributedString, formConfigurator: FormConfigurator? = nil) {
+    if let cellBackgroundColor = formConfigurator?.fieldsBackgroundColor {
+      contentView.backgroundColor = cellBackgroundColor
+      backgroundColor = cellBackgroundColor
+    }
     formTextLabel.attributedText = attributedText
   }
 }

@@ -23,18 +23,27 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     secondTextField.delegate = self
   }
   
-  func update(withFormItem formItem: FormItem) {
+  func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator? = nil) {
     guard formItem.formFields.count == 2 else { return }
     
     let firstFieldData = formItem.formFields[0]
     let secondFieldData = formItem.formFields[1]
     
-    update(textFieldView: firstTextField, withData: firstFieldData)
-    update(textFieldView: secondTextField, withData: secondFieldData)
+    if let cellBackgroundColor = formConfigurator?.fieldsBackgroundColor {
+      contentView.backgroundColor = cellBackgroundColor
+      backgroundColor = cellBackgroundColor
+    }
+    
+    update(textFieldView: firstTextField,
+           withData: firstFieldData,
+           formConfigurator: formConfigurator)
+    update(textFieldView: secondTextField,
+           withData: secondFieldData,
+           formConfigurator: formConfigurator)
   }
   
-  func update(textFieldView: TextFieldView, withData data: FormField) {
-    textFieldView.update(withData: data)
+  func update(textFieldView: TextFieldView, withData data: FormField, formConfigurator: FormConfigurator? = nil) {
+    textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
   
   func updateErrorState() {
@@ -46,7 +55,6 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
 extension TwoTextFieldsCell: TextFieldDelegate {
   func didUpdate(textFieldView: TextFieldView, with fieldData: FormField) {
     textFieldView.textField.text = fieldData.value
-    update(textFieldView: textFieldView, withData: fieldData)
     delegate?.didUpdate(data: fieldData)
   }
 }
