@@ -18,6 +18,8 @@ pod "RSFormView"
 ## Usage
 
 1. Add a FormView to your view controller, you can do this either programatically or via Storyboards.
+
+
 Programatically: 
 ```swift
 let formView = FormView(frame: frame)
@@ -42,12 +44,16 @@ formView.delegate = self
 ```
 
 4. Set a FormViewModel to your formView
+
+
 A `FormViewModel` can be any class that implements the `FormViewModel` delegate. 
 For a class to implement `FormViewModel` delegate  you only need to define an array of `FormItem`
 Each `FormItem` will determine the behavior and validation of each text field in your form. 
 `FormItem` can be a text field, two text fields in line or a "section header"
 
 5. Configure your form looks
+
+
 Create a `FormConfigurator` change any colors or fonts you need and set it to your form view
 ```swift
 let configurator = FormConfigurator()
@@ -55,6 +61,8 @@ configurator.textColor = UIColor.red
 formView.formConfirator = yourFormConfigurator
 ```
 6. Collect data
+
+
 Any text entry made in your form will be collected in your `FormViewModel`  `items`. 
 Since you may have more than one text field per item a better way for collecting your data is taking use of the `fields()` function of the `FormViewModel`, like this:
 ```swift
@@ -66,7 +74,7 @@ formViewModel.fields().forEach {
   case "Birthdate":
     user.birthdate = $0.value
   default:
-    print("\($0.name): \($0.value))
+    print("\($0.name): \($0.value)")
   }
 }
 ```
