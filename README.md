@@ -36,7 +36,7 @@ and implement
 ```swift
 func didUpdateFields(allFieldsValid: Bool)
 ```
-This function will be called any time a user enters any data in the form, so it's a great place to update other views dependant of the entered data.
+This function will be called any time a user enters any data in the form, so it's a great place to update other views dependent on the entered data.
 
 3. Set your view controller as the FormView delegate
 ```swift
