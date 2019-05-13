@@ -8,6 +8,8 @@
 
 RSFormView is a library that helps you build fully customizable forms for data entry in a few minutes. 
 
+![](formExample.gif)
+
 ## Installation
 
 RSFormView is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
