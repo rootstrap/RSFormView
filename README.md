@@ -154,3 +154,9 @@ formItem.attributedString = attributedString
 ## Example App
 
 Clone this repo and run the example app to take a look at some of the RSFormView functionalities 
+
+## Contribute
+
+To contribute to this library: fork this repository and create a Pull Request from your fork, detailing what are you improving/extending, the approach taken and screenshots to proof functionality added.
+
+You can also open issues in this repository and our team will tackle them as soon as possible. 
