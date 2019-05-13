@@ -46,49 +46,6 @@ class TextFieldView: UIView {
     configureViews()
   }
   
-  func configureViews() {
-    actualView = addNibView(inBundle: Constants.formViewBundle)
-    
-    textField.delegate = self
-    textField.font = formConfigurator.textFont
-    textField.textColor = formConfigurator.textColor
-    
-    titleLabel.font = formConfigurator.titleFont
-    titleLabel.textColor = formConfigurator.textColor
-    
-    errorLabel.font = formConfigurator.errorFont
-    errorLabel.textColor = formConfigurator.errorTextColor
-    
-    let tapGesture = UITapGestureRecognizer(target: self,
-                                            action: #selector(tappedView))
-    addGestureRecognizer(tapGesture)
-    updateErrorState()
-  }
-  
-  func saveCursorPosition() {
-    if let selectedRange = textField.selectedTextRange {
-      lastCursorPosition = textField.offset(from: textField.beginningOfDocument,
-                                            to: selectedRange.start)
-    }
-  }
-  
-  func setCursorPosition(isDeleting: Bool = false) {
-    guard let lastCursorPosition = lastCursorPosition,
-      fieldData?.fieldType != .usPhone,
-      fieldData?.fieldType != .expiration,
-      textField.selectedTextRange != nil else {
-        self.lastCursorPosition = nil
-        return
-    }
-    
-    if let newPosition = textField.position(from: textField.beginningOfDocument,
-                                            offset: lastCursorPosition + (isDeleting ? -1 : 1)) {
-      textField.selectedTextRange = textField.textRange(from: newPosition, to: newPosition)
-    }
-    
-    self.lastCursorPosition = nil
-  }
-  
   func updateErrorState() {
     guard let fieldData = fieldData else { return }
     if fieldData.validationMatch == nil {
@@ -106,52 +63,6 @@ class TextFieldView: UIView {
       titleValidColor() : formConfigurator.invalidTitleColor
     
     errorLabel.text = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
-  }
-  
-  fileprivate func titleValidColor() -> UIColor {
-    return textField.isFirstResponder ? formConfigurator.editingTitleColor : formConfigurator.validTitleColor
-  }
-  
-  fileprivate func bottomLineValidColor() -> UIColor {
-    return textField.isFirstResponder ?
-      formConfigurator.editingLineColor : formConfigurator.validLineColor
-  }
-  
-  fileprivate func setKeyboardType() {
-    guard let fieldData = fieldData else { return }
-    switch fieldData.fieldType {
-    case .numeric, .usPhone, .fiveDigitZipCode, .expiration:
-      textField.keyboardType = .numberPad
-    case .email:
-      textField.keyboardType = .emailAddress
-    default:
-      textField.keyboardType = .default
-    }
-  }
-  
-  func configureFormPicker() {
-    guard let fieldData = fieldData,
-      fieldData.fieldType == .date else {
-        textField.inputView = nil
-        return
-    }
-    
-    let datePicker = UIDatePicker()
-    
-    if fieldData.value != "" {
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = TextFieldView.dateFormat
-      if let date = dateFormatter.date(from: fieldData.value) {
-        datePicker.date = date
-      }
-    }
-    datePicker.datePickerMode = .date
-    datePicker.minimumDate = fieldData.minimunDate
-    datePicker.maximumDate = fieldData.maximumDate
-    datePicker.addTarget(self,
-                         action: #selector(datePickerChangedValue),
-                         for: .valueChanged)
-    textField.inputView = datePicker
   }
   
   func update(withData data: FormField, formConfigurator: FormConfigurator) {
@@ -186,71 +97,9 @@ class TextFieldView: UIView {
     textField.becomeFirstResponder()
   }
   
-  fileprivate func processTextUpdates(with text: String, updatedText: String, data: FormField) {
-    var updatedText = updatedText
-    if data.fieldType == .usPhone &&
-      textField.text?.count ?? 0 < updatedText.count &&
-      [3, 7].contains(updatedText.count) {
-      updatedText += "-"
-    }
-    
-    if data.fieldType == .expiration {
-      updatedText = expirationDate(previousText: text, updatedText: updatedText)
-    }
-    
-    propagateUpdates(previousText: text, updatedText: updatedText, data: data)
-  }
-  
-  fileprivate func propagateUpdates(previousText: String, updatedText: String, data: FormField) {
-    var updatedText = updatedText
-    updatedText = data.capitalizeValue ? updatedText.capitalized : updatedText
-    updatedText = data.uppercaseValue ? updatedText.uppercased() : updatedText
-    if data.fieldType == .usState {
-      updatedText = updatedText.count > 2 ? updatedText.capitalized : updatedText.uppercased()
-    }
-    let isDeleting = updatedText.count < previousText.count
-    data.oneTimeErrorMessage = nil
-    data.value = updatedText
-    data.shouldDisplayError = true
-    
-    validate(with: updatedText)
-    saveCursorPosition()
-    delegate?.didUpdate(textFieldView: self, with: data)
-    setCursorPosition(isDeleting: isDeleting)
-  }
-  
   func validate(with text: String) {
     guard let data = fieldData else { return }
     data.isValid = data.value.isValid(type: data.validationType ?? data.defaultValidationType)
-  }
-  
-  func expirationDate(previousText: String, updatedText: String) -> String {
-    if updatedText.count < previousText.count {
-      //if deleting we don't need to do any manipulation
-      return updatedText
-    }
-    
-    var resultingText = ""
-    switch previousText.count {
-    case 0:
-      //if first character is bigger than 1 put zero at the begginning
-      //since its typing a month
-      if Int(updatedText) ?? 0 <= 1 {
-        resultingText = updatedText
-      } else {
-        resultingText = "0\(updatedText)/"
-      }
-    case 1:
-      if Int(updatedText) ?? 0 > 12 {
-        resultingText = previousText
-      } else {
-        resultingText = "\(updatedText)/"
-      }
-    default:
-      resultingText = updatedText
-    }
-    
-    return resultingText
   }
 }
 
