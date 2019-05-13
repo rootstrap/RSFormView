@@ -68,7 +68,7 @@ formView.formConfigurator = configurator
 
 
 Any text entry made in your form will be collected in your `FormViewModel`  `items`. 
-Since you may have more than one text field per item a better way for collecting your data is taking use of the `fields()` function of the `FormViewModel`, like this:
+Since you may have more than one text field per item a better way for collecting your data is making use of the `fields()` function of the `FormViewModel`, like this:
 ```swift
 var user = User()
 formViewModel.fields().forEach {
