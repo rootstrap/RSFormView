@@ -50,6 +50,7 @@ A `FormViewModel` can be any class that implements the `FormViewModel` delegate.
 For a class to implement `FormViewModel` delegate  you only need to define an array of `FormItem`
 Each `FormItem` will determine the behavior and validation of each text field in your form. 
 `FormItem` can be a text field, two text fields in line or a "section header"
+More about fields configuration in the `FormItem` section.
 
 5. Configure your form looks
 
@@ -57,7 +58,7 @@ Each `FormItem` will determine the behavior and validation of each text field in
 Create a `FormConfigurator` change any colors or fonts you need and set it to your form view
 ```swift
 let configurator = FormConfigurator()
-configurator.textColor = UIColor.lughtGray
+configurator.textColor = UIColor.lightGray
 configurator.validTitleColor = UIColor.blue
 configurator.titleFont = UIFont.systemFont(withSize: 13)
 ...
