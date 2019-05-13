@@ -91,13 +91,13 @@ Cases:
  - date: Will present a native date picker when the field is selected and validate that the entry is not empty
  - numeric: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
  - password: Will mask the text entry in UI and validate that the text entry is not empty
- - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number  
+ - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number format  
  
  Check `FieldType` definition for more supported cases. 
  
  ## ValidationType 
  
- `validationType` is a FormField property that determines the validation behaviour of the represented TextField
+ `validationType` is a `FormField` property that determines the validation behaviour of the represented TextField
  Different `FieldType`s provide different default validations but the validation can be overriden by setting the `FormField` a `ValidationType` 
  
  Cases: 
@@ -149,3 +149,7 @@ let attributedString = NSAttributedString(...)
 let formItem = FormItem()
 formItem.attributedString = attributedString
 ```
+
+## Example App
+
+Clone this repo and run the example app to take a look at some of the RSFormView functionalities 
