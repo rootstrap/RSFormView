@@ -98,8 +98,8 @@ Cases:
  
  ## ValidationType 
  
- `validationType` is a `FormField` property that determines the validation behaviour of the represented TextField
- Different `FieldType`s provide different default validations but the validation can be overriden by setting the `FormField` a `ValidationType` 
+ `validationType` is a `FormField` property that determines the validation behaviour of the represented TextField.
+ Different `FieldType`s provide different default validations but the validation can be overriden by setting a `ValidationType` to the `FormField`.
  
  Cases: 
  - nonEmpty: Will mark the field invalid if the text entry is empty
