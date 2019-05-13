@@ -47,7 +47,7 @@ formView.delegate = self
 
 
 A `FormViewModel` can be any class that implements the `FormViewModel` delegate. 
-For a class to implement `FormViewModel` delegate  you only need to define an array of `FormItem`
+For a class to implement `FormViewModel` delegate  you only need to define an array of `FormItem`.
 Each `FormItem` will determine the behavior and validation of each text field in your form. 
 `FormItem` can be a text field, two text fields in line or a "section header"
 More about fields configuration in the `FormItem` section.
