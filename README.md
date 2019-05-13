@@ -110,10 +110,10 @@ Cases:
 
 Custom example: 
 ```swift
-yourTextField.validationType = .custom(evaluator: { [weak self] updatedValue in
-  let otherTextField = self?.fields().first { $0.name == "OtherTextFieldName" }
-  let otherTextFieldValue = otherTextField?.value ?? ""
-  return updatedValue.count > 5 && updatedValue == otherTextFieldValue
+yourFormField.validationType = .custom(evaluator: { [weak self] updatedValue in
+  let otherFormField = self?.fields().first { $0.name == "OtherFormFieldName" }
+  let otherFormFieldValue = otherFormField?.value ?? ""
+  return updatedValue.count > 5 && updatedValue == otherFormFieldValue
 })
 //In this example the field will be marked valid if the text entry has mora characters than 5 and its text entry is the same as the field with identifier "OtherTextFieldName"  
 ```
