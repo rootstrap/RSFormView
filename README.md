@@ -151,6 +151,16 @@ let formItem = FormItem()
 formItem.attributedString = attributedString
 ```
 
+## Server Side Validation
+
+To manually mark fields invalid (for example after a server side validation) you can simply do:
+
+``` swift
+yourFormView.markItemInvalid(fieldName: "EmailFieldName", errorMessage: "Oops, This email is already taken")
+```
+
+After the user makes any edit in the invalid field the field will no longer be marked invalid unless the validation doesn;t pass.
+
 ## Example App
 
 Clone this repo and run the example app to take a look at some of the RSFormView functionalities 
