@@ -103,7 +103,7 @@ Cases:
  Cases: 
  - nonEmpty: Will mark the field invalid if the text entry is empty
  - none: No validation will be made, the field will never be marked invalid unless manually made so
- - numeric: Will mark the field invalid is the text entry is not a number
+ - numeric: Will mark the field invalid if the text entry is not a number
  - usState: Will validate that the text entry matches the name or abbreviation of any of the US states
  - custom: Pass this case a block with your custom validation.
 
