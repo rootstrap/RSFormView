@@ -62,7 +62,7 @@ configurator.textColor = UIColor.lightGray
 configurator.validTitleColor = UIColor.blue
 configurator.titleFont = UIFont.systemFont(withSize: 13)
 ...
-formView.formConfigurator = yourFormConfigurator
+formView.formConfigurator = configurator
 ```
 6. Collect data
 
