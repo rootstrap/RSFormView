@@ -89,7 +89,7 @@ internal extension TextFieldView {
       }
     }
     datePicker.datePickerMode = .date
-    datePicker.minimumDate = fieldData.minimunDate
+    datePicker.minimumDate = fieldData.minimumDate
     datePicker.maximumDate = fieldData.maximumDate
     datePicker.addTarget(self,
                          action: #selector(datePickerChangedValue),
