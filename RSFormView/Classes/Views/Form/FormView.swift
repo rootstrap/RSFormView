@@ -43,6 +43,7 @@ public protocol FormViewDelegate: class {
     configureViews()
   }
   
+  /// Updates the error state for every visible FormItems
   public func reloadVisibleCells() {
     for cell in formTableView.visibleCells {
       if let cell = cell as? FormViewCell {
@@ -51,6 +52,13 @@ public protocol FormViewDelegate: class {
     }
   }
   
+  /**
+   Marks the field with name equal to *fieldName* as invalid with *error* as error message
+   
+   - Parameters:
+      - fieldName: The name of the field to mark as invalid
+      - error: The error message to display for the invalid item
+  */
   public func markItemInvalid(fieldName: String, error: String) {
     viewModel?.markItemInvalid(fieldName: fieldName, error: error)
     reloadVisibleCells()

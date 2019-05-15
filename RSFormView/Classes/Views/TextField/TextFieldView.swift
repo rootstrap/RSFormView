@@ -46,6 +46,7 @@ class TextFieldView: UIView {
     configureViews()
   }
   
+  /// Updates TextFieldView layout according of the validation state of the related FormField
   func updateErrorState() {
     guard let fieldData = fieldData else { return }
     if fieldData.validationMatch == nil {
@@ -65,6 +66,13 @@ class TextFieldView: UIView {
     errorLabel.text = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
   }
   
+  /**
+   Updates TextFieldView according to the FormField specifications
+   
+   - Parameters:
+      - data: Model that describes the behaviour of the TextFieldView instance
+      - formConfigurator: Model that describes the layout of the TextFieldView instance
+  */
   func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
     self.formConfigurator = formConfigurator

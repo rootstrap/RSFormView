@@ -33,8 +33,13 @@ public enum ValidationType {
 }
 
 public protocol FormViewModel: class {
+  /// Data Source of the FormView, its value will define the amount of rows, text fields per row, and row behaviour.
   var items: [FormItem] { get set }
+  
+  /// Returns a bool stating if all fields in FormView are valid. A default implementation is provided.
   func validateFields() -> Bool
+  
+  /// Returns every FormField in items
   func fields() -> [FormField]
 }
 
