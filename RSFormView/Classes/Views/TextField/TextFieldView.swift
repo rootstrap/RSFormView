@@ -63,7 +63,12 @@ class TextFieldView: UIView {
     titleLabel.textColor = isValid ?
       titleValidColor() : formConfigurator.invalidTitleColor
     
-    errorLabel.text = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
+    let errorText = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
+    errorLabel.text = errorText
+    
+    errorLabel.accessibilityIdentifier = "Error\(fieldData.name)"
+    errorLabel.accessibilityLabel = "Error\(fieldData.name)"
+    errorLabel.accessibilityTraits = .staticText
   }
   
   /**
@@ -75,6 +80,10 @@ class TextFieldView: UIView {
   */
   func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
+    isAccessibilityElement = false
+    titleLabel.isAccessibilityElement = false
+    textField.accessibilityIdentifier = data.name
+    textField.accessibilityLabel = data.name
     self.formConfigurator = formConfigurator
     actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
     updatePlaceHolder(withText: data.placeholder)

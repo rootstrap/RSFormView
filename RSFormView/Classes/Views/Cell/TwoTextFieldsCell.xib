@@ -18,23 +18,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYI-TN-xGB" customClass="TextFieldView" customModule="RSFormView">
-                        <rect key="frame" x="7" y="0.0" width="182.5" height="43.5"/>
+                        <rect key="frame" x="7" y="0.0" width="180.5" height="43.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-6X-JZh" customClass="TextFieldView" customModule="RSFormView">
-                        <rect key="frame" x="185.5" y="0.0" width="182.5" height="43.5"/>
+                        <rect key="frame" x="187.5" y="0.0" width="180.5" height="43.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="fBL-6X-JZh" firstAttribute="width" secondItem="5IQ-5b-JBk" secondAttribute="width" multiplier="0.5" constant="-5" id="6Td-y3-ANh"/>
+                    <constraint firstItem="fBL-6X-JZh" firstAttribute="width" secondItem="5IQ-5b-JBk" secondAttribute="width" multiplier="0.5" constant="-7" id="6Td-y3-ANh"/>
                     <constraint firstItem="fBL-6X-JZh" firstAttribute="height" secondItem="5IQ-5b-JBk" secondAttribute="height" id="97x-5r-UwV"/>
                     <constraint firstItem="jYI-TN-xGB" firstAttribute="centerY" secondItem="5IQ-5b-JBk" secondAttribute="centerY" id="AWd-Te-INk"/>
                     <constraint firstItem="jYI-TN-xGB" firstAttribute="leading" secondItem="5IQ-5b-JBk" secondAttribute="leading" constant="7" id="CQd-TO-OAL"/>
                     <constraint firstItem="fBL-6X-JZh" firstAttribute="centerY" secondItem="5IQ-5b-JBk" secondAttribute="centerY" id="NHq-ey-Wlh"/>
                     <constraint firstAttribute="trailing" secondItem="fBL-6X-JZh" secondAttribute="trailing" constant="7" id="RUg-n2-y9y"/>
                     <constraint firstItem="jYI-TN-xGB" firstAttribute="height" secondItem="5IQ-5b-JBk" secondAttribute="height" id="a2z-W5-YL1"/>
-                    <constraint firstItem="jYI-TN-xGB" firstAttribute="width" secondItem="5IQ-5b-JBk" secondAttribute="width" multiplier="0.5" constant="-5" id="u1g-pa-XD2"/>
+                    <constraint firstItem="jYI-TN-xGB" firstAttribute="width" secondItem="5IQ-5b-JBk" secondAttribute="width" multiplier="0.5" constant="-7" id="u1g-pa-XD2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

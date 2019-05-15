@@ -29,6 +29,7 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     let firstFieldData = formItem.formFields[0]
     let secondFieldData = formItem.formFields[1]
   
+    isAccessibilityElement = false
     contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
     backgroundColor = formConfigurator.fieldsBackgroundColor
     

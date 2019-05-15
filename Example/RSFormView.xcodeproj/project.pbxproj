@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071067CE228B8551001D97DF /* RSFormViewExampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */; };
 		071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80B2278DCAE0023B402 /* AppDelegate.swift */; };
 		071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */; };
 		071CC8112278DCAE0023B402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC80F2278DCAE0023B402 /* Main.storyboard */; };
@@ -16,8 +17,21 @@
 		188A7270091AF46617C45335 /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		071067D0228B8551001D97DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072B3CC82278CFFB0056DB8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071CC8082278DCAD0023B402;
+			remoteInfo = RSFormViewExampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		00CDFC5F28C5A87E092B39EE /* Pods-RSFormView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView.debug.xcconfig"; sourceTree = "<group>"; };
+		071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormViewExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFormViewExampleAppUITests.swift; sourceTree = "<group>"; };
+		071067CF228B8551001D97DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSFormViewExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071CC80B2278DCAE0023B402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		071067C8228B8551001D97DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		071CC8062278DCAD0023B402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071067CC228B8551001D97DF /* RSFormViewExampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */,
+				071067CF228B8551001D97DF /* Info.plist */,
+			);
+			path = RSFormViewExampleAppUITests;
+			sourceTree = "<group>";
+		};
 		071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */,
+				071067CC228B8551001D97DF /* RSFormViewExampleAppUITests */,
 				072B3CD22278CFFB0056DB8A /* Products */,
 				CC4013885E4D57FABF251752 /* Pods */,
 				DAE9E5CCBFF7B353DC474174 /* Frameworks */,
@@ -73,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */,
+				071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +132,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		071067CA228B8551001D97DF /* RSFormViewExampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071067D4228B8551001D97DF /* Build configuration list for PBXNativeTarget "RSFormViewExampleAppUITests" */;
+			buildPhases = (
+				071067C7228B8551001D97DF /* Sources */,
+				071067C8228B8551001D97DF /* Frameworks */,
+				071067C9228B8551001D97DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071067D1228B8551001D97DF /* PBXTargetDependency */,
+			);
+			name = RSFormViewExampleAppUITests;
+			productName = RSFormViewExampleAppUITests;
+			productReference = 071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		071CC8082278DCAD0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071CC8182278DCB00023B402 /* Build configuration list for PBXNativeTarget "RSFormViewExampleApp" */;
@@ -129,6 +179,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Rootstrap;
 				TargetAttributes = {
+					071067CA228B8551001D97DF = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 071CC8082278DCAD0023B402;
+					};
 					071CC8082278DCAD0023B402 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -148,11 +202,19 @@
 			projectRoot = "";
 			targets = (
 				071CC8082278DCAD0023B402 /* RSFormViewExampleApp */,
+				071067CA228B8551001D97DF /* RSFormViewExampleAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		071067C9228B8551001D97DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		071CC8072278DCAD0023B402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +285,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		071067C7228B8551001D97DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071067CE228B8551001D97DF /* RSFormViewExampleAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		071CC8052278DCAD0023B402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +304,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071067D1228B8551001D97DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071CC8082278DCAD0023B402 /* RSFormViewExampleApp */;
+			targetProxy = 071067D0228B8551001D97DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		071CC80F2278DCAE0023B402 /* Main.storyboard */ = {
@@ -255,6 +333,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		071067D2228B8551001D97DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9839GT2TL;
+				INFOPLIST_FILE = RSFormViewExampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewExampleApp;
+			};
+			name = Debug;
+		};
+		071067D3228B8551001D97DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9839GT2TL;
+				INFOPLIST_FILE = RSFormViewExampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewExampleApp;
+			};
+			name = Release;
+		};
 		071CC8192278DCB00023B402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0FB321B63486FCED2008CDC /* Pods-RSFormViewExampleApp.debug.xcconfig */;
@@ -418,6 +534,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		071067D4228B8551001D97DF /* Build configuration list for PBXNativeTarget "RSFormViewExampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071067D2228B8551001D97DF /* Debug */,
+				071067D3228B8551001D97DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		071CC8182278DCB00023B402 /* Build configuration list for PBXNativeTarget "RSFormViewExampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
