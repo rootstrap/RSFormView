@@ -5,7 +5,7 @@ env:
 language: swift
 xcode_workspace: RSFormView.xcworkspace
 xcode_scheme: RSFormViewExampleApp
-osx_image: xcode10
+osx_image: xcode10.2
 cache:
   - cocoapods
 before_install:
