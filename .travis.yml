@@ -22,6 +22,6 @@ script:
   - set -o pipefail
   - xcodebuild -workspace RSFormView.xcworkspace -scheme RSFormViewExampleApp -destination 'platform=iOS Simulator,name=iPhone Xs,OS=12.2' build test | xcpretty --test --color
 after_script:
-  - cd..
+  - cd ..
   - slather coverage
   - ./cc-test-reporter after-build -t cobertura --exit-code $TRAVIS_TEST_RESULT
