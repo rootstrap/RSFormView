@@ -20,7 +20,7 @@ install:
   - pod install
 script:
   - set -o pipefail
-  - xcodebuild -workspace ios-base.xcworkspace -scheme ios-base -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test | xcpretty --test --color
+  - xcodebuild -workspace RSFormView.xcworkspace -scheme RSFormView -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test | xcpretty --test --color
   - bundle exec danger
 after_script:
   - slather coverage

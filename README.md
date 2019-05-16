@@ -1,5 +1,7 @@
+[![Build Status](https://img.shields.io/travis/rootstrap/RSFormView/master.svg)](https://travis-ci.org/rootstrap/RSFormView)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7f79bedea0280ec94444/maintainability)](https://codeclimate.com/repos/5cd33d2d08760b668c0049c7/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7f79bedea0280ec94444/test_coverage)](https://codeclimate.com/repos/5cd33d2d08760b668c0049c7/test_coverage)
+[![License](https://img.shields.io/github/license/rootstrap/RSFormView.svg)](https://github.com/rootstrap/RSFormView/blob/master/LICENSE)
 
 # RSFormView
 
