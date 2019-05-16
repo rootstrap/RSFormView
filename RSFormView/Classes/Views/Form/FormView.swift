@@ -98,10 +98,4 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
                          in: tableView,
                          with: rowFields)
   }
-  
-  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if let cell = tableView.cellForRow(at: indexPath) as? TextFieldCell {
-      cell.focus()
-    }
-  }
 }

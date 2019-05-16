@@ -20,12 +20,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is one simple example of the awesome forms you can achieve with RSFormView!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUp-m6-9rP">
                                 <rect key="frame" x="50" y="78" width="314" height="61"/>
+                                <accessibility key="accessibilityConfiguration" identifier="HeaderLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCY-hB-00i">
                                 <rect key="frame" x="50" y="793" width="314" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Collect Data"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="dr9-Ia-tza"/>
                                 </constraints>

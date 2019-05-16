@@ -13,9 +13,9 @@ class SignupExampleViewModel: FormViewModel {
   var items: [FormItem] = []
   
   init() {
-    items = [nameItem(), emailItem(), passwordItem(),
+    items = [emailItem(), nameItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
-             addressItem(), cityStateItem(), zipDOBItem()]
+             addressItem(), cityStateItem(), zipItem(), birthdateItem()]
   }
   
   enum FieldName: String {
@@ -121,7 +121,7 @@ class SignupExampleViewModel: FormViewModel {
     return FormItem(firstField: cityField, secondField: stateField)
   }
   
-  func zipDOBItem() -> FormItem {
+  func zipItem() -> FormItem {
     let zipField = FormField(name: FieldName.zip.rawValue,
                              initialValue: "",
                              placeholder: FieldName.zip.rawValue,
@@ -129,6 +129,10 @@ class SignupExampleViewModel: FormViewModel {
                              isValid: false,
                              errorMessage: "Please enter a Zip Code")
     
+    return FormItem(firstField: zipField)
+  }
+  
+  func birthdateItem() -> FormItem {
     let birthdateField = FormField(name: FieldName.birthdate.rawValue,
                                    initialValue: "",
                                    placeholder: FieldName.birthdate.rawValue,
@@ -136,7 +140,7 @@ class SignupExampleViewModel: FormViewModel {
                                    isValid: false,
                                    errorMessage: "Please enter a birthdate")
     
-    return FormItem(firstField: zipField, secondField: birthdateField)
+    return FormItem(firstField: birthdateField)
   }
   
   func passwordItem() -> FormItem {
@@ -146,6 +150,7 @@ class SignupExampleViewModel: FormViewModel {
                                   fieldType: .password,
                                   isValid: false,
                                   errorMessage: "Please enter a valid password")
+    passwordField.capitalizeValue = false
     
     return FormItem(firstField: passwordField)
   }
@@ -158,6 +163,7 @@ class SignupExampleViewModel: FormViewModel {
                                          isValid: false,
                                          errorMessage: "Passwords don't match")
     confirmPasswordField.validationMatch = FieldName.password.rawValue
+    confirmPasswordField.capitalizeValue = false
     return FormItem(firstField: confirmPasswordField)
   }
 }
