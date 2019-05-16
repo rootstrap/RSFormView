@@ -4,7 +4,7 @@ env:
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 language: swift
 xcode_workspace: RSFormView.xcworkspace
-xcode_scheme: RSFormView
+xcode_scheme: RSFormViewExampleApp
 osx_image: xcode10
 cache:
   - cocoapods
@@ -19,7 +19,7 @@ install:
   - pod install
 script:
   - set -o pipefail
-  - xcodebuild -workspace RSFormView.xcworkspace -scheme RSFormView -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test | xcpretty --test --color
+  - xcodebuild -workspace RSFormView.xcworkspace -scheme RSFormViewExampleApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.3' build test | xcpretty --test --color
 after_script:
   - slather coverage
   - ./cc-test-reporter after-build -t cobertura --exit-code $TRAVIS_TEST_RESULT
