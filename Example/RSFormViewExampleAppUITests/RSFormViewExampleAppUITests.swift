@@ -18,16 +18,6 @@ class RSFormViewExampleAppUITests: XCTestCase {
     app.launch()
   }
   
-  override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-  }
-  
-  func testHeader() {
-    let headerLabel = app.staticTexts["HeaderLabel"]
-    XCTAssertTrue(headerLabel.exists)
-    XCTAssertTrue(headerLabel.label == "This is one simple example of the awesome forms you can achieve with RSFormView!")
-  }
-  
   func testButtonInitialState() {
     let button = app.buttons["Collect Data"]
     XCTAssertFalse(button.isEnabled)
@@ -38,21 +28,30 @@ class RSFormViewExampleAppUITests: XCTestCase {
     let emailTextField = app.textFields["EMAIL"]
     emailTextField.tap()
     emailTextField.typeText("german.stabile")
-
-    //TODO: Test Invalid Email
-    
-    emailTextField.typeText("@gmail.com")
-    
-    XCTAssertFalse(app.staticTexts["Please enter a valid email"].exists)
     
     let toolbarDoneButton = app.buttons["Toolbar Done Button"]
     let toolbarNextButton = app.buttons["Toolbar Next Button"]
+    
+    toolbarDoneButton.tap()
+    let table = app.tables.element(boundBy: 0)
+    table.swipeAround()
+    
+    let errorLabel = app.staticTexts["ErrorEMAIL"]
+    XCTAssertTrue(errorLabel.exists)
+    XCTAssertTrue(errorLabel.label == "Please enter a valid email")
+    
+    emailTextField.tap()
+    emailTextField.typeText("@gmail.com")
+    toolbarDoneButton.tap()
+    table.swipeAround()
+    
+    XCTAssertFalse(errorLabel.exists)
+    
+    emailTextField.tap()
     toolbarNextButton.tap()
     
     let firstNameTextField = app.textFields["FIRST NAME"]
-    let deleteString = (firstNameTextField.value as! String).map { _ in XCUIKeyboardKey.delete.rawValue }.joined(separator: "")
-    
-    firstNameTextField.typeText(deleteString)
+    firstNameTextField.clearText()
     firstNameTextField.typeText("Malandro")
     
     toolbarNextButton.tap()
@@ -70,22 +69,17 @@ class RSFormViewExampleAppUITests: XCTestCase {
     toolbarNextButton.tap()
     let confirmPasswordField = app.secureTextFields["CONFIRM PASSWORD"]
     UIPasteboard.general.string = "holaholahola"
-    sleep(1)
     confirmPasswordField.doubleTap()
     app.menuItems["Paste"].tap()
     
     sleep(1)
-    //TODO: Test Invalid Confirm Password
-    
-    let confirmDeleteString = "holaholahola".map { _ in XCUIKeyboardKey.delete.rawValue }.joined(separator: "")
-    confirmPasswordField.typeText(confirmDeleteString)
+    confirmPasswordField.clearText(text: "holaholahola")
     
     UIPasteboard.general.string = "holahola"
     confirmPasswordField.doubleTap()
     app.menuItems["Paste"].tap()
     
     sleep(1)
-    //TODO: Test Valid Confirm Password
     
     let addressTextField = app.textFields["ADDRESS"]
     addressTextField.tap()
@@ -123,6 +117,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     sleep(1)
     
     XCTAssertTrue(app.buttons["OK"].exists)
+    
     //TODO: Test collected data is valid
   }
 }

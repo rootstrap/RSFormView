@@ -67,7 +67,8 @@ class TextFieldView: UIView {
     errorLabel.text = errorText
     
     errorLabel.accessibilityIdentifier = "Error\(fieldData.name)"
-    errorLabel.accessibilityLabel = "Error\(fieldData.name)"
+    errorLabel.accessibilityLabel = errorText
+    errorLabel.isAccessibilityElement = !errorLabel.isHidden
     errorLabel.accessibilityTraits = .staticText
   }
   
