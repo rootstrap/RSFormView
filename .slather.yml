@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+workspace: Example/RSFormView.xcworkspace
+xcodeproj: Example/RSFormView.xcodeproj
+scheme: RSFormViewExampleApp
+ignore:
+  - Pods/*
