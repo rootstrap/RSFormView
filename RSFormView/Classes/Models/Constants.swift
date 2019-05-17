@@ -10,5 +10,5 @@ import Foundation
 
 class Constants {
   
-  static var formViewBundle = Bundle(identifier: "com.rootstrap.RSFormView")
+  static var formViewBundle = Bundle(for: FormView.self)
 }

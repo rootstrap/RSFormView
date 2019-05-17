@@ -261,13 +261,14 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManagerSwift/IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormTextCell.xib",
 				"${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/FormViewCell.xib",
 				"${PODS_ROOT}/../../RSFormView/Classes/Views/Cell/TwoTextFieldsCell.xib",
 				"${PODS_ROOT}/../../RSFormView/Classes/Views/Form/FormView.xib",
 				"${PODS_ROOT}/../../RSFormView/Classes/Views/TextField/TextFieldView.xib",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RSFormView/RSFormView.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -279,10 +280,11 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwoTextFieldsCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FormView.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TextFieldView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSFormView.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

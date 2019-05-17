@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C771C59FF54E9312F86DD616CC00731"
+               BlueprintIdentifier = "8DC86F666551903359FECC6E963C0264"
+               BuildableName = "libRSFormView.a"
                BlueprintName = "RSFormView"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libRSFormView.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
