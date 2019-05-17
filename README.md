@@ -174,3 +174,7 @@ Clone this repo and run the example app to take a look at some of the RSFormView
 To contribute to this library: fork this repository and create a Pull Request from your fork, detailing what are you improving/extending, the approach taken and screenshots to proof functionality added.
 
 You can also open issues in this repository and our team will tackle them as soon as possible. 
+
+## Credits
+
+**RSFormView** is authored and mantained by [Rootstrap](http://www.rootstrap.com) and [German Stabile](https://github.com/germanStabile) with the help of our [contributors](https://github.com/rootstrap/RSFormView/contributors).
