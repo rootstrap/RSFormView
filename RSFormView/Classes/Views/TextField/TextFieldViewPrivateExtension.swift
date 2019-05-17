@@ -74,13 +74,20 @@ internal extension TextFieldView {
   
   func configureFormPicker() {
     guard let fieldData = fieldData,
-      fieldData.fieldType == .date else {
+      fieldData.fieldType == .date ||
+      fieldData.fieldType == .picker else {
         textField.inputView = nil
         return
     }
-    
+    if fieldData.fieldType == .date {
+      setDatePicker(with: fieldData)
+    } else {
+      setGeneralPicker(with: fieldData)
+    }
+  }
+  
+  func setDatePicker(with fieldData: FormField) {
     let datePicker = UIDatePicker()
-    
     if fieldData.value != "" {
       let dateFormatter = DateFormatter()
       dateFormatter.dateFormat = TextFieldView.dateFormat
@@ -95,6 +102,18 @@ internal extension TextFieldView {
                          action: #selector(datePickerChangedValue),
                          for: .valueChanged)
     textField.inputView = datePicker
+  }
+  
+  func setGeneralPicker(with fieldData: FormField) {
+    let picker = UIPickerView()
+    
+    if let options = fieldData.options,
+      let index = options.index(of: fieldData.value) {
+      picker.selectRow(index, inComponent: 0, animated: false)
+    }
+    
+    picker.delegate = self
+    textField.inputView = picker
   }
   
   func processTextUpdates(with text: String, updatedText: String, data: FormField) {
@@ -167,5 +186,12 @@ internal extension TextFieldView {
     } else {
       return "\(updatedText)/"
     }
+  }
+  
+  func update(withPickerText pickerText: String) {
+    guard let data = fieldData else { return }
+    textField.text = pickerText
+    data.value = pickerText
+    delegate?.didUpdate(textFieldView: self, with: data)
   }
 }

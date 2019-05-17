@@ -88,7 +88,7 @@ class TextFieldView: UIView {
     self.formConfigurator = formConfigurator
     actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
     updatePlaceHolder(withText: data.placeholder)
-    textField.clearButtonMode = data.fieldType == .date ? .never : .whileEditing
+    textField.clearButtonMode = (data.fieldType == .date || data.fieldType == .picker) ? .never : .whileEditing
     textField.isSecureTextEntry = data.fieldType == .password
     textField.text = data.value
     titleLabel.text = data.name
@@ -129,9 +129,31 @@ extension TextFieldView {
     dateFormatter.dateFormat = TextFieldView.dateFormat
     
     let dateString = dateFormatter.string(from: sender.date)
-    textField.text = dateString
-    fieldData?.value = dateString
-    delegate?.didUpdate(textFieldView: self, with: data)
+    update(withPickerText: dateString)
+  }
+}
+
+//General picker related methods
+extension TextFieldView: UIPickerViewDelegate, UIPickerViewDataSource {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+  }
+
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    guard let fieldOptions = fieldData?.options else { return 0 }
+    return fieldOptions.count
+  }
+
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    guard let fieldOptions = fieldData?.options else { return "" }
+    return fieldOptions[row]
+  }
+
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    guard let fieldData = fieldData,
+      let fieldOptions = fieldData.options else { return }
+    let pickerString = fieldOptions[row]
+    update(withPickerText: pickerString)
   }
 }
 
@@ -140,7 +162,7 @@ extension TextFieldView: UITextFieldDelegate {
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool {
     guard let data = fieldData,
-      data.fieldType != .date else {
+      data.fieldType != .date, data.fieldType != .picker else {
         return false
     }
     
