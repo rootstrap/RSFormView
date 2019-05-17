@@ -98,20 +98,20 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     sleep(1)
     
-    let zipCodeField = app.textFields.matching(identifier: "ZIP CODE").element(boundBy: 0)
+    let zipCodeField = app.textFields["ZIP CODE"]
     zipCodeField.tap()
     zipCodeField.typeText("12345")
     
     app.textFields["DOB"].tap()
     
-    let datePickers = XCUIApplication().datePickers
+    let datePickers = app.datePickers
     datePickers.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "September")
     datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: "13")
     datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: "1989")
     
-    app.textFields.matching(identifier: "AGE").element(boundBy: 0).tap()
+    app.textFields["AGE"].tap()
     
-    let agePicker = XCUIApplication().pickers
+    let agePicker = app.pickers
     agePicker.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "4")
     
     toolbarDoneButton.tap()
