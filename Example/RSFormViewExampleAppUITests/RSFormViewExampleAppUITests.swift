@@ -98,7 +98,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     sleep(1)
     
-    let zipCodeField = app.textFields["ZIP CODE"]
+    let zipCodeField = app.textFields.matching(identifier: "ZIP CODE").element(boundBy: 0)
     zipCodeField.tap()
     zipCodeField.typeText("12345")
     
@@ -109,7 +109,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: "13")
     datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: "1989")
     
-    app.textFields["AGE"].tap()
+    app.textFields.matching(identifier: "AGE").element(boundBy: 0).tap()
     
     let agePicker = app.pickers
     agePicker.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "4")
