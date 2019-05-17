@@ -109,7 +109,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: "13")
     datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: "1989")
     
-    app.textFields["AGE"].tap()
+    app.textFields.matching(identifier: "AGE").element(boundBy: 0).tap()
     
     let agePicker = XCUIApplication().pickers
     agePicker.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "4")
