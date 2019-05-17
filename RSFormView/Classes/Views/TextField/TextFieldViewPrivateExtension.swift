@@ -74,27 +74,33 @@ internal extension TextFieldView {
   
   func configureFormPicker() {
     guard let fieldData = fieldData,
-      fieldData.fieldType == .date else {
+      fieldData.fieldType == .date ||
+      fieldData.fieldType == .picker else {
         textField.inputView = nil
         return
     }
-    
-    let datePicker = UIDatePicker()
-    
-    if fieldData.value != "" {
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = TextFieldView.dateFormat
-      if let date = dateFormatter.date(from: fieldData.value) {
-        datePicker.date = date
+    if fieldData.fieldType == .date {
+      let datePicker = UIDatePicker()
+      
+      if fieldData.value != "" {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = TextFieldView.dateFormat
+        if let date = dateFormatter.date(from: fieldData.value) {
+          datePicker.date = date
+        }
       }
+      datePicker.datePickerMode = .date
+      datePicker.minimumDate = fieldData.minimumDate
+      datePicker.maximumDate = fieldData.maximumDate
+      datePicker.addTarget(self,
+                           action: #selector(datePickerChangedValue),
+                           for: .valueChanged)
+      textField.inputView = datePicker
+    } else {
+      let picker = UIPickerView()
+      picker.delegate = self
+      textField.inputView = picker
     }
-    datePicker.datePickerMode = .date
-    datePicker.minimumDate = fieldData.minimumDate
-    datePicker.maximumDate = fieldData.maximumDate
-    datePicker.addTarget(self,
-                         action: #selector(datePickerChangedValue),
-                         for: .valueChanged)
-    textField.inputView = datePicker
   }
   
   func processTextUpdates(with text: String, updatedText: String, data: FormField) {
@@ -167,5 +173,12 @@ internal extension TextFieldView {
     } else {
       return "\(updatedText)/"
     }
+  }
+  
+  func update(withPickerText pickerText: String) {
+    guard let data = fieldData else { return }
+    textField.text = pickerText
+    data.value = pickerText
+    delegate?.didUpdate(textFieldView: self, with: data)
   }
 }

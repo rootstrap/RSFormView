@@ -18,6 +18,7 @@ public enum FieldType {
   case regular
   case expiration
   case password
+  case picker
 }
 
 public enum ValidationType {

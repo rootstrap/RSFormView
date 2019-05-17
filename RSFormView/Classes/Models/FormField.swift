@@ -78,6 +78,9 @@ open class FormField {
   /// The maximum selectable date for *.date* FormFields
   public var maximumDate: Date?
   
+  /// Source data for *.picker* FormFields
+  public var options: [String]?
+  
   /// The default validation type for a given fieldType, this will be overriden by setting the FormField's *validationType*
   var defaultValidationType: ValidationType {
     var validationType: ValidationType = .none
@@ -98,6 +101,8 @@ open class FormField {
       validationType = .numeric
     case .usState:
       validationType = .usState
+    case .picker:
+      validationType = .nonEmpty
     }
     
     return validationType
@@ -115,5 +120,21 @@ open class FormField {
     self.isValid = isValid
     self.fieldType = fieldType
     self.errorMessage = errorMessage
+  }
+  
+  public init(name: String,
+              initialValue: String,
+              placeholder: String,
+              fieldType: FieldType,
+              isValid: Bool,
+              errorMessage: String,
+              options: [String] = []) {
+    self.name = name
+    self.value = initialValue
+    self.placeholder = placeholder
+    self.isValid = isValid
+    self.fieldType = fieldType
+    self.errorMessage = errorMessage
+    self.options = options
   }
 }

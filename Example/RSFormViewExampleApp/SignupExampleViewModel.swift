@@ -15,7 +15,7 @@ class SignupExampleViewModel: FormViewModel {
   init() {
     items = [emailItem(), nameItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
-             addressItem(), cityStateItem(), zipItem(), birthdateItem()]
+             addressItem(), cityStateItem(), zipItem(), birthdateItem(), ageItem()]
   }
   
   enum FieldName: String {
@@ -29,6 +29,7 @@ class SignupExampleViewModel: FormViewModel {
     case password = "PASSWORD"
     case confirmPassword = "CONFIRM PASSWORD"
     case address = "ADDRESS"
+    case age = "AGE"
   }
   
   var collectedData: String {
@@ -141,6 +142,20 @@ class SignupExampleViewModel: FormViewModel {
                                    errorMessage: "Please enter a birthdate")
     
     return FormItem(firstField: birthdateField)
+  }
+  
+  func ageItem() -> FormItem {
+    let ageRange = 1...90
+    let stringAgeRange = ageRange.map { String($0) }
+    let ageField = FormField(name: FieldName.age.rawValue,
+                                   initialValue: "",
+                                   placeholder: FieldName.age.rawValue,
+                                   fieldType: .picker,
+                                   isValid: false,
+                                   errorMessage: "Please select the age",
+                                   options: stringAgeRange)
+  
+    return FormItem(firstField: ageField)
   }
   
   func passwordItem() -> FormItem {
