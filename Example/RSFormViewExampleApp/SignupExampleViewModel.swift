@@ -152,7 +152,7 @@ class SignupExampleViewModel: FormViewModel {
                              fieldType: .picker,
                              isValid: false,
                              errorMessage: "Please select your age")
-    ageField.options = stringAgeRange
+    ageField.options = ageRange
   
     return FormItem(firstField: ageField)
   }
