@@ -121,20 +121,4 @@ open class FormField {
     self.fieldType = fieldType
     self.errorMessage = errorMessage
   }
-  
-  public init(name: String,
-              initialValue: String,
-              placeholder: String,
-              fieldType: FieldType,
-              isValid: Bool,
-              errorMessage: String,
-              options: [String] = []) {
-    self.name = name
-    self.value = initialValue
-    self.placeholder = placeholder
-    self.isValid = isValid
-    self.fieldType = fieldType
-    self.errorMessage = errorMessage
-    self.options = options
-  }
 }

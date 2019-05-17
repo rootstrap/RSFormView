@@ -80,27 +80,40 @@ internal extension TextFieldView {
         return
     }
     if fieldData.fieldType == .date {
-      let datePicker = UIDatePicker()
-      
-      if fieldData.value != "" {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = TextFieldView.dateFormat
-        if let date = dateFormatter.date(from: fieldData.value) {
-          datePicker.date = date
-        }
-      }
-      datePicker.datePickerMode = .date
-      datePicker.minimumDate = fieldData.minimumDate
-      datePicker.maximumDate = fieldData.maximumDate
-      datePicker.addTarget(self,
-                           action: #selector(datePickerChangedValue),
-                           for: .valueChanged)
-      textField.inputView = datePicker
+      setDatePicker(with: fieldData)
     } else {
-      let picker = UIPickerView()
-      picker.delegate = self
-      textField.inputView = picker
+      setGeneralPicker(with: fieldData)
     }
+  }
+  
+  func setDatePicker(with fieldData: FormField) {
+    let datePicker = UIDatePicker()
+    if fieldData.value != "" {
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = TextFieldView.dateFormat
+      if let date = dateFormatter.date(from: fieldData.value) {
+        datePicker.date = date
+      }
+    }
+    datePicker.datePickerMode = .date
+    datePicker.minimumDate = fieldData.minimumDate
+    datePicker.maximumDate = fieldData.maximumDate
+    datePicker.addTarget(self,
+                         action: #selector(datePickerChangedValue),
+                         for: .valueChanged)
+    textField.inputView = datePicker
+  }
+  
+  func setGeneralPicker(with fieldData: FormField) {
+    let picker = UIPickerView()
+    
+    if let options = fieldData.options,
+      let index = options.index(of: fieldData.value) {
+      picker.selectRow(index, inComponent: 0, animated: false)
+    }
+    
+    picker.delegate = self
+    textField.inputView = picker
   }
   
   func processTextUpdates(with text: String, updatedText: String, data: FormField) {

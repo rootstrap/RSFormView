@@ -15,16 +15,17 @@ class RSFormViewExampleAppUITests: XCTestCase {
     continueAfterFailure = false
     
     app = XCUIApplication()
-    app.launch()
   }
   
   func testButtonInitialState() {
+    app.launch()
     let button = app.buttons["Collect Data"]
     XCTAssertFalse(button.isEnabled)
     XCTAssertTrue(button.label == "Get Entered Data")
   }
   
   func testForm() {
+    app.launch()
     let emailTextField = app.textFields["EMAIL"]
     emailTextField.tap()
     emailTextField.typeText("german.stabile")
@@ -97,7 +98,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     sleep(1)
     
-    let zipCodeField = app.textFields["ZIP CODE"]
+    let zipCodeField = app.textFields.matching(identifier: "ZIP CODE").element(boundBy: 0)
     zipCodeField.tap()
     zipCodeField.typeText("12345")
     

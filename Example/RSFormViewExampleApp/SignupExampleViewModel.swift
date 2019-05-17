@@ -145,15 +145,14 @@ class SignupExampleViewModel: FormViewModel {
   }
   
   func ageItem() -> FormItem {
-    let ageRange = 1...90
-    let stringAgeRange = ageRange.map { String($0) }
+    let ageRange = (1...90).map(String.init)
     let ageField = FormField(name: FieldName.age.rawValue,
-                                   initialValue: "",
-                                   placeholder: FieldName.age.rawValue,
-                                   fieldType: .picker,
-                                   isValid: false,
-                                   errorMessage: "Please select the age",
-                                   options: stringAgeRange)
+                             initialValue: "",
+                             placeholder: FieldName.age.rawValue,
+                             fieldType: .picker,
+                             isValid: false,
+                             errorMessage: "Please select your age")
+    ageField.options = stringAgeRange
   
     return FormItem(firstField: ageField)
   }
