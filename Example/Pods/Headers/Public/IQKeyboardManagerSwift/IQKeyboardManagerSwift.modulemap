@@ -1,6 +1,1 @@
-module IQKeyboardManagerSwift {
-  umbrella header "IQKeyboardManagerSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}
+../../../Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap
