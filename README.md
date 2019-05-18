@@ -10,7 +10,7 @@
 
 RSFormView is a library that helps you build fully customizable forms for data entry in a few minutes. 
 
-![](formExample.gif)
+<img src="https://github.com/rootstrap/RSFormView/blob/master/formExample.gif" height="440">
 
 ## Installation
 
