@@ -63,4 +63,18 @@ extension String {
     
     return true
   }
+  
+  func isValidLength(maxLength: Int?, minLength: Int?) -> Bool  {
+    var isValid = true
+    if let textMinLength = minLength,
+      count < textMinLength {
+      isValid = false
+    }
+    
+    if let textMaxLength = maxLength,
+      textMaxLength > 0, count > textMaxLength {
+      isValid = false
+    }
+    return isValid
+  }
 }

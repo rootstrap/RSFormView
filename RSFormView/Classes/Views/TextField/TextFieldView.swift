@@ -118,6 +118,7 @@ class TextFieldView: UIView {
   func validate(with text: String) {
     guard let data = fieldData else { return }
     data.isValid = data.value.isValid(type: data.validationType ?? data.defaultValidationType)
+      && data.value.isValidLength(maxLength: data.maximumTextLength, minLength: data.minimumTextLength)
   }
 }
 

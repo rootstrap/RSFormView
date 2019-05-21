@@ -53,12 +53,12 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     let firstNameTextField = app.textFields["FIRST NAME"]
     firstNameTextField.clearText()
-    firstNameTextField.typeText("Malandro")
+    firstNameTextField.typeText("German")
     
     toolbarNextButton.tap()
     
     let lastNameTextField = app.textFields["LAST NAME"]
-    lastNameTextField.typeText("Malandro")
+    lastNameTextField.typeText("German")
     
     toolbarNextButton.tap()
     

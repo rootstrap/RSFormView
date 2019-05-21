@@ -78,6 +78,12 @@ open class FormField {
   /// The maximum selectable date for *.date* FormFields
   public var maximumDate: Date?
   
+  /// The minimum character length allowed for the text in a TextFieldView
+  public var minimumTextLength: Int?
+  
+  /// The maximum character length allowed for the text in a TextFieldView
+  public var maximumTextLength: Int?
+  
   /// Source data for *.picker* FormFields
   public var options: [String]?
   
