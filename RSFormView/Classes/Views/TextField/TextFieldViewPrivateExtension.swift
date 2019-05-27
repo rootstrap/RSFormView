@@ -17,9 +17,18 @@ internal extension TextFieldView {
     
     titleLabel.font = formConfigurator.titleFont
     titleLabel.textColor = formConfigurator.textColor
+    titleLabel.backgroundColor = formConfigurator.fieldsBackgroundColor
+    titleContainer.backgroundColor = formConfigurator.fieldsBackgroundColor
     
     errorLabel.font = formConfigurator.errorFont
     errorLabel.textColor = formConfigurator.errorTextColor
+    
+    borderLine.backgroundColor = formConfigurator.fieldsBackgroundColor
+    borderLine.layer.borderColor = formConfigurator.validBorderColor
+    borderLine.layer.borderWidth = formConfigurator.borderWidth
+    borderLine.layer.cornerRadius = formConfigurator.borderCornerRadius
+    
+    actualView?.sendSubviewToBack(borderLine)
     
     let tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tappedView))
@@ -58,6 +67,11 @@ internal extension TextFieldView {
   func bottomLineValidColor() -> UIColor {
     return textField.isFirstResponder ?
       formConfigurator.editingLineColor : formConfigurator.validLineColor
+  }
+  
+  func borderLineValidColor() -> CGColor {
+    return textField.isFirstResponder ?
+      formConfigurator.editingBorderColor : formConfigurator.validBorderColor
   }
   
   func setKeyboardType() {
