@@ -61,12 +61,7 @@ class TextFieldView: UIView {
     
     let isValid = !fieldData.shouldDisplayError || fieldData.isValid
     
-    bottomLine.backgroundColor = isValid ?
-      bottomLineValidColor() : formConfigurator.invalidLineColor
-    titleLabel.textColor = isValid ?
-      titleValidColor() : formConfigurator.invalidTitleColor
-    borderLine.layer.borderColor = isValid ?
-      borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
+    setupCell(with: isValid)
     
     let errorText = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
     errorLabel.text = errorText
@@ -75,6 +70,15 @@ class TextFieldView: UIView {
     errorLabel.accessibilityLabel = errorText
     errorLabel.isAccessibilityElement = !errorLabel.isHidden
     errorLabel.accessibilityTraits = .staticText
+  }
+  
+  func setupCell(with isValid: Bool = true) {
+    bottomLine.backgroundColor = isValid ?
+      bottomLineValidColor() : formConfigurator.invalidLineColor
+    titleLabel.textColor = isValid ?
+      titleValidColor() : formConfigurator.invalidTitleColor
+    borderLine.layer.borderColor = isValid ?
+      borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
   }
   
   /**
