@@ -21,12 +21,9 @@ public class FormConfigurator {
   public var textColor = UIColor.brightGray
   public var errorTextColor = UIColor.red
   
-  public var validBorderColor = UIColor.lightGray.cgColor
-  public var invalidBorderColor = UIColor.red.cgColor
-  public var editingBorderColor = UIColor.astralBlue.withAlphaComponent(0.8).cgColor
-  public var invalidBorderWidth = CGFloat(2)
-  public var validBorderWidth = CGFloat(1)
-  public var editingBorderWidth = CGFloat(1)
+  public var validBorderColor = UIColor.lightGray
+  public var invalidBorderColor = UIColor.red
+  public var editingBorderColor = UIColor.astralBlue.withAlphaComponent(0.8)
   
   public var borderCornerRadius = CGFloat(8)
   public var borderWidth = CGFloat(1)

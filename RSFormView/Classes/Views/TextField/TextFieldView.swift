@@ -66,7 +66,7 @@ class TextFieldView: UIView {
     titleLabel.textColor = isValid ?
       titleValidColor() : formConfigurator.invalidTitleColor
     borderLine.layer.borderColor = isValid ?
-      borderLineValidColor() : formConfigurator.invalidBorderColor
+      borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
     
     let errorText = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
     errorLabel.text = errorText
@@ -204,7 +204,7 @@ extension TextFieldView: UITextFieldDelegate {
     textField.placeholder = ""
     titleLabel.isHidden = false
     titleContainer.isHidden = false
-    borderLine.layer.borderColor = formConfigurator.editingBorderColor
+    borderLine.layer.borderColor = formConfigurator.editingBorderColor.cgColor
   }
   
   func textFieldDidEndEditing(_ textField: UITextField) {

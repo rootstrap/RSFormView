@@ -23,10 +23,10 @@ internal extension TextFieldView {
     errorLabel.font = formConfigurator.errorFont
     errorLabel.textColor = formConfigurator.errorTextColor
     
-    borderLine.backgroundColor = formConfigurator.fieldsBackgroundColor
-    borderLine.layer.borderColor = formConfigurator.validBorderColor
-    borderLine.layer.borderWidth = formConfigurator.borderWidth
-    borderLine.layer.cornerRadius = formConfigurator.borderCornerRadius
+    borderLine.addBorder(color: formConfigurator.validBorderColor,
+                         weight: formConfigurator.borderWidth,
+                         backgroundColor: formConfigurator.fieldsBackgroundColor)
+    borderLine.setRoundBorders(formConfigurator.borderCornerRadius)
     
     actualView?.sendSubviewToBack(borderLine)
     
@@ -71,7 +71,7 @@ internal extension TextFieldView {
   
   func borderLineValidColor() -> CGColor {
     return textField.isFirstResponder ?
-      formConfigurator.editingBorderColor : formConfigurator.validBorderColor
+      formConfigurator.editingBorderColor.cgColor : formConfigurator.validBorderColor.cgColor
   }
   
   func setKeyboardType() {
