@@ -102,7 +102,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     zipCodeField.tap()
     zipCodeField.typeText("12345")
     
-    app.textFields["DOB"].tap()
+    app.textFields.matching(identifier: "DOB").element(boundBy: 0).tap()
     
     let datePickers = app.datePickers
     datePickers.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "September")

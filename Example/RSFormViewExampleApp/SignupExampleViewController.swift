@@ -22,18 +22,30 @@ class SignupExampleViewController: UIViewController {
     formView.viewModel = viewModel
     formView.delegate = self
     
-//    let configurator = FormConfigurator()
-//    configurator.editingLineColor = UIColor.white
-//    configurator.editingTitleColor = UIColor.white
-//    configurator.formBackgroundColor = UIColor.black
-//    configurator.fieldsBackgroundColor = UIColor.black
-//    configurator.errorTextColor = UIColor.blue
-//    configurator.invalidTitleColor = UIColor.yellow
-//    configurator.invalidLineColor = UIColor.yellow
-//    configurator.placeholderTextColor = UIColor.white
-//    configurator.validTitleColor = UIColor.lightGray
+    let configurator = FormConfigurator()
+    configurator.editingTitleColor = UIColor.astralBlue
+    configurator.editingBorderColor = UIColor.astralBlue
     
-//    formView.formConfigurator = configurator
+    configurator.formBackgroundColor = UIColor.lightGray
+    configurator.fieldsBackgroundColor = UIColor.lightGray
+    
+    configurator.errorTextColor = UIColor.yellow
+    configurator.invalidTitleColor = UIColor.yellow
+    configurator.invalidBorderColor = UIColor.yellow
+   configurator.errorTextColor = UIColor.yellow
+    
+    configurator.placeholderTextColor = UIColor.gray
+    configurator.validTitleColor = UIColor.purple
+    configurator.validBorderColor = UIColor.purple
+    
+    
+    //set lineColor to clear so it is not visible
+    
+    configurator.editingLineColor = UIColor.clear
+    configurator.invalidLineColor = UIColor.clear
+    configurator.validLineColor = UIColor.clear
+    
+    formView.formConfigurator = configurator
     configureButton()
   }
   
