@@ -18,17 +18,17 @@ internal extension TextFieldView {
     titleLabel.font = formConfigurator.titleFont
     titleLabel.textColor = formConfigurator.textColor
     titleLabel.backgroundColor = formConfigurator.fieldsBackgroundColor
-    titleContainer.backgroundColor = formConfigurator.fieldsBackgroundColor
+    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
     
     errorLabel.font = formConfigurator.errorFont
     errorLabel.textColor = formConfigurator.errorTextColor
     
-    borderLine.addBorder(color: formConfigurator.validBorderColor,
+    textFieldContainerView.addBorder(color: formConfigurator.validBorderColor,
                          weight: formConfigurator.borderWidth,
                          backgroundColor: formConfigurator.fieldsBackgroundColor)
-    borderLine.setRoundBorders(formConfigurator.borderCornerRadius)
+    textFieldContainerView.setRoundBorders(formConfigurator.borderCornerRadius)
     
-    actualView?.sendSubviewToBack(borderLine)
+    actualView?.sendSubviewToBack(textFieldContainerView)
     
     let tapGesture = UITapGestureRecognizer(target: self,
                                             action: #selector(tappedView))
