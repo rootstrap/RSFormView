@@ -79,6 +79,7 @@ class TextFieldView: UIView {
       titleValidColor() : formConfigurator.invalidTitleColor
     textFieldContainerView.layer.borderColor = isValid ?
       borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
+    errorLabel.textColor = formConfigurator.errorTextColor
   }
   
   /**
