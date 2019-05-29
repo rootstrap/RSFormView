@@ -21,33 +21,39 @@ class SignupExampleViewController: UIViewController {
     
     formView.viewModel = viewModel
     formView.delegate = self
-    
+
+    configureFormColors()
+    configureButton()
+  }
+  
+  func configureFormColors() {
     let configurator = FormConfigurator()
-    configurator.editingTitleColor = UIColor.astralBlue
-    configurator.editingBorderColor = UIColor.astralBlue
+    let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
     
-    configurator.formBackgroundColor = UIColor.lightGray
-    configurator.fieldsBackgroundColor = UIColor.lightGray
+    configurator.editingTitleColor = darkPurple
+    configurator.editingBorderColor = darkPurple
+    configurator.formBackgroundColor = UIColor.white
+    configurator.fieldsBackgroundColor = UIColor.white
     
-    configurator.errorTextColor = UIColor.yellow
-    configurator.invalidTitleColor = UIColor.yellow
-    configurator.invalidBorderColor = UIColor.yellow
-   configurator.errorTextColor = UIColor.yellow
+    configurator.errorTextColor = UIColor.orange
+    configurator.invalidTitleColor = UIColor.orange
+    configurator.invalidBorderColor = UIColor.orange
     
     configurator.placeholderTextColor = UIColor.gray
-    configurator.validTitleColor = UIColor.purple
-    configurator.validBorderColor = UIColor.purple
-    
+    configurator.validTitleColor = UIColor.gray
+    configurator.validBorderColor = UIColor.gray
     
     //set lineColor to clear so it is not visible
-    
     configurator.editingLineColor = UIColor.clear
     configurator.invalidLineColor = UIColor.clear
     configurator.validLineColor = UIColor.clear
     
+    configurator.borderCornerRadius = 20
+    configurator.borderWidth = 2
+    
     formView.formConfigurator = configurator
-    configureButton()
   }
+  
   
   func configureButton() {
     getDataButton.clipsToBounds = true

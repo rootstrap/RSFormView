@@ -59,7 +59,7 @@ More about fields configuration in the `FormItem` section.
 5. Configure your form looks
 
 
-Create a `FormConfigurator` change any colors or fonts you need and set it to your form view
+Create a `FormConfigurator` change any colors or fonts you need and set it to your form view.
 ```swift
 let configurator = FormConfigurator()
 configurator.textColor = UIColor.lightGray
@@ -68,6 +68,44 @@ configurator.titleFont = UIFont.systemFont(withSize: 13)
 ...
 formView.formConfigurator = configurator
 ```
+
+Use the UIColor extension `formColor(red: Int, green: Int, blue: Int)`  to create new UIColors.
+```swift
+let configurator = FormConfigurator()
+...
+let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
+configurator.editingTitleColor = darkPurple
+...
+formView.formConfigurator = configurator
+```
+
+Choose whether to hide the bottom line by setting the bottom line colors to clear (they are set colored by default)
+```swift
+let configurator = FormConfigurator()
+...
+configurator.validLineColor = UIColor.clear
+configurator.invalidLineColor = UIColor.clear
+configurator.editingLineColor = UIColor.clear
+...
+formView.formConfigurator = configurator
+```
+
+Choose whether to show borders by setting the border colors to the value desired (they are set clear by default). 
+Also set the border width and corner radius as desired.
+```swift
+let configurator = FormConfigurator()
+...
+configurator.validBorderColor = UIColor.gray
+configurator.invalidBorderColor = UIColor.orange
+configurator.editingBorderColor = UIColor.darkPurple
+configurator.borderCornerRadius = 20
+configurator.borderWidth = 2
+...
+formView.formConfigurator = configurator
+```
+
+<img src="https://github.com/rootstrap/RSFormView/blob/master/editBorders.gif" height="440">
+
 6. Collect data
 
 
