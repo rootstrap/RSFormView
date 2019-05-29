@@ -63,6 +63,9 @@ class TextFieldView: UIView {
     
     configureCellColors(with: isValid)
     
+    textFieldContainerView.layer.cornerRadius = formConfigurator.borderCornerRadius
+    textFieldContainerView.layer.borderWidth = formConfigurator.borderWidth
+    
     let errorText = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
     errorLabel.text = errorText
     

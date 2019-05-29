@@ -23,31 +23,38 @@ class SignupExampleViewController: UIViewController {
     formView.delegate = self
     
     let configurator = FormConfigurator()
-    configurator.editingTitleColor = UIColor.astralBlue
-    configurator.editingBorderColor = UIColor.astralBlue
-    
-    configurator.formBackgroundColor = UIColor.lightGray
-    configurator.fieldsBackgroundColor = UIColor.lightGray
-    
-    configurator.errorTextColor = UIColor.yellow
-    configurator.invalidTitleColor = UIColor.yellow
-    configurator.invalidBorderColor = UIColor.yellow
-   configurator.errorTextColor = UIColor.yellow
-    
-    configurator.placeholderTextColor = UIColor.gray
-    configurator.validTitleColor = UIColor.purple
-    configurator.validBorderColor = UIColor.purple
-    
-    
-    //set lineColor to clear so it is not visible
-    
-    configurator.editingLineColor = UIColor.clear
-    configurator.invalidLineColor = UIColor.clear
-    configurator.validLineColor = UIColor.clear
-    
+    configureFormColors(formConfigurator: configurator)
+
     formView.formConfigurator = configurator
     configureButton()
   }
+  
+  func configureFormColors(formConfigurator: FormConfigurator) {
+    
+    let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
+    
+    formConfigurator.editingTitleColor = darkPurple
+    formConfigurator.editingBorderColor = darkPurple
+    formConfigurator.formBackgroundColor = UIColor.white
+    formConfigurator.fieldsBackgroundColor = UIColor.white
+    
+    formConfigurator.errorTextColor = UIColor.orange
+    formConfigurator.invalidTitleColor = UIColor.orange
+    formConfigurator.invalidBorderColor = UIColor.orange
+    
+    formConfigurator.placeholderTextColor = UIColor.gray
+    formConfigurator.validTitleColor = UIColor.gray
+    formConfigurator.validBorderColor = UIColor.gray
+    
+    //set lineColor to clear so it is not visible
+    formConfigurator.editingLineColor = UIColor.clear
+    formConfigurator.invalidLineColor = UIColor.clear
+    formConfigurator.validLineColor = UIColor.clear
+    
+    formConfigurator.borderCornerRadius = 20
+    formConfigurator.borderWidth = 2
+  }
+  
   
   func configureButton() {
     getDataButton.clipsToBounds = true
