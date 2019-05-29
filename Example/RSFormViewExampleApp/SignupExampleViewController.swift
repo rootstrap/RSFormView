@@ -21,38 +21,37 @@ class SignupExampleViewController: UIViewController {
     
     formView.viewModel = viewModel
     formView.delegate = self
-    
-    let configurator = FormConfigurator()
-    configureFormColors(formConfigurator: configurator)
 
-    formView.formConfigurator = configurator
+    configureFormColors()
     configureButton()
   }
   
-  func configureFormColors(formConfigurator: FormConfigurator) {
-    
+  func configureFormColors() {
+    let configurator = FormConfigurator()
     let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
     
-    formConfigurator.editingTitleColor = darkPurple
-    formConfigurator.editingBorderColor = darkPurple
-    formConfigurator.formBackgroundColor = UIColor.white
-    formConfigurator.fieldsBackgroundColor = UIColor.white
+    configurator.editingTitleColor = darkPurple
+    configurator.editingBorderColor = darkPurple
+    configurator.formBackgroundColor = UIColor.white
+    configurator.fieldsBackgroundColor = UIColor.white
     
-    formConfigurator.errorTextColor = UIColor.orange
-    formConfigurator.invalidTitleColor = UIColor.orange
-    formConfigurator.invalidBorderColor = UIColor.orange
+    configurator.errorTextColor = UIColor.orange
+    configurator.invalidTitleColor = UIColor.orange
+    configurator.invalidBorderColor = UIColor.orange
     
-    formConfigurator.placeholderTextColor = UIColor.gray
-    formConfigurator.validTitleColor = UIColor.gray
-    formConfigurator.validBorderColor = UIColor.gray
+    configurator.placeholderTextColor = UIColor.gray
+    configurator.validTitleColor = UIColor.gray
+    configurator.validBorderColor = UIColor.gray
     
     //set lineColor to clear so it is not visible
-    formConfigurator.editingLineColor = UIColor.clear
-    formConfigurator.invalidLineColor = UIColor.clear
-    formConfigurator.validLineColor = UIColor.clear
+    configurator.editingLineColor = UIColor.clear
+    configurator.invalidLineColor = UIColor.clear
+    configurator.validLineColor = UIColor.clear
     
-    formConfigurator.borderCornerRadius = 20
-    formConfigurator.borderWidth = 2
+    configurator.borderCornerRadius = 20
+    configurator.borderWidth = 2
+    
+    formView.formConfigurator = configurator
   }
   
   
