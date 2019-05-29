@@ -9,7 +9,7 @@ import Foundation
 
 public class FormConfigurator {
   public var formBackgroundColor = UIColor.white
-  public var fieldsBackgroundColor = UIColor.white
+  public var fieldsBackgroundColor = UIColor.clear
   
   public var validTitleColor = UIColor.darkGray
   public var invalidTitleColor = UIColor.red
@@ -20,6 +20,13 @@ public class FormConfigurator {
   public var placeholderTextColor = UIColor.brightGray
   public var textColor = UIColor.brightGray
   public var errorTextColor = UIColor.red
+  
+  public var validBorderColor = UIColor.clear
+  public var invalidBorderColor = UIColor.clear
+  public var editingBorderColor = UIColor.clear
+  
+  public var borderCornerRadius: CGFloat = 8
+  public var borderWidth: CGFloat = 1
   
   public var errorFont = UIFont.systemFont(ofSize: 13)
   public var titleFont = UIFont.boldSystemFont(ofSize: 12)

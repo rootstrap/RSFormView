@@ -21,4 +21,15 @@ extension UIView {
     addSubview(view)
     return view
   }
+  
+  func addBorder(color: UIColor = UIColor.black, weight: CGFloat = 1.0, backgroundColor: UIColor = UIColor.white) {
+    layer.borderColor = color.cgColor
+    layer.borderWidth = weight
+    layer.backgroundColor = backgroundColor.cgColor
+  }
+  
+  func setRoundBorders(_ cornerRadius: CGFloat = 10.0) {
+    clipsToBounds = true
+    layer.cornerRadius = cornerRadius
+  }
 }
