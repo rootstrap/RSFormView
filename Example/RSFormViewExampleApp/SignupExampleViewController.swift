@@ -28,7 +28,6 @@ class SignupExampleViewController: UIViewController {
   
   func configureFormColors() {
     let configurator = FormConfigurator()
-    let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
     
     configurator.editingTitleColor = UIColor.astralBlue
     configurator.editingBorderColor = UIColor.astralBlue
