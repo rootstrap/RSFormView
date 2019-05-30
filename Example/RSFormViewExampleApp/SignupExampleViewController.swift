@@ -30,14 +30,14 @@ class SignupExampleViewController: UIViewController {
     let configurator = FormConfigurator()
     let darkPurple = UIColor.formColor(red: 140, green: 20, blue: 252)
     
-    configurator.editingTitleColor = darkPurple
-    configurator.editingBorderColor = darkPurple
+    configurator.editingTitleColor = UIColor.astralBlue
+    configurator.editingBorderColor = UIColor.astralBlue
     configurator.formBackgroundColor = UIColor.white
     configurator.fieldsBackgroundColor = UIColor.white
     
-    configurator.errorTextColor = UIColor.orange
-    configurator.invalidTitleColor = UIColor.orange
-    configurator.invalidBorderColor = UIColor.orange
+    configurator.errorTextColor = UIColor.red
+    configurator.invalidTitleColor = UIColor.red
+    configurator.invalidBorderColor = UIColor.red
     
     configurator.placeholderTextColor = UIColor.gray
     configurator.validTitleColor = UIColor.gray
@@ -48,8 +48,8 @@ class SignupExampleViewController: UIViewController {
     configurator.invalidLineColor = UIColor.clear
     configurator.validLineColor = UIColor.clear
     
-    configurator.borderCornerRadius = 20
-    configurator.borderWidth = 2
+    configurator.borderCornerRadius = 8
+    configurator.borderWidth = 1
     
     formView.formConfigurator = configurator
   }
