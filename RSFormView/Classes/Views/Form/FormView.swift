@@ -82,20 +82,24 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
   
   public func tableView(_ tableView: UITableView,
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let formItem = viewModel?.items[indexPath.row]
-    let rowFields = formItem?.formFields
     
-    if let attributtedText = formItem?.attributedText,
-      rowFields?.isEmpty ?? true,
-      let cell = tableView
-        .dequeueReusableCell(withIdentifier: FormTextCell.reuseIdentifier,
-                             for: indexPath) as? FormTextCell {
-      cell.update(withAttributedText: attributtedText, formConfigurator: formConfigurator)
-      return cell
+    let rowFields = viewModel?.items[indexPath.row].formFields
+    
+    if let formItem = viewModel?.items[indexPath.row] {
+      
+      if let attributtedText = formItem.attributedText,
+        rowFields?.isEmpty ?? true,
+        let cell = tableView
+          .dequeueReusableCell(withIdentifier: FormTextCell.reuseIdentifier,
+                               for: indexPath) as? FormTextCell {
+        cell.update(withFormItem: formItem, formConfigurator: formConfigurator)
+        return cell
+      }
     }
     
     return textFieldCell(forRowAt: indexPath,
                          in: tableView,
                          with: rowFields)
   }
+    
 }
