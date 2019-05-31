@@ -8,10 +8,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldView" customModule="RSFormView">
             <connections>
+                <outlet property="bottomLineToErrorLabelDistance" destination="Tfy-PN-9tr" id="2DR-k4-tZo"/>
                 <outlet property="bottomLineView" destination="RIZ-xe-aye" id="zDT-5F-QuL"/>
                 <outlet property="errorLabel" destination="Hzy-qd-h60" id="gtZ-TF-3R1"/>
+                <outlet property="labelToTextFieldDistance" destination="BXd-1n-EW5" id="vwO-qH-fnG"/>
                 <outlet property="textField" destination="lnL-7s-IUB" id="mEm-Ro-UDQ"/>
+                <outlet property="textFieldContainerToErrorLabelDistance" destination="03k-62-rXt" id="FrR-XB-eUJ"/>
                 <outlet property="textFieldContainerView" destination="Ju8-ML-rLS" id="14Z-Yf-j8G"/>
+                <outlet property="textFieldToBottomLineDistance" destination="7me-1d-Ujb" id="vcQ-Do-6hR"/>
                 <outlet property="titleLabel" destination="UcT-hi-sC7" id="N2i-H5-N1N"/>
                 <outlet property="titleLabelContainerView" destination="Ndz-6O-5Lo" id="yv1-U6-SfM"/>
             </connections>

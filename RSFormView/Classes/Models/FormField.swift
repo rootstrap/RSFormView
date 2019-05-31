@@ -8,11 +8,21 @@
 
 import Foundation
 
+open class ConstraintsConfigurator {
+  public var headerLabelTopMargin: CGFloat = 30
+  public var headerLabelBottomMargin: CGFloat = 12.5
+  
+  public init() {}
+}
+
 open class FormItem {
   var formFields: [FormField]
   
   /// Set with the desired attributed text for text only rows, leave empty for TextFieldView rows
   public var attributedText: NSAttributedString?
+  
+  /// Set with the desired contraints configurations for text only rows, leave empty for TextFieldView rows
+  public var contraintsConfigurator: ConstraintsConfigurator = ConstraintsConfigurator()
   
   /**
    - Parameters:

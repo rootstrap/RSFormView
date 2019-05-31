@@ -88,6 +88,8 @@ class SignupExampleViewModel: FormViewModel {
   
   func addressHeaderItem() -> FormItem {
     let item = FormItem()
+    item.contraintsConfigurator.headerLabelTopMargin = CGFloat(80)
+    item.contraintsConfigurator.headerLabelBottomMargin = CGFloat(5)
     item.attributedText = NSAttributedString(string: "Enter your address",
                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.8),
                                                           NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
