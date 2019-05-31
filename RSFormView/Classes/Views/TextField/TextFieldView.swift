@@ -25,7 +25,7 @@ class TextFieldView: UIView {
   @IBOutlet weak var labelToTextFieldDistance: NSLayoutConstraint!
   @IBOutlet weak var textFieldToBottomLineDistance: NSLayoutConstraint!
   @IBOutlet weak var bottomLineToErrorLabelDistance: NSLayoutConstraint!
-  @IBOutlet weak var textFieldContainerBottomToErrorLabelDistance: NSLayoutConstraint!
+  @IBOutlet weak var textFieldContainerToErrorLabelDistance: NSLayoutConstraint!
   
   var actualView: UIView?
   

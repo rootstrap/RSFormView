@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +13,7 @@
                 <outlet property="errorLabel" destination="Hzy-qd-h60" id="gtZ-TF-3R1"/>
                 <outlet property="labelToTextFieldDistance" destination="BXd-1n-EW5" id="vwO-qH-fnG"/>
                 <outlet property="textField" destination="lnL-7s-IUB" id="mEm-Ro-UDQ"/>
-                <outlet property="textFieldContainerBottomToErrorLabelDistance" destination="03k-62-rXt" id="FrR-XB-eUJ"/>
+                <outlet property="textFieldContainerToErrorLabelDistance" destination="03k-62-rXt" id="FrR-XB-eUJ"/>
                 <outlet property="textFieldContainerView" destination="Ju8-ML-rLS" id="14Z-Yf-j8G"/>
                 <outlet property="textFieldToBottomLineDistance" destination="7me-1d-Ujb" id="vcQ-Do-6hR"/>
                 <outlet property="titleLabel" destination="UcT-hi-sC7" id="N2i-H5-N1N"/>

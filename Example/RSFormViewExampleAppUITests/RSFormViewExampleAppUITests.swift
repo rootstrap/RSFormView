@@ -51,24 +51,24 @@ class RSFormViewExampleAppUITests: XCTestCase {
     emailTextField.tap()
     toolbarNextButton.tap()
     
-    let firstNameTextField = app.textFields["FIRST NAME"]
+    let firstNameTextField = app.textFields.matching(identifier: "FIRST NAME").element(boundBy: 0)
     firstNameTextField.clearText()
     firstNameTextField.typeText("German")
     
     toolbarNextButton.tap()
     
-    let lastNameTextField = app.textFields["LAST NAME"]
+    let lastNameTextField = app.textFields.matching(identifier: "LAST NAME").element(boundBy: 0)
     lastNameTextField.typeText("German")
     
     toolbarNextButton.tap()
     
-    let passwordField = app.secureTextFields["PASSWORD"]
+    let passwordField = app.secureTextFields.matching(identifier: "PASSWORD").element(boundBy: 0)
     UIPasteboard.general.string = "holahola"
     passwordField.doubleTap()
     app.menuItems["Paste"].tap()
     
     toolbarNextButton.tap()
-    let confirmPasswordField = app.secureTextFields["CONFIRM PASSWORD"]
+    let confirmPasswordField = app.secureTextFields.matching(identifier: "CONFIRM PASSWORD").element(boundBy: 0)
     UIPasteboard.general.string = "holaholahola"
     confirmPasswordField.doubleTap()
     app.menuItems["Paste"].tap()
@@ -82,18 +82,18 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     sleep(1)
     
-    let addressTextField = app.textFields["ADDRESS"]
+    let addressTextField = app.textFields.matching(identifier: "ADDRESS").element(boundBy: 0)
     addressTextField.tap()
     addressTextField.typeText("Some address")
     
     toolbarNextButton.tap()
     
-    let cityTextField = app.textFields["CITY"]
+    let cityTextField = app.textFields.matching(identifier: "CITY").element(boundBy: 0)
     cityTextField.typeText("New York")
     
     toolbarNextButton.tap()
     
-    let stateTextField = app.textFields["STATE"]
+    let stateTextField = app.textFields.matching(identifier: "STATE").element(boundBy: 0)
     stateTextField.typeText("NY")
     
     sleep(1)

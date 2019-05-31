@@ -85,9 +85,8 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
     
     let rowFields = viewModel?.items[indexPath.row].formFields
     
-    if let formItem = viewModel?.items[indexPath.row] {
-      
-      if let attributtedText = formItem.attributedText,
+    if let formItem = viewModel?.items[indexPath.row],
+      let attributtedText = formItem.attributedText,
         rowFields?.isEmpty ?? true,
         let cell = tableView
           .dequeueReusableCell(withIdentifier: FormTextCell.reuseIdentifier,
@@ -95,7 +94,6 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
         cell.update(withFormItem: formItem, formConfigurator: formConfigurator)
         return cell
       }
-    }
     
     return textFieldCell(forRowAt: indexPath,
                          in: tableView,
