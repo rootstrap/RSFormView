@@ -44,5 +44,10 @@ public class FormConfigurator {
   public var placeholderFont = UIFont.systemFont(ofSize: 14)
   public var textFont = UIFont.systemFont(ofSize: 15)
   
+  public var labelToTextFieldDistance: CGFloat = 8
+  public var textFieldToBottomLineDistance: CGFloat = 5
+  public var bottomLineToErrorLabelDistance: CGFloat = 15
+  public var textFieldContainerToErrorLabelDistance: CGFloat = 5
+  
   public init() {}
 }

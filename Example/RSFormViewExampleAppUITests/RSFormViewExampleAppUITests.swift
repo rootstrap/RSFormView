@@ -26,7 +26,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
   
   func testForm() {
     app.launch()
-    let emailTextField = app.textFields["EMAIL"]
+    let emailTextField = app.textField(with: "EMAIL")
     emailTextField.tap()
     emailTextField.typeText("german.stabile")
     
@@ -51,24 +51,36 @@ class RSFormViewExampleAppUITests: XCTestCase {
     emailTextField.tap()
     toolbarNextButton.tap()
     
-    let firstNameTextField = app.textFields.matching(identifier: "FIRST NAME").element(boundBy: 0)
+    let firstNameTextField = app.textField(with: "FIRST NAME")
     firstNameTextField.clearText()
     firstNameTextField.typeText("German")
     
     toolbarNextButton.tap()
     
-    let lastNameTextField = app.textFields.matching(identifier: "LAST NAME").element(boundBy: 0)
+    let lastNameTextField = app.textField(with: "LAST NAME")
     lastNameTextField.typeText("German")
+    
+    app.textField(with: "DOB").tap()
+    
+    let datePickers = app.datePickers
+    datePickers.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "September")
+    datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: "13")
+    datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: "1989")
+    
+    app.textField(with: "GENDER").tap()
+
+    let genderPicker = app.pickers
+    genderPicker.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "female")
     
     toolbarNextButton.tap()
     
-    let passwordField = app.secureTextFields.matching(identifier: "PASSWORD").element(boundBy: 0)
+    let passwordField = app.secureTextField(with: "PASSWORD")
     UIPasteboard.general.string = "holahola"
     passwordField.doubleTap()
     app.menuItems["Paste"].tap()
     
     toolbarNextButton.tap()
-    let confirmPasswordField = app.secureTextFields.matching(identifier: "CONFIRM PASSWORD").element(boundBy: 0)
+    let confirmPasswordField = app.secureTextField(with: "CONFIRM PASSWORD")
     UIPasteboard.general.string = "holaholahola"
     confirmPasswordField.doubleTap()
     app.menuItems["Paste"].tap()
@@ -82,37 +94,26 @@ class RSFormViewExampleAppUITests: XCTestCase {
     
     sleep(1)
     
-    let addressTextField = app.textFields.matching(identifier: "ADDRESS").element(boundBy: 0)
+    let addressTextField = app.textField(with: "ADDRESS")
     addressTextField.tap()
     addressTextField.typeText("Some address")
     
     toolbarNextButton.tap()
     
-    let cityTextField = app.textFields.matching(identifier: "CITY").element(boundBy: 0)
+    let cityTextField = app.textField(with: "CITY")
+    cityTextField.tap()
     cityTextField.typeText("New York")
     
     toolbarNextButton.tap()
     
-    let stateTextField = app.textFields.matching(identifier: "STATE").element(boundBy: 0)
+    let stateTextField = app.textField(with: "STATE")
     stateTextField.typeText("NY")
     
     sleep(1)
     
-    let zipCodeField = app.textFields.matching(identifier: "ZIP CODE").element(boundBy: 0)
+    let zipCodeField = app.textField(with: "ZIP CODE")
     zipCodeField.tap()
     zipCodeField.typeText("12345")
-    
-    app.textFields.matching(identifier: "DOB").element(boundBy: 0).tap()
-    
-    let datePickers = app.datePickers
-    datePickers.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "September")
-    datePickers.pickerWheels.element(boundBy: 1).adjust(toPickerWheelValue: "13")
-    datePickers.pickerWheels.element(boundBy: 2).adjust(toPickerWheelValue: "1989")
-    
-    app.textFields.matching(identifier: "AGE").element(boundBy: 0).tap()
-    
-    let agePicker = app.pickers
-    agePicker.pickerWheels.element(boundBy: 0).adjust(toPickerWheelValue: "4")
     
     toolbarDoneButton.tap()
     

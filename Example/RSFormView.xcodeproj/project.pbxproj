@@ -16,6 +16,7 @@
 		071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */; };
 		07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */; };
 		188A7270091AF46617C45335 /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */; };
+		817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F591B22A174BE00723654 /* XCUIAppExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
 		451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746099BF600E9A6BA9C13259 /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		817F591B22A174BE00723654 /* XCUIAppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIAppExtension.swift; sourceTree = "<group>"; };
 		AEC9282DDFBB11614C765AB8 /* Pods-RSFormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView.release.xcconfig"; sourceTree = "<group>"; };
 		C0FB321B63486FCED2008CDC /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DDF1C68AD1F8912FFD9D980A /* libPods-RSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */,
 				071067CF228B8551001D97DF /* Info.plist */,
 				07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */,
+				817F591B22A174BE00723654 /* XCUIAppExtension.swift */,
 			);
 			path = RSFormViewExampleAppUITests;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				071067CE228B8551001D97DF /* RSFormViewExampleAppUITests.swift in Sources */,
 				07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */,
+				817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,12 +13,12 @@ class FormTextCell: UITableViewCell {
   
   static let reuseIdentifier = "FormTextCellIdentifier"
   @IBOutlet weak var formTextLabel: UILabel!
-  @IBOutlet weak var headerLabelTopMargin: NSLayoutConstraint!
-  @IBOutlet weak var headerLabelBottomMargin: NSLayoutConstraint!
+  @IBOutlet weak var headerLabelTopMarginConstraint: NSLayoutConstraint!
+  @IBOutlet weak var headerLabelBottomMarginConstraint: NSLayoutConstraint!
   
   func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator) {
-    headerLabelTopMargin.constant = formItem.contraintsConfigurator.headerLabelTopMargin
-    headerLabelBottomMargin.constant = formItem.contraintsConfigurator.headerLabelBottomMargin
+    headerLabelTopMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelTopMargin
+    headerLabelBottomMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelBottomMargin
     contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
     backgroundColor = formConfigurator.fieldsBackgroundColor
     formTextLabel.attributedText = formItem.attributedText
