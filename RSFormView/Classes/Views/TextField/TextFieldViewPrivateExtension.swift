@@ -77,8 +77,10 @@ internal extension TextFieldView {
   func setKeyboardType() {
     guard let fieldData = fieldData else { return }
     switch fieldData.fieldType {
-    case .numeric, .usPhone, .fiveDigitZipCode, .expiration:
+    case .integer, .usPhone, .fiveDigitZipCode, .expiration:
       textField.keyboardType = .numberPad
+    case .double:
+        textField.keyboardType = .decimalPad
     case .email:
       textField.keyboardType = .emailAddress
     default:
