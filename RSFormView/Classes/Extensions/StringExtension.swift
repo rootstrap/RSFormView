@@ -16,8 +16,8 @@ extension String {
       isValid = isEmailFormatted()
     case .integer:
       isValid = isInteger()
-    case .double:
-        isValid = isValidDouble(maxDecimalPlaces: 2)
+    case .double(let maxDecimalPlaces):
+        isValid = isValidDouble(maxDecimalPlaces: maxDecimalPlaces)
     case .usState:
       isValid = AddressManager.validateState(state: self)
     case .usPhone:
