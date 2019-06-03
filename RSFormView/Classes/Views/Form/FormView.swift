@@ -23,6 +23,7 @@ public protocol FormViewDelegate: class {
     didSet {
       backgroundColor = formConfigurator.formBackgroundColor
       formTableView.backgroundColor = formConfigurator.formBackgroundColor
+      formTableView.isScrollEnabled = formConfigurator.isScrollEnabled
       formTableView.reloadData()
     }
   }

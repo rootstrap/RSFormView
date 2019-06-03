@@ -9,6 +9,9 @@ import Foundation
 
 public class FormConfigurator {
   
+  //scrollable property
+  public var isScrollEnabled = true
+  
   //backgroud colors
   public var formBackgroundColor = UIColor.white
   public var fieldsBackgroundColor = UIColor.clear
