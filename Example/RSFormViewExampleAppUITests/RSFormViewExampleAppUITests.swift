@@ -77,20 +77,20 @@ class RSFormViewExampleAppUITests: XCTestCase {
     let passwordField = app.secureTextField(with: "PASSWORD")
     UIPasteboard.general.string = "holahola"
     passwordField.doubleTap()
-    app.menuItems["Paste"].tap()
+    app.menuItem(with: "Paste").tap()
     
     toolbarNextButton.tap()
     let confirmPasswordField = app.secureTextField(with: "CONFIRM PASSWORD")
     UIPasteboard.general.string = "holaholahola"
     confirmPasswordField.doubleTap()
-    app.menuItems["Paste"].tap()
+    app.menuItem(with: "Paste").tap()
     
     sleep(1)
     confirmPasswordField.clearText(text: "holaholahola")
     
     UIPasteboard.general.string = "holahola"
     confirmPasswordField.doubleTap()
-    app.menuItems["Paste"].tap()
+    app.menuItem(with: "Paste").tap()
     
     sleep(1)
     

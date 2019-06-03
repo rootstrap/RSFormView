@@ -13,7 +13,7 @@ class SignupExampleViewModel: FormViewModel {
   var items: [FormItem] = []
   
   init() {
-    items = [emailItem(), nameItem(), birthdateItem(), genderItem(), passwordItem(),
+    items = [emailItem(), nameItem(), birthDateItem(), genderItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
              addressItem(), cityStateItem(), zipItem()]
   }
@@ -137,7 +137,7 @@ class SignupExampleViewModel: FormViewModel {
     return FormItem(firstField: zipField)
   }
   
-  func birthdateItem() -> FormItem {
+  func birthDateItem() -> FormItem {
     let birthdateField = FormField(name: FieldName.birthdate.rawValue,
                                    initialValue: "",
                                    placeholder: FieldName.birthdate.rawValue,
@@ -151,13 +151,13 @@ class SignupExampleViewModel: FormViewModel {
   func genderItem() -> FormItem {
     let genderOptions = ["male", "female"]
     let genderField = FormField(name: FieldName.gender.rawValue,
-                             initialValue: "",
-                             placeholder: FieldName.gender.rawValue,
-                             fieldType: .picker,
-                             isValid: false,
-                             errorMessage: "Please select your gender")
+                                initialValue: "",
+                                placeholder: FieldName.gender.rawValue,
+                                fieldType: .picker,
+                                isValid: false,
+                                errorMessage: "Please select your gender")
     genderField.options = genderOptions
-  
+    
     return FormItem(firstField: genderField)
   }
   

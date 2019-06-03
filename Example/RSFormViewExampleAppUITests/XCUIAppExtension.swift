@@ -17,4 +17,9 @@ extension XCUIApplication {
   func secureTextField(with identifier: String) -> XCUIElement {
     return secureTextFields.matching(identifier: identifier).element(boundBy: 0)
   }
+  
+  func menuItem(with identifier: String) -> XCUIElement {
+    return menuItems.matching(identifier: identifier).element(boundBy: 0)
+  }
+  
 }
