@@ -10,7 +10,8 @@ import Foundation
 
 public enum FieldType {
   case email
-  case numeric
+  case integer
+  case double
   case date
   case usState
   case usPhone
@@ -29,7 +30,8 @@ public enum ValidationType {
   case expiration
   case fiveDigitZipCode
   case usPhone
-  case numeric
+  case integer
+  case double
   case custom(evaluator: (String) -> (Bool))
 }
 

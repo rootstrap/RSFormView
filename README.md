@@ -132,7 +132,8 @@ formViewModel.fields().forEach {
 Cases: 
  - email: Will present the email keyboard when the field is selected and validate that the text entry is in an email format
  - date: Will present a native date picker when the field is selected and validate that the entry is not empty
- - numeric: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
+ - integer: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
+ - double: Will present the decimal keyboard when the field is selected and validate that the text entry can be casted to Double, max 2 decimal places
  - password: Will mask the text entry in UI and validate that the text entry is not empty
  - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number format  
  
@@ -146,7 +147,8 @@ Cases:
  Cases: 
  - nonEmpty: Will mark the field invalid if the text entry is empty
  - none: No validation will be made, the field will never be marked invalid unless manually made so
- - numeric: Will mark the field invalid if the text entry is not a number
+ - integer: Will mark the field invalid if the text entry is not an integer
+ - double: Will mark the field invalid if the text entry is not a double, max 2 decimal places
  - usState: Will validate that the text entry matches the name or abbreviation of any of the US states
  - custom: Pass this case a block with your custom validation.
 

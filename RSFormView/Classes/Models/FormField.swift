@@ -113,8 +113,10 @@ open class FormField {
       validationType = .fiveDigitZipCode
     case .password:
       validationType = .nonEmpty
-    case .numeric:
-      validationType = .numeric
+    case .integer:
+      validationType = .integer
+    case .double:
+        validationType = .double
     case .usState:
       validationType = .usState
     case .picker:
