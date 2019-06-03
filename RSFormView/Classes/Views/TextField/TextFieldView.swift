@@ -22,10 +22,10 @@ class TextFieldView: UIView {
   @IBOutlet weak var bottomLineView: UIView!
   @IBOutlet weak var textFieldContainerView: UIView!
   @IBOutlet weak var titleLabelContainerView: UIView!
-  @IBOutlet weak var labelToTextFieldDistance: NSLayoutConstraint!
-  @IBOutlet weak var textFieldToBottomLineDistance: NSLayoutConstraint!
-  @IBOutlet weak var bottomLineToErrorLabelDistance: NSLayoutConstraint!
-  @IBOutlet weak var textFieldContainerToErrorLabelDistance: NSLayoutConstraint!
+  @IBOutlet weak var labelToTextFieldConstraint: NSLayoutConstraint!
+  @IBOutlet weak var textFieldToBottomLineConstraint: NSLayoutConstraint!
+  @IBOutlet weak var bottomLineToErrorLabelConstraint: NSLayoutConstraint!
+  @IBOutlet weak var textFieldContainerToErrorLabelConstraint: NSLayoutConstraint!
   
   var actualView: UIView?
   
@@ -98,22 +98,29 @@ class TextFieldView: UIView {
    */
   func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
-    isAccessibilityElement = false
-    titleLabel.isAccessibilityElement = false
-    titleLabelContainerView.isAccessibilityElement = false
-    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
-    textFieldContainerView.isAccessibilityElement = false
-    textField.accessibilityIdentifier = data.name
-    textField.accessibilityLabel = data.name
     self.formConfigurator = formConfigurator
+    setAccessibility(withData: data)
+    populateTextView(withData: data)
+    setContraints()
+
+    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
     actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
     
+    updateErrorState()
+  }
+  
+  func setContraints() {
+    labelToTextFieldConstraint.constant = formConfigurator.labelToTextFieldDistance
+    textFieldToBottomLineConstraint.constant = formConfigurator.textFieldToBottomLineDistance
+    bottomLineToErrorLabelConstraint.constant = formConfigurator.bottomLineToErrorLabelDistance
+    textFieldContainerToErrorLabelConstraint.constant = formConfigurator.textFieldContainerToErrorLabelDistance
+  }
+  
+  func populateTextView(withData data: FormField) {
     updatePlaceHolder(withText: data.placeholder)
     textField.clearButtonMode = (data.fieldType == .date || data.fieldType == .picker) ? .never : .whileEditing
     textField.isSecureTextEntry = data.fieldType == .password
     textField.text = data.value
-    
-    
     titleLabel.text = data.name
     errorLabel.text = data.errorMessage
     titleLabel.isHidden = data.value.isEmpty
@@ -122,8 +129,16 @@ class TextFieldView: UIView {
       data.shouldDisplayError = true
       validate(with: data.value)
     }
-    
-    updateErrorState()
+  }
+  
+  func setAccessibility(withData data: FormField) {
+    isAccessibilityElement = false
+    titleLabel.isAccessibilityElement = false
+    titleLabelContainerView.isAccessibilityElement = false
+    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
+    textFieldContainerView.isAccessibilityElement = false
+    textField.accessibilityIdentifier = data.name
+    textField.accessibilityLabel = data.name
   }
   
   func updatePlaceHolder(withText text: String) {

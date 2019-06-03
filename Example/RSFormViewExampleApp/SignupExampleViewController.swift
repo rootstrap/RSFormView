@@ -50,6 +50,9 @@ class SignupExampleViewController: UIViewController {
     configurator.borderCornerRadius = 8
     configurator.borderWidth = 1
     
+    configurator.labelToTextFieldDistance = CGFloat(15)
+    configurator.textFieldToBottomLineDistance = CGFloat(14)
+    
     formView.formConfigurator = configurator
   }
   

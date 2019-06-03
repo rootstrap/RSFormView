@@ -13,9 +13,9 @@ class SignupExampleViewModel: FormViewModel {
   var items: [FormItem] = []
   
   init() {
-    items = [emailItem(), nameItem(), passwordItem(),
+    items = [emailItem(), nameItem(), birthDateItem(), genderItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
-             addressItem(), cityStateItem(), zipItem(), birthdateItem(), ageItem()]
+             addressItem(), cityStateItem(), zipItem()]
   }
   
   enum FieldName: String {
@@ -30,6 +30,7 @@ class SignupExampleViewModel: FormViewModel {
     case confirmPassword = "CONFIRM PASSWORD"
     case address = "ADDRESS"
     case age = "AGE"
+    case gender = "GENDER"
   }
   
   var collectedData: String {
@@ -88,7 +89,7 @@ class SignupExampleViewModel: FormViewModel {
   
   func addressHeaderItem() -> FormItem {
     let item = FormItem()
-    item.contraintsConfigurator.headerLabelTopMargin = CGFloat(80)
+    item.contraintsConfigurator.headerLabelTopMargin = CGFloat(50)
     item.contraintsConfigurator.headerLabelBottomMargin = CGFloat(5)
     item.attributedText = NSAttributedString(string: "Enter your address",
                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.8),
@@ -136,7 +137,7 @@ class SignupExampleViewModel: FormViewModel {
     return FormItem(firstField: zipField)
   }
   
-  func birthdateItem() -> FormItem {
+  func birthDateItem() -> FormItem {
     let birthdateField = FormField(name: FieldName.birthdate.rawValue,
                                    initialValue: "",
                                    placeholder: FieldName.birthdate.rawValue,
@@ -147,17 +148,17 @@ class SignupExampleViewModel: FormViewModel {
     return FormItem(firstField: birthdateField)
   }
   
-  func ageItem() -> FormItem {
-    let ageRange = (1...90).map(String.init)
-    let ageField = FormField(name: FieldName.age.rawValue,
-                             initialValue: "",
-                             placeholder: FieldName.age.rawValue,
-                             fieldType: .picker,
-                             isValid: false,
-                             errorMessage: "Please select your age")
-    ageField.options = ageRange
-  
-    return FormItem(firstField: ageField)
+  func genderItem() -> FormItem {
+    let genderOptions = ["male", "female"]
+    let genderField = FormField(name: FieldName.gender.rawValue,
+                                initialValue: "",
+                                placeholder: FieldName.gender.rawValue,
+                                fieldType: .picker,
+                                isValid: false,
+                                errorMessage: "Please select your gender")
+    genderField.options = genderOptions
+    
+    return FormItem(firstField: genderField)
   }
   
   func passwordItem() -> FormItem {

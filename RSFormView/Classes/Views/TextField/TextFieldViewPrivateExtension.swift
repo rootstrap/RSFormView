@@ -28,6 +28,8 @@ internal extension TextFieldView {
                          backgroundColor: formConfigurator.fieldsBackgroundColor)
     textFieldContainerView.setRoundBorders(formConfigurator.borderCornerRadius)
     
+    setContraints() 
+    
     actualView?.sendSubviewToBack(textFieldContainerView)
     
     let tapGesture = UITapGestureRecognizer(target: self,
