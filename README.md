@@ -106,7 +106,7 @@ formView.formConfigurator = configurator
 
 <img src="https://github.com/rootstrap/RSFormView/blob/master/editBorders.gif" height="440">
 
-Disable tableView scrolling. Scroll is enabled by default.
+Disable tableView scrolling, which is enabled by default.
 ```swift
 let configurator = FormConfigurator()
 ...
