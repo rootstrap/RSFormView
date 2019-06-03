@@ -115,8 +115,8 @@ open class FormField {
       validationType = .nonEmpty
     case .integer:
       validationType = .integer
-    case .double:
-        validationType = .double
+    case .double(let maxDecimalPlaces):
+      validationType = .double(maxDecimalPlaces: maxDecimalPlaces)
     case .usState:
       validationType = .usState
     case .picker:

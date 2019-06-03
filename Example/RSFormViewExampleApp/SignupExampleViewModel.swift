@@ -49,11 +49,11 @@ class SignupExampleViewModel: FormViewModel {
   
   func firstNameField() -> FormField {
     let firstNameField = FormField(name: FieldName.firstName.rawValue, //Identifier for the field
-      initialValue: "John", //Provide a default value for the field
-      placeholder: FieldName.firstName.rawValue, //A place holder for when theres no value
-      fieldType: .regular, //field type describes the behaviour the field will expect and provide a default validation
-      isValid: true, //wether is valid in its initial state
-      errorMessage: "Please enter a first name") //message displayed when the value doesn't pass the validation
+                                   initialValue: "John", //Provide a default value for the field
+                                   placeholder: FieldName.firstName.rawValue, //A place holder for when theres no value
+                                   fieldType: .regular, //field type describes the behaviour the field will expect and provide a default validation
+                                   isValid: true, //wether is valid in its initial state
+                                   errorMessage: "Please enter a first name") //message displayed when the value doesn't pass the validation
     firstNameField.maximumTextLength = 6 //maximum number of characters allowed on textfield
     firstNameField.minimumTextLength = 3 //minimum number of characters allowed on textfield
     return firstNameField

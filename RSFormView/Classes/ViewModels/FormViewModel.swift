@@ -8,10 +8,10 @@
 
 import Foundation
 
-public enum FieldType {
+public enum FieldType: Equatable {
   case email
   case integer
-  case double
+  case double(maxDecimalPlaces: Int)
   case date
   case usState
   case usPhone
@@ -31,7 +31,7 @@ public enum ValidationType {
   case fiveDigitZipCode
   case usPhone
   case integer
-  case double
+  case double(maxDecimalPlaces: Int)
   case custom(evaluator: (String) -> (Bool))
 }
 
