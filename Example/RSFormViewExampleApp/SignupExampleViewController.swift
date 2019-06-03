@@ -22,11 +22,11 @@ class SignupExampleViewController: UIViewController {
     formView.viewModel = viewModel
     formView.delegate = self
 
-    configureFormColors()
+    configureFormConfigurator()
     configureButton()
   }
   
-  func configureFormColors() {
+  func configureFormConfigurator() {
     let configurator = FormConfigurator()
     
     configurator.editingTitleColor = UIColor.astralBlue
