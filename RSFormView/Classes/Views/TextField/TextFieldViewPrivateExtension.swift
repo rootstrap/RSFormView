@@ -126,7 +126,7 @@ internal extension TextFieldView {
     let picker = UIPickerView()
     
     if let options = fieldData.options,
-      let index = options.index(of: fieldData.value) {
+      let index = options.firstIndex(of: fieldData.value) {
       picker.selectRow(index, inComponent: 0, animated: false)
     }
     

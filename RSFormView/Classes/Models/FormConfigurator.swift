@@ -18,12 +18,12 @@ public class FormConfigurator {
   
   //title colors
   public var validTitleColor = UIColor.darkGray
-  public var invalidTitleColor = UIColor.red
-  public var editingTitleColor = UIColor.astralBlue.withAlphaComponent(0.8)
+  public var invalidTitleColor = UIColor.bitterSweetRed
+  public var editingTitleColor = UIColor.dodgerBlue
   
   //bottom line colors
-  public var editingLineColor = UIColor.blizzardBlue
-  public var invalidLineColor = UIColor.red
+  public var editingLineColor = UIColor.dodgerBlue
+  public var invalidLineColor = UIColor.bitterSweetRed
   public var validLineColor = UIColor.lightGray
   
   //text colors
@@ -36,7 +36,7 @@ public class FormConfigurator {
   public var editingBorderColor = UIColor.clear
   
   //error text color
-  public var errorTextColor = UIColor.red
+  public var errorTextColor = UIColor.bitterSweetRed
   
   public var borderCornerRadius: CGFloat = 8
   public var borderWidth: CGFloat = 1
@@ -49,8 +49,23 @@ public class FormConfigurator {
   
   public var labelToTextFieldDistance: CGFloat = 8
   public var textFieldToBottomLineDistance: CGFloat = 5
-  public var bottomLineToErrorLabelDistance: CGFloat = 15
+  public var bottomLineToErrorLabelDistance: CGFloat = 5
   public var textFieldContainerToErrorLabelDistance: CGFloat = 5
   
   public init() {}
+}
+
+public class DarkModeConfigurator: FormConfigurator {
+  override public init() {
+    super.init()
+    formBackgroundColor = UIColor.mineShaftGray
+    fieldsBackgroundColor = UIColor.tundoraGray
+    
+    validLineColor = UIColor.white
+    
+    placeholderTextColor = UIColor.white
+    textColor = UIColor.white
+    
+    validTitleColor = UIColor.white
+  }
 }

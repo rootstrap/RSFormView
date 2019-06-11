@@ -16,7 +16,7 @@ open class ConstraintsConfigurator {
 }
 
 open class FormItem {
-  var formFields: [FormField]
+  public let formFields: [FormField]
   
   /// Set with the desired attributed text for text only rows, leave empty for TextFieldView rows
   public var attributedText: NSAttributedString?

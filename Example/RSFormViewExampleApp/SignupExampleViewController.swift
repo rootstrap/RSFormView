@@ -21,41 +21,9 @@ class SignupExampleViewController: UIViewController {
     
     formView.viewModel = viewModel
     formView.delegate = self
-
-    setUpFormConfigurator()
+    
     configureButton()
   }
-  
-  func setUpFormConfigurator() {
-    let configurator = FormConfigurator()
-    
-    configurator.editingTitleColor = UIColor.astralBlue
-    configurator.editingBorderColor = UIColor.astralBlue
-    configurator.formBackgroundColor = UIColor.white
-    configurator.fieldsBackgroundColor = UIColor.white
-    
-    configurator.errorTextColor = UIColor.red
-    configurator.invalidTitleColor = UIColor.red
-    configurator.invalidBorderColor = UIColor.red
-    
-    configurator.placeholderTextColor = UIColor.gray
-    configurator.validTitleColor = UIColor.gray
-    configurator.validBorderColor = UIColor.gray
-    
-    //set lineColor to clear so it is not visible
-    configurator.editingLineColor = UIColor.clear
-    configurator.invalidLineColor = UIColor.clear
-    configurator.validLineColor = UIColor.clear
-    
-    configurator.borderCornerRadius = 8
-    configurator.borderWidth = 1
-    
-    configurator.labelToTextFieldDistance = CGFloat(15)
-    configurator.textFieldToBottomLineDistance = CGFloat(14)
-    
-    formView.formConfigurator = configurator
-  }
-  
   
   func configureButton() {
     getDataButton.clipsToBounds = true
@@ -65,7 +33,7 @@ class SignupExampleViewController: UIViewController {
   
   func updateButton(enabled: Bool) {
     getDataButton.backgroundColor = enabled ?
-      UIColor.astralBlue : UIColor.brightGray.withAlphaComponent(0.4)
+      UIColor.dodgerBlue : UIColor.brightGray.withAlphaComponent(0.4)
     getDataButton.isEnabled = enabled
   }
   
@@ -80,7 +48,8 @@ class SignupExampleViewController: UIViewController {
 }
 
 extension SignupExampleViewController: FormViewDelegate {
-  func didUpdateFields(allFieldsValid: Bool) {
+  func didUpdateFields(in formView: FormView,
+                       allFieldsValid: Bool) {
     updateButton(enabled: allFieldsValid)
   }
 }
