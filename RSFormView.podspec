@@ -2,10 +2,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "RSFormView"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "A library to easily create customizable form views to collect user data."
 
-  s.description  = "A library to easily create customizable form views to collect user data."
+  s.description  = "RSFormView allows you to build beutiful forms in a few minutes with out of the box or custom designs."
 
   s.homepage     = "https://github.com/rootstrap/RSFormView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
