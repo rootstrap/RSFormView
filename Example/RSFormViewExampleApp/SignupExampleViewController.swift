@@ -21,7 +21,7 @@ class SignupExampleViewController: UIViewController {
     
     formView.viewModel = viewModel
     formView.delegate = self
-
+    
     configureButton()
   }
   
@@ -33,7 +33,7 @@ class SignupExampleViewController: UIViewController {
   
   func updateButton(enabled: Bool) {
     getDataButton.backgroundColor = enabled ?
-      UIColor.astralBlue : UIColor.brightGray.withAlphaComponent(0.4)
+      UIColor.dodgerBlue : UIColor.brightGray.withAlphaComponent(0.4)
     getDataButton.isEnabled = enabled
   }
   
