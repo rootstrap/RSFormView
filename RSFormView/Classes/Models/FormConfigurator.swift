@@ -49,8 +49,29 @@ public class FormConfigurator {
   
   public var labelToTextFieldDistance: CGFloat = 8
   public var textFieldToBottomLineDistance: CGFloat = 5
-  public var bottomLineToErrorLabelDistance: CGFloat = 15
+  public var bottomLineToErrorLabelDistance: CGFloat = 5
   public var textFieldContainerToErrorLabelDistance: CGFloat = 5
   
   public init() {}
+}
+
+public class DarkModeConfigurator: FormConfigurator {
+  override public init() {
+    super.init()
+    formBackgroundColor = UIColor.mineShaftGray
+    fieldsBackgroundColor = UIColor.tundoraGray
+    
+    editingLineColor = UIColor.heliotropePurple
+    invalidLineColor = UIColor.razzmatazzRed
+    validLineColor = UIColor.white
+    
+    placeholderTextColor = UIColor.white
+    textColor = UIColor.white
+    
+    validTitleColor = UIColor.white
+    invalidTitleColor = UIColor.razzmatazzRed
+    editingTitleColor = UIColor.heliotropePurple
+    
+    errorTextColor = UIColor.razzmatazzRed
+  }
 }

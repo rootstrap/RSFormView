@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public protocol FormViewDelegate: class {
-  func didUpdateFields(allFieldsValid: Bool)
+  func didUpdateFields(in formView: FormView, allFieldsValid: Bool)
 }
 
 @IBDesignable public class FormView: UIView {
@@ -68,10 +68,10 @@ public protocol FormViewDelegate: class {
 
 extension FormView: FormCellDelegate {
   func didUpdate(data: FormField) {
-    update(field: data)
     checkMatches(updatedField: data)
     reloadVisibleCells()
-    delegate?.didUpdateFields(allFieldsValid: viewModel?.validateFields() ?? false)
+    delegate?.didUpdateFields(in: self,
+                              allFieldsValid: viewModel?.validateFields() ?? false)
   }
 }
 
@@ -87,7 +87,7 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
     let rowFields = viewModel?.items[indexPath.row].formFields
     
     if let formItem = viewModel?.items[indexPath.row],
-      let attributtedText = formItem.attributedText,
+      let _ = formItem.attributedText,
         rowFields?.isEmpty ?? true,
         let cell = tableView
           .dequeueReusableCell(withIdentifier: FormTextCell.reuseIdentifier,

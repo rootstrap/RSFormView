@@ -65,7 +65,7 @@ class TextFieldView: UIView {
     
     let isValid = !fieldData.shouldDisplayError || fieldData.isValid
     
-    configureCellColors(with: isValid)
+    configureColors(isValid)
     
     textFieldContainerView.layer.cornerRadius = formConfigurator.borderCornerRadius
     textFieldContainerView.layer.borderWidth = formConfigurator.borderWidth
@@ -79,7 +79,7 @@ class TextFieldView: UIView {
     errorLabel.accessibilityTraits = .staticText
   }
   
-  func configureCellColors(with isValid: Bool) {
+  func configureColors(_ isValid: Bool) {
     bottomLineView.backgroundColor = isValid ?
       bottomLineValidColor() : formConfigurator.invalidLineColor
     titleLabel.textColor = isValid ?
@@ -87,6 +87,7 @@ class TextFieldView: UIView {
     textFieldContainerView.layer.borderColor = isValid ?
       borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
     errorLabel.textColor = formConfigurator.errorTextColor
+    textField.textColor = formConfigurator.textColor
   }
   
   /**
@@ -165,7 +166,7 @@ class TextFieldView: UIView {
 //Date picker related methods
 extension TextFieldView {
   @objc func datePickerChangedValue(sender: UIDatePicker) {
-    guard let data = fieldData else { return }
+    guard let _ = fieldData else { return }
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = TextFieldView.dateFormat
     

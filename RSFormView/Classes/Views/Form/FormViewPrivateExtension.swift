@@ -47,19 +47,6 @@ internal extension FormView {
     }
   }
   
-  func update(field: FormField) {
-    guard let items = viewModel?.items,
-      !items.isEmpty else { return }
-    
-    for item in items {
-      if let index =
-        item.formFields.firstIndex(where: { $0.name == field.name }) {
-        item.formFields[index] = field
-        return
-      }
-    }
-  }
-  
   func textFieldCell(forRowAt indexPath: IndexPath,
                                  in tableView: UITableView,
                                  with rowFields: [FormField]?) -> UITableViewCell {
