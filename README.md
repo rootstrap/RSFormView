@@ -30,7 +30,7 @@ let formView = FormView(frame: frame)
 view.addSubview(formView)
 ```
 Storyboards:
-Add a `UIView` to your view controller and change the class name to `FormView`.
+Add a `UIView` to your view controller and change the class name to `FormView` and the module to `RSFormView`.
 
 2. Set your view controller as FormViewDelegate:
 ```swift
@@ -142,7 +142,7 @@ Cases:
  - email: Will present the email keyboard when the field is selected and validate that the text entry is in an email format
  - date: Will present a native date picker when the field is selected and validate that the entry is not empty
  - integer: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
- - double: Will present the decimal keyboard when the field is selected and validate that the text entry can be casted to Double, max 2 decimal places
+ - double: Will present the decimal keyboard when the field is selected and validate that the text entry can be casted to Double, pass the max decimal places as a parameter of this enum case
  - password: Will mask the text entry in UI and validate that the text entry is not empty
  - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number format  
  
