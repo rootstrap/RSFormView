@@ -44,6 +44,11 @@ public protocol FormViewDelegate: class {
     configureViews()
   }
   
+  public override func prepareForInterfaceBuilder() {
+    super.prepareForInterfaceBuilder()
+    configureViews()
+  }
+  
   /// Updates the error state for every visible FormItems
   public func reloadVisibleCells() {
     for cell in formTableView.visibleCells {
