@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source       = { :git => "https://github.com/rootstrap/RSFormView.git", :tag => "v1.1.1" }
+  s.source = { :git => "https://github.com/rootstrap/RSFormView.git", :tag => "1.1.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
