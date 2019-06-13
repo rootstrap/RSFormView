@@ -274,6 +274,16 @@ extension TextFieldView: UITextFieldDelegate {
     return true
   }
   
+  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    guard let data = fieldData,
+        data.fieldType == .picker else { return true }
+    guard let fieldOptions = fieldData?.options else { return true }
+    if textField.text?.count == 0 {
+        textField.text = fieldOptions[0]
+    }
+    return true
+  }
+  
   func textFieldDidBeginEditing(_ textField: UITextField) {
     titleLabel.textColor = formConfigurator.editingTitleColor
     textField.placeholder = ""
