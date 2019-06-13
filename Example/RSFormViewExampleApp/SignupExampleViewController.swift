@@ -18,7 +18,7 @@ class SignupExampleViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     formView.viewModel = viewModel
     formView.delegate = self
     

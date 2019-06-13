@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreGraphics
 
 protocol TextFieldDelegate: class {
   func didUpdate(textFieldView: TextFieldView,
@@ -40,6 +41,16 @@ class TextFieldView: UIView {
       setKeyboardType()
     }
   }
+
+  var isValid: Bool {
+    return fieldData?.isValid ?? false
+  }
+
+  var borderColor: UIColor? {
+    didSet {
+      setNeedsDisplay()
+    }
+  }
   
   var formConfigurator = FormConfigurator()
   
@@ -51,6 +62,41 @@ class TextFieldView: UIView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     configureViews()
+  }
+
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
+    guard let context = UIGraphicsGetCurrentContext() else { return }
+    context.resetClip()
+
+    let shouldClip = !(fieldData?.value.isEmpty ?? true) || textField.placeholder?.isEmpty ?? true
+    let currentBorderColor = borderColor ?? formConfigurator.validBorderColor
+    let rectPath = UIBezierPath(roundedRect: textFieldContainerView.frame,
+                                cornerRadius: formConfigurator.borderCornerRadius)
+    rectPath.lineWidth = formConfigurator.borderWidth
+
+    if shouldClip {
+      let clipPath = UIBezierPath(roundedRect: .infinite,
+                                  cornerRadius: formConfigurator.borderCornerRadius)
+      let titleLabelPath = UIBezierPath(rect: titleLabelContainerView.frame)
+      clipPath.append(titleLabelPath)
+      clipPath.usesEvenOddFillRule = true
+      /* Clipping paths are used to define in which areas
+        the drawing context will actually draw, in this case
+        If the titleView is present, we need to create a shape
+        that excludes that area, so when we store the border
+        that part is not drawn.
+        https://developer.apple.com/documentation/uikit/uibezierpath/1624341-addclip
+      */
+      clipPath.addClip()
+    }
+
+    currentBorderColor.setStroke()
+    rectPath.stroke()
+    // Removed the clipping path, so when we paint the background, it fills the whole shape
+    context.resetClip()
+    formConfigurator.fieldsBackgroundColor.setFill()
+    rectPath.fill()
   }
   
   /// Updates TextFieldView layout according of the validation state of the related FormField
@@ -67,9 +113,6 @@ class TextFieldView: UIView {
     
     configureColors(isValid)
     
-    textFieldContainerView.layer.cornerRadius = formConfigurator.borderCornerRadius
-    textFieldContainerView.layer.borderWidth = formConfigurator.borderWidth
-    
     let errorText = fieldData.oneTimeErrorMessage ?? fieldData.errorMessage
     errorLabel.text = errorText
     
@@ -80,14 +123,19 @@ class TextFieldView: UIView {
   }
   
   func configureColors(_ isValid: Bool) {
-    bottomLineView.backgroundColor = isValid ?
-      bottomLineValidColor() : formConfigurator.invalidLineColor
     titleLabel.textColor = isValid ?
       titleValidColor() : formConfigurator.invalidTitleColor
-    textFieldContainerView.layer.borderColor = isValid ?
-      borderLineValidColor() : formConfigurator.invalidBorderColor.cgColor
     errorLabel.textColor = formConfigurator.errorTextColor
     textField.textColor = formConfigurator.textColor
+    var activeColor = isValid ?
+      borderLineValidColor() : formConfigurator.invalidBorderColor
+    borderColor = activeColor
+    if borderColor == .clear {
+      activeColor = isValid ?
+        bottomLineValidColor() : formConfigurator.invalidLineColor
+      bottomLineView.backgroundColor = activeColor
+    }
+    textField.tintColor = activeColor
   }
   
   /**
@@ -104,9 +152,6 @@ class TextFieldView: UIView {
     populateTextView(withData: data)
     setContraints()
 
-    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
-    actualView?.backgroundColor = formConfigurator.fieldsBackgroundColor
-    
     updateErrorState()
   }
   
@@ -136,7 +181,6 @@ class TextFieldView: UIView {
     isAccessibilityElement = false
     titleLabel.isAccessibilityElement = false
     titleLabelContainerView.isAccessibilityElement = false
-    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
     textFieldContainerView.isAccessibilityElement = false
     textField.accessibilityIdentifier = data.name
     textField.accessibilityLabel = data.name
@@ -232,11 +276,16 @@ extension TextFieldView: UITextFieldDelegate {
   
   func textFieldDidBeginEditing(_ textField: UITextField) {
     titleLabel.textColor = formConfigurator.editingTitleColor
-    bottomLineView.backgroundColor = formConfigurator.editingLineColor
     textField.placeholder = ""
     titleLabel.isHidden = false
     titleLabelContainerView.isHidden = false
-    textFieldContainerView.layer.borderColor = formConfigurator.editingBorderColor.cgColor
+    borderColor = formConfigurator.editingBorderColor
+    textField.tintColor = formConfigurator.editingBorderColor
+    if borderColor == .clear {
+      bottomLineView.backgroundColor = formConfigurator.editingLineColor
+      textField.tintColor = formConfigurator.editingLineColor
+    }
+    setNeedsDisplay()
   }
   
   func textFieldDidEndEditing(_ textField: UITextField) {
@@ -244,6 +293,7 @@ extension TextFieldView: UITextFieldDelegate {
     titleLabelContainerView.isHidden = fieldData?.value ?? "" == ""
     updatePlaceHolder(withText: fieldData?.placeholder ?? "")
     updateErrorState()
+    setNeedsDisplay()
   }
 }
 

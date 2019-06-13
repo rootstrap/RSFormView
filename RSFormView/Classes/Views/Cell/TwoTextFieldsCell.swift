@@ -30,9 +30,7 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     let secondFieldData = formItem.formFields[1]
   
     isAccessibilityElement = false
-    contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
-    backgroundColor = formConfigurator.fieldsBackgroundColor
-    
+
     update(textFieldView: firstTextField,
            withData: firstFieldData,
            formConfigurator: formConfigurator)

@@ -17,17 +17,10 @@ internal extension TextFieldView {
     
     titleLabel.font = formConfigurator.titleFont
     titleLabel.textColor = formConfigurator.textColor
-    titleLabel.backgroundColor = formConfigurator.fieldsBackgroundColor
-    titleLabelContainerView.backgroundColor = formConfigurator.fieldsBackgroundColor
     
     errorLabel.font = formConfigurator.errorFont
     errorLabel.textColor = formConfigurator.errorTextColor
-    
-    textFieldContainerView.addBorder(color: formConfigurator.validBorderColor,
-                         weight: formConfigurator.borderWidth,
-                         backgroundColor: formConfigurator.fieldsBackgroundColor)
-    textFieldContainerView.setRoundBorders(formConfigurator.borderCornerRadius)
-    
+
     setContraints() 
     
     actualView?.sendSubviewToBack(textFieldContainerView)
@@ -71,9 +64,9 @@ internal extension TextFieldView {
       formConfigurator.editingLineColor : formConfigurator.validLineColor
   }
   
-  func borderLineValidColor() -> CGColor {
+  func borderLineValidColor() -> UIColor {
     return textField.isFirstResponder ?
-      formConfigurator.editingBorderColor.cgColor : formConfigurator.validBorderColor.cgColor
+      formConfigurator.editingBorderColor : formConfigurator.validBorderColor
   }
   
   func setKeyboardType() {

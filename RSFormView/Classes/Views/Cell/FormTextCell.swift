@@ -19,8 +19,6 @@ class FormTextCell: UITableViewCell {
   func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator) {
     headerLabelTopMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelTopMargin
     headerLabelBottomMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelBottomMargin
-    contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
-    backgroundColor = formConfigurator.fieldsBackgroundColor
     formTextLabel.attributedText = formItem.attributedText
   }
 }

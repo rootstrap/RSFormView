@@ -30,8 +30,6 @@ class TextFieldCell: UITableViewCell, FormViewCell {
   }
   
   func update(withData data: FormField, formConfigurator: FormConfigurator) {
-    contentView.backgroundColor = formConfigurator.fieldsBackgroundColor
-    backgroundColor = formConfigurator.fieldsBackgroundColor
     isAccessibilityElement = false
     textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
