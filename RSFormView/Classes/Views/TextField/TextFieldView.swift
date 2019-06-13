@@ -278,7 +278,7 @@ extension TextFieldView: UITextFieldDelegate {
     guard let data = fieldData,
         data.fieldType == .picker else { return true }
     guard let fieldOptions = fieldData?.options else { return true }
-    if textField.text?.count == 0 {
+    if textField.text?.isEmpty ?? true {
         textField.text = fieldOptions[0]
     }
     return true
