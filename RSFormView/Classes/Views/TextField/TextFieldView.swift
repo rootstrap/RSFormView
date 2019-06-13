@@ -275,11 +275,11 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-    guard let data = fieldData,
-      let fieldOptions = fieldData?.options,
-      data.fieldType == .picker else { return true }
-    if textField.text?.isEmpty ?? true {
-      textField.text = fieldOptions[0]
+    if let data = fieldData,
+        let options = data.options,
+        data.fieldType == .picker,
+        textField.text?.isEmpty ?? true {
+        update(withPickerText: options[0])
     }
     return true
   }
