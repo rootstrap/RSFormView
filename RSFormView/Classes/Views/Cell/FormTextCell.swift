@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-class FormTextCell: UITableViewCell {
+class FormTextCell: FormTableViewCell {
   
   static let reuseIdentifier = "FormTextCellIdentifier"
   @IBOutlet weak var formTextLabel: UILabel!
   @IBOutlet weak var headerLabelTopMarginConstraint: NSLayoutConstraint!
   @IBOutlet weak var headerLabelBottomMarginConstraint: NSLayoutConstraint!
   
-  func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator) {
+  override func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {
     headerLabelTopMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelTopMargin
     headerLabelBottomMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelBottomMargin
     formTextLabel.attributedText = formItem.attributedText

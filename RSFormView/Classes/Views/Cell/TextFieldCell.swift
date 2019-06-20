@@ -9,32 +9,23 @@
 import Foundation
 import UIKit
 
-protocol FormCellDelegate: class {
-  func didUpdate(data: FormField)
-}
-
-protocol FormViewCell: class {
-  func updateErrorState()
-}
-
-class TextFieldCell: UITableViewCell, FormViewCell {
+class TextFieldCell: FormTableViewCell {
   
   static let reuseIdentifier = "TextFieldCellIdentifier"
   
   @IBOutlet weak var textFieldView: TextFieldView!
-  
-  weak var delegate: FormCellDelegate?
-  
+
   override func awakeFromNib() {
     textFieldView.delegate = self
   }
   
-  func update(withData data: FormField, formConfigurator: FormConfigurator) {
+  override func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {
     isAccessibilityElement = false
-    textFieldView.update(withData: data, formConfigurator: formConfigurator)
+    guard let fieldData = formItem.formFields.first else { return }
+    textFieldView.update(withData: fieldData, formConfigurator: formConfigurator)
   }
   
-  func updateErrorState() {
+  override func updateErrorState() {
     textFieldView.updateErrorState()
   }
   

@@ -9,21 +9,19 @@
 import Foundation
 import UIKit
 
-class TwoTextFieldsCell: UITableViewCell, FormViewCell {
+class TwoTextFieldsCell: FormTableViewCell {
   
   static let reuseIdentifier = "TwoTextFieldsCellIdentifier"
   
   @IBOutlet weak var firstTextField: TextFieldView!
   @IBOutlet weak var secondTextField: TextFieldView!
   
-  weak var delegate: FormCellDelegate?
-  
   override func awakeFromNib() {
     firstTextField.delegate = self
     secondTextField.delegate = self
   }
   
-  func update(withFormItem formItem: FormItem, formConfigurator: FormConfigurator) {
+  override func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {
     guard formItem.formFields.count == 2 else { return }
     
     let firstFieldData = formItem.formFields[0]
@@ -43,7 +41,7 @@ class TwoTextFieldsCell: UITableViewCell, FormViewCell {
     textFieldView.update(withData: data, formConfigurator: formConfigurator)
   }
   
-  func updateErrorState() {
+  override func updateErrorState() {
     firstTextField.updateErrorState()
     secondTextField.updateErrorState()
   }
