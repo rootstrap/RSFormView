@@ -54,7 +54,7 @@ class SignupExampleViewModel: FormViewModel {
     return StepperCellItem(with: FormField(name: FieldName.numberOfSiblings.rawValue, //Identifier for the field
                           initialValue: "10", //Provide a default value for the field
                           placeholder: "",
-                          fieldType: .double(maxDecimalPlaces: 0), //field type describes the behaviour the field will expect and provide a default validation
+                          fieldType: .integer, //field type describes the behaviour the field will expect and provide a default validation
                           isValid: true, //wether is valid in its initial state
                           errorMessage: "Please enter a value") //message displayed when the value doesn't pass the validation
                         )

@@ -35,7 +35,10 @@ class StepperCell: FormTableViewCell {
 
   override func draw(_ rect: CGRect) {
     super.draw(rect)
-    let path = UIBezierPath(rect: CGRect(x: margin, y: rect.height - margin / 2, width: rect.width - margin * 2, height: 1))
+    let path = UIBezierPath(rect: CGRect(x: margin,
+                                         y: rect.height - margin / 2,
+                                         width: rect.width - margin * 2,
+                                         height: 1))
     (configurator?.validLineColor ?? .lightGray).setFill()
     path.fill()
   }

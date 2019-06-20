@@ -54,7 +54,7 @@ A `FormViewModel` can be any class that implements the `FormViewModel` delegate.
 For a class to implement `FormViewModel` delegate  you only need to define an array of `FormItem`.
 Each `FormItem` will determine the behavior and validation of each text field in your form.
 Out of the box, RSFormView provides the following subclasses of `FormItem`:
-- `TextCellItem`: A single line of text, or a "section header"
+- `TextCellItem`: A single label, or a "section header"
 - `TextFieldCellItem`: A single text field.
 - `TwoTextFieldCellItem`: Two text fields.
 
@@ -178,7 +178,7 @@ yourFormField.validationType = .custom(evaluator: { [weak self] updatedValue in
 
 A `FormItem` defines the basic behaviour of a row which is then specialized by subclassing it. You should never use instances of FormItem directly, RSFormView provides the following subclasses of FormItem out of the box:
 
-TextCellItem: A single line of text, or a "section header"
+TextCellItem: A single label, or a "section header"
 TextFieldCellItem: A single text field.
 TwoTextFieldCellItem: Two text fields.
 
@@ -201,7 +201,7 @@ let formItem = TextFieldCellItem(with: birthdateField)
 let firstFormField = FormField(...)
 let secondFormField = FormField(...)
 
-let formItem = ForTwoTextFieldCellItemmItem(firstField: firstFormField, secondField: secondFormField)
+let formItem = TwoTextFieldCellItem(firstField: firstFormField, secondField: secondFormField)
 ```
 
 3. Text Cell Item (may be used as a section header or text hint):
@@ -212,11 +212,11 @@ formItem.attributedString = attributedString
 ```
 
 ## Custom Form Items
-If you need custom fields and the customization possibilities of the FormConfigurator are not enough, you can implement your own Fields.
+If you need custom fields and the customization possibilities of the `FormConfigurator` are not enough, you can implement your own Fields.
 To do so, follow these steps:
 1- Create your custom `UITableViewCell` as you would normally do for any tableView.
 2- Instead of subclassing from `UITableViewCell`, use `FormTableViewCell` as a base class.
-3- Override `update` and `updateErrorState` to implement your own ui updates for the field.
+3- Override `update` and `updateErrorState` to implement your own UI updates for the field.
 4- Create a subclass of `FormItem` that overrides `cellIdentifier` and returns a valid reuseID.
 5- In your formViewModel implementation, override the `customCellSetup` callback and register your new cell on the tableView.
 
