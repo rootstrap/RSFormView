@@ -50,6 +50,7 @@
 		E20AAFD52D5B2E1CA694E3B1B547899F /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FD24222324C7E7EF40FFAE7807089 /* AddressManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E3A3AF2D937F7B7DA923CEF36CCCDD15 /* RSFormView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CD6FF5E843A618282A2FC81683DCD8 /* RSFormView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F886635DB8B24AF65559B6EC26B32C65 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896A26F3CB30FB3CD89BB041B357AAE /* StringExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FEDB766722BA79DF0029D8C2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB766622BA79DF0029D8C2 /* FormCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,13 +101,13 @@
 		2896A26F3CB30FB3CD89BB041B357AAE /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		28D6DEAFBD05DE94200D967AA62839A3 /* FormViewPrivateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormViewPrivateExtension.swift; sourceTree = "<group>"; };
 		2910B0FACFD4FE2B109E760776650DC9 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
-		2C96E922FAF8B4D830253F474ECD535F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		2D929055228486A7E7FBB2C1048122FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		2C96E922FAF8B4D830253F474ECD535F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D929055228486A7E7FBB2C1048122FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		31EDBDF8D65BAF3BA816D27A77DCCAF9 /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		39385EA3D9F06CFC5270DB21D07C4BFC /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
 		3998CBD2832F5EFF0872CDE916FCC249 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
 		3F2801A1876AA32949531E26E5C31C53 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
-		40775C37404E0F65E63D1BC2E7329263 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RSFormViewExampleApp.a"; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40775C37404E0F65E63D1BC2E7329263 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4971CB334DEDED4AC31ECE740FF2B4 /* TwoTextFieldsCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TwoTextFieldsCell.xib; sourceTree = "<group>"; };
 		610789A3814696226317BC841E8B94AA /* TextFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		61616DC0A1B429402046E71B919CDDCF /* RSFormView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSFormView-dummy.m"; sourceTree = "<group>"; };
@@ -121,22 +122,22 @@
 		95F0704E7F1E09778370551A453026DB /* RSFormView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSFormView-prefix.pch"; sourceTree = "<group>"; };
 		9826FFA73109A0B2C99FCBEF5EA1A2D4 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9932CD4A6AB7468364076D56A13BBFCD /* FormView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DAF1144E71332BDA240606619627081 /* FormView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9DE0105E5465C9D3CA2359EA28C4B4A9 /* RSFormView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RSFormView.h; path = RSFormView/Classes/RSFormView.h; sourceTree = "<group>"; };
 		9EBC45F213AB0ECB5911D50DC9C8AC7D /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
 		A0E5E8D23920C32CAB6A2C0408FC30F8 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		A292723098B5E0FECA35FC76EFB498F9 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
 		A65CED11CBD35096251FBEB17EB27AF6 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		A8E950A16D00F649C54FFB30F81D7842 /* libIQKeyboardManagerSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIQKeyboardManagerSwift.a; path = libIQKeyboardManagerSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABD2D192FC8A7E06154AE48D1E236253 /* libRSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRSFormView.a; path = libRSFormView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE2DD504FDDF724A41FD4AA6FC9E3A84 /* RSFormView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RSFormView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A8E950A16D00F649C54FFB30F81D7842 /* libIQKeyboardManagerSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManagerSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD2D192FC8A7E06154AE48D1E236253 /* libRSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFormView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2DD504FDDF724A41FD4AA6FC9E3A84 /* RSFormView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RSFormView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSFormView.xcconfig; sourceTree = "<group>"; };
 		AF0CF5BB09D450E20041414E0D144146 /* Pods-RSFormViewExampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSFormViewExampleApp-resources.sh"; sourceTree = "<group>"; };
 		B0CD6FF5E843A618282A2FC81683DCD8 /* RSFormView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSFormView-umbrella.h"; sourceTree = "<group>"; };
 		BD08AA9BEA60937695A94F97FD883C1A /* ViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		C10EECFB250C3CB12D8C1F5F58B458B9 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
-		C5B241B4B094A5BBB650AA403F596142 /* RSFormView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RSFormView.bundle; path = "RSFormView-RSFormView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B241B4B094A5BBB650AA403F596142 /* RSFormView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0FEFA1432490DB07D9231D8BCABCC1 /* FormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		CCF0CFC4E50D4E0CAE5208F5D134946A /* FormTextCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormTextCell.swift; sourceTree = "<group>"; };
 		CFC5FD3BCD80F6466158F18C812E1893 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		EB0452F2A998F08149F0E1767834C6D4 /* ResourceBundle-RSFormView-RSFormView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RSFormView-RSFormView-Info.plist"; sourceTree = "<group>"; };
 		FA38505A8720A890F3C0782CCD81B35E /* RSFormView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSFormView.modulemap; sourceTree = "<group>"; };
 		FB22C05F1352D51F007C1DA8DBD7C254 /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
+		FEDB766622BA79DF0029D8C2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		FEE318700072A1E7F63B02D1B688A93D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,7 +253,6 @@
 				610789A3814696226317BC841E8B94AA /* TextFieldView.swift */,
 				76C8F9D51912A2C0239380D1AE98DAF8 /* TextFieldViewPrivateExtension.swift */,
 			);
-			name = TextField;
 			path = TextField;
 			sourceTree = "<group>";
 		};
@@ -283,8 +284,8 @@
 				CCF0CFC4E50D4E0CAE5208F5D134946A /* FormTextCell.swift */,
 				31EDBDF8D65BAF3BA816D27A77DCCAF9 /* TextFieldCell.swift */,
 				0EA9819C8C9D62F0DD10EE2EB1940099 /* TwoTextFieldsCell.swift */,
+				FEDB766622BA79DF0029D8C2 /* FormCell.swift */,
 			);
-			name = Cell;
 			path = Cell;
 			sourceTree = "<group>";
 		};
@@ -302,7 +303,6 @@
 				9DAF1144E71332BDA240606619627081 /* FormView.swift */,
 				28D6DEAFBD05DE94200D967AA62839A3 /* FormViewPrivateExtension.swift */,
 			);
-			name = Form;
 			path = Form;
 			sourceTree = "<group>";
 		};
@@ -449,7 +449,6 @@
 				7BAE7CC16D3CA53193DEC7C642BE612F /* Resources */,
 				AAD1CDBAF1D477515E2CCCBB361638F3 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -695,6 +694,7 @@
 				C5EDA495BB6BB0F97DE255A291D14ABC /* FormConfigurator.swift in Sources */,
 				2E92C2D05B59D0208613A58C6B30CE5C /* FormField.swift in Sources */,
 				2E56C0A58569E737C9A37E5ECE2FAE18 /* FormTextCell.swift in Sources */,
+				FEDB766722BA79DF0029D8C2 /* FormCell.swift in Sources */,
 				A7D1293D708D895B6B7260B6B089B1FB /* FormView.swift in Sources */,
 				993B255E0ECF0E480F154F826A6ACDE6 /* FormViewModel.swift in Sources */,
 				3CB08C6EEE5D7028C4345B0F8C1A0261 /* FormViewPrivateExtension.swift in Sources */,

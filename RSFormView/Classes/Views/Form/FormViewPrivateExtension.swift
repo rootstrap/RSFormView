@@ -46,29 +46,20 @@ internal extension FormView {
       validationMatch.isValid = validationMatch.value == updatedField.value
     }
   }
-  
-  func textFieldCell(forRowAt indexPath: IndexPath,
-                                 in tableView: UITableView,
-                                 with rowFields: [FormField]?) -> UITableViewCell {
-    if rowFields?.count == 1,
-      let fieldData = rowFields?.first,
-      let cell = tableView
-        .dequeueReusableCell(withIdentifier: TextFieldCell.reuseIdentifier,
-                             for: indexPath) as? TextFieldCell {
-      cell.update(withData: fieldData, formConfigurator: formConfigurator)
-      cell.delegate = self
-      return cell
+
+  func reuseIdentifier(forRowAt indexPath: IndexPath, with formItem: FormItem?) -> String {
+    guard let formItem = formItem else {
+      return FormTextCell.reuseIdentifier
+    }
+
+    let rowFields = formItem.formFields
+
+    if rowFields.count == 1 && formItem.attributedText == nil {
+      return TextFieldCell.reuseIdentifier
+    } else if rowFields.count == 2 {
+      return TwoTextFieldsCell.reuseIdentifier
     }
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: TwoTextFieldsCell.reuseIdentifier,
-                                             for: indexPath)
-    if let formItem = viewModel?.items[indexPath.row],
-      formItem.formFields.count == 2,
-      let cell = cell as? TwoTextFieldsCell {
-      cell.delegate = self
-      cell.update(withFormItem: formItem, formConfigurator: formConfigurator)
-    }
-    
-    return cell
+    return FormTextCell.reuseIdentifier
   }
 }
