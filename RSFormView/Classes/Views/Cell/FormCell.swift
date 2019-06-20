@@ -21,8 +21,10 @@ public protocol FormCellDelegate: class {
   To create new types of cells, you need to inherit from this class,
   and override the update method
  */
-public class FormTableViewCell: UITableViewCell {
+open class FormTableViewCell: UITableViewCell {
   open weak var delegate: FormCellDelegate?
+
+  open var formItem: FormItem?
 
   /// Called every time the cell is rendered
   open func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {

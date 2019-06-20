@@ -18,7 +18,14 @@ public protocol FormViewDelegate: class {
   @IBOutlet weak var formTableView: UITableView!
   
   public weak var delegate: FormViewDelegate?
-  public var viewModel: FormViewModel?
+
+  public var viewModel: FormViewModel? {
+    didSet {
+      viewModel?.customCellSetup?(formTableView)
+      reloadVisibleCells()
+    }
+  }
+
   public var formConfigurator = FormConfigurator() {
     didSet {
       backgroundColor = formConfigurator.formBackgroundColor
@@ -90,7 +97,7 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
                  cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let formItem = viewModel?.items[indexPath.row]
 
-    let reuseId = reuseIdentifier(forRowAt: indexPath, with: formItem)
+    let reuseId = formItem?.cellIdentifier ?? FormTextCell.reuseIdentifier
 
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseId,
                                              for: indexPath)
@@ -106,5 +113,4 @@ extension FormView: UITableViewDelegate, UITableViewDataSource {
     formCell.update(with: item, and: formConfigurator)
     return formCell
   }
-    
 }

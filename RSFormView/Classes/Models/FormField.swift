@@ -15,28 +15,32 @@ open class ConstraintsConfigurator {
   public init() {}
 }
 
+/**
+ Base FormItem class, this defines the base behaviour that a row will have.
+ **You should not use concrete instances of this class in your codebase.**
+ Instead use `TextFieldCellItem`, `TwoTextFieldCellItem`, `TextCellItem` or one of your own.
+
+ For custom rows, inherit from this base class, and override the `cellIdentifier` value.
+ */
 open class FormItem {
   public let formFields: [FormField]
+
+  /// Override this identifier to define which UITableViewCell will be used.
+  open var cellIdentifier: String {
+    return TextFieldCell.reuseIdentifier
+  }
   
   /// Set with the desired attributed text for text only rows, leave empty for TextFieldView rows
   public var attributedText: NSAttributedString?
   
   /// Set with the desired contraints configurations for text only rows, leave empty for TextFieldView rows
   public var contraintsConfigurator: ConstraintsConfigurator = ConstraintsConfigurator()
-  
+
   /**
    - Parameters:
-      - firstField: the FormField describing the first TextFieldView of the row, leave empty for text only row.
-      - secondField: the FormField describing the second TextFieldView of the row, leave empty for text only row and rows with only one TextFieldView
-  */
-  public init(firstField: FormField? = nil, secondField: FormField? = nil) {
-    var fields: [FormField] = []
-    [firstField, secondField].forEach {
-      if let field = $0 {
-        fields.append(field)
-      }
-    }
-    
+   - fields: the FormFields describing the item.
+   */
+  public init(with fields: [FormField]) {
     self.formFields = fields
   }
 }
@@ -58,7 +62,7 @@ open class FormField {
   public var validationType: ValidationType?
   
   /// Defines the error message to be displayed when the text entry is invalid
-  public var errorMessage: String
+  public var errorMessage: String?
   
   /// Defines the error message to be displayed when the FormField is manually marked invalid
   public var oneTimeErrorMessage: String?
@@ -128,10 +132,10 @@ open class FormField {
   
   public init(name: String,
               initialValue: String,
-              placeholder: String,
+              placeholder: String = "",
               fieldType: FieldType,
               isValid: Bool,
-              errorMessage: String) {
+              errorMessage: String? = nil) {
     self.name = name
     self.value = initialValue
     self.placeholder = placeholder

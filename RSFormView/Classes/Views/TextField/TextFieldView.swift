@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import CoreGraphics
 
-protocol TextFieldDelegate: class {
+public protocol TextFieldDelegate: class {
   func didUpdate(textFieldView: TextFieldView,
                  with fieldData: FormField)
 }
 
 @IBDesignable
-class TextFieldView: UIView {
+public class TextFieldView: UIView {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var errorLabel: UILabel!
@@ -64,7 +64,7 @@ class TextFieldView: UIView {
     configureViews()
   }
 
-  override func draw(_ rect: CGRect) {
+  override public func draw(_ rect: CGRect) {
     super.draw(rect)
     guard let context = UIGraphicsGetCurrentContext() else { return }
     context.resetClip()
@@ -221,21 +221,21 @@ extension TextFieldView {
 
 //General picker related methods
 extension TextFieldView: UIPickerViewDelegate, UIPickerViewDataSource {
-  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+  public func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
   
-  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+  public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     guard let fieldOptions = fieldData?.options else { return 0 }
     return fieldOptions.count
   }
   
-  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+  public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     guard let fieldOptions = fieldData?.options else { return "" }
     return fieldOptions[row]
   }
   
-  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+  public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     guard let fieldData = fieldData,
       let fieldOptions = fieldData.options else { return }
     let pickerString = fieldOptions[row]
@@ -244,7 +244,7 @@ extension TextFieldView: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 extension TextFieldView: UITextFieldDelegate {
-  func textField(_ textField: UITextField,
+  public func textField(_ textField: UITextField,
                  shouldChangeCharactersIn range: NSRange,
                  replacementString string: String) -> Bool {
     guard let data = fieldData,
@@ -265,7 +265,7 @@ extension TextFieldView: UITextFieldDelegate {
     return false
   }
   
-  func textFieldShouldClear(_ textField: UITextField) -> Bool {
+  public func textFieldShouldClear(_ textField: UITextField) -> Bool {
     guard let data = fieldData else { return true }
     data.value = ""
     data.shouldDisplayError = true
@@ -274,7 +274,7 @@ extension TextFieldView: UITextFieldDelegate {
     return true
   }
   
-  func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+  public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
     if let data = fieldData,
         let options = data.options,
         data.fieldType == .picker,
@@ -284,7 +284,7 @@ extension TextFieldView: UITextFieldDelegate {
     return true
   }
   
-  func textFieldDidBeginEditing(_ textField: UITextField) {
+  public func textFieldDidBeginEditing(_ textField: UITextField) {
     titleLabel.textColor = formConfigurator.editingTitleColor
     textField.placeholder = ""
     titleLabel.isHidden = false
@@ -298,7 +298,7 @@ extension TextFieldView: UITextFieldDelegate {
     setNeedsDisplay()
   }
   
-  func textFieldDidEndEditing(_ textField: UITextField) {
+  public func textFieldDidEndEditing(_ textField: UITextField) {
     titleLabel.isHidden = fieldData?.value ?? "" == ""
     titleLabelContainerView.isHidden = fieldData?.value ?? "" == ""
     updatePlaceHolder(withText: fieldData?.placeholder ?? "")

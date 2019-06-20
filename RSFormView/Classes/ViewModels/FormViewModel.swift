@@ -6,7 +6,7 @@
 //  Copyright © 2019 Rootstrap. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public enum FieldType: Equatable {
   case email
@@ -44,9 +44,16 @@ public protocol FormViewModel: class {
   
   /// Returns every FormField in items
   func fields() -> [FormField]
+
+  // Custom cells
+  var customCellSetup: ((UITableView?) -> Void)? { get }
 }
 
 public extension FormViewModel {
+  var customCellSetup: ((UITableView?) -> Void)? {
+    return nil
+  }
+  
   func markItemInvalid(fieldName: String, error: String) {
     if let field = fields().first(where: { $0.name == fieldName }) {
       field.isValid = false
