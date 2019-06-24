@@ -12,54 +12,57 @@
 		03D2CE9EC7ADEC7365047DA463B8DDE8 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A292723098B5E0FECA35FC76EFB498F9 /* IQBarButtonItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		05D1D5CBE66C97497A9FB285A3FDC07B /* IQInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7855BDC8658A1B6BC48A930EDB84173E /* IQInvocation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1052D8082514C32C942877189635848D /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EBC45F213AB0ECB5911D50DC9C8AC7D /* IQKeyboardManagerSwift-dummy.m */; };
-		1662BD7C00ADA77024A40843502825E5 /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9932CD4A6AB7468364076D56A13BBFCD /* FormView.xib */; };
+		1192B61263C1FF4924D0038DAA679D68 /* FormConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6E78CAEB3C25970475E35AB63B072 /* FormConfigurator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		177C86FE8FA3DD49E61511626FF3A862 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896A26F3CB30FB3CD89BB041B357AAE /* StringExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1CDA975B08C06D60C693D789CA917D34 /* IQKeyboardManagerConstantsInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39385EA3D9F06CFC5270DB21D07C4BFC /* IQKeyboardManagerConstantsInternal.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		23509657FCC5A40EB38E10F9B2F588EF /* RSFormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DE0105E5465C9D3CA2359EA28C4B4A9 /* RSFormView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E3A54420729BFFE2A4FCF9C31C564CE /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9932CD4A6AB7468364076D56A13BBFCD /* FormView.xib */; };
+		247A5D1937C601724226C44E01E49435 /* FormTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 192F330056AA702F02F75339B6554F40 /* FormTextCell.xib */; };
 		25C82E558B5F1A202279C24B174AC722 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B79DB1D248E7F6C9E684437DEBC2E9 /* IQNSArray+Sort.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E56C0A58569E737C9A37E5ECE2FAE18 /* FormTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0CFC4E50D4E0CAE5208F5D134946A /* FormTextCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E92C2D05B59D0208613A58C6B30CE5C /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0FEFA1432490DB07D9231D8BCABCC1 /* FormField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3CB08C6EEE5D7028C4345B0F8C1A0261 /* FormViewPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6DEAFBD05DE94200D967AA62839A3 /* FormViewPrivateExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D2FFBAE83D30D8A7A83213E1A1199A4 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBBD90F14D763B35EBA314E7EC1E189 /* TextFieldCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		382CB9097549D9EEF68A1643A45672A5 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD08AA9BEA60937695A94F97FD883C1A /* ViewExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		452F303375D458AECE9FCE58F265820A /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106B8DD2DD25478EABBD35B716A022C /* IQTextView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46AD9957BE144200FD0C473F6BA3FD1D /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77CC05D9CDE17C87010AB0A2BB30D6D /* IQUITextFieldView+Additions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4D9B611CD52EC111A17DD874931DC211 /* FormTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 192F330056AA702F02F75339B6554F40 /* FormTextCell.xib */; };
-		56ECEAE0EEB88833E97F101E6669EE97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826FFA73109A0B2C99FCBEF5EA1A2D4 /* Constants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5D010A62E9A3D1A98750108D4DEF7D3D /* FormViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860C9FE51BE8C0A8E5A3C3BBEA9CEC5C /* FormViewCell.xib */; };
-		5D6931C4C27C073B3DE9DA1899B44604 /* TwoTextFieldsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4971CB334DEDED4AC31ECE740FF2B4 /* TwoTextFieldsCell.xib */; };
+		53E86EF03446D3EF481F8C25033225C8 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B0DFE775304CA5E80CA8B24279518 /* TextFieldView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		549E6C07774B5E8A7200EEE492695178 /* RSFormView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DE0105E5465C9D3CA2359EA28C4B4A9 /* RSFormView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		57C0566EE38C8F245DE533A9061383CE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA401E4276B8A7D6E5E18E609F7371E /* ColorExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5F5916872169F52843C45F66AADDE45B /* Pods-RSFormViewExampleApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A478ADD1B929E440B71922E44AF45 /* Pods-RSFormViewExampleApp-dummy.m */; };
+		6150D90A3A66374A1A079DCD71CD2820 /* FormViewPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C109E92A70E1FA404124394B40179DE /* FormViewPrivateExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		69187A1744506D43A86216F2ACCAFFCA /* TextFieldViewPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7119356F9B1961C83030D181C55AF1 /* TextFieldViewPrivateExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6CEB086973F7EFC00999C99FE31BE0A2 /* RSFormView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CD6FF5E843A618282A2FC81683DCD8 /* RSFormView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7276473D74E544241D3A55A03BB74309 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65CED11CBD35096251FBEB17EB27AF6 /* IQTitleBarButtonItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		768F6125F93EFCA74D4710D4E7E5035C /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848047CBA3AAAFE50C12F3AEE7AB378 /* TextFieldView.xib */; };
+		7507822FF483C3A6CE498FCD0FE0B208 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976A644BA6D5803B19CCD30C8495842E /* FormView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		801C8A2938C41A7322B3C2DDF27D9EE7 /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15172B5F03ED44F2C22F95B7FCF20B7E /* IQUIViewController+Additions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8096D5EE0B48876CF682746FFFE4D6E1 /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79015F1347E5D3EB64F0CD6A7AD689AF /* IQKeyboardManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8578F2582C48A232ED3B75C72B6385E9 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2910B0FACFD4FE2B109E760776650DC9 /* IQToolbar.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9137E846E5EF0F1E3E6762BF1607FDC7 /* TextFieldViewPrivateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8F9D51912A2C0239380D1AE98DAF8 /* TextFieldViewPrivateExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9476E52CC8D5519235AC50696625B1C5 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECD083B30EE8F5BA23B0F4DB1E0DE4 /* FormViewModel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9545CA8287F9EFF88E4EA667267E8FD8 /* IQKeyboardManagerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C10EECFB250C3CB12D8C1F5F58B458B9 /* IQKeyboardManagerSwift-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		993B255E0ECF0E480F154F826A6ACDE6 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECD083B30EE8F5BA23B0F4DB1E0DE4 /* FormViewModel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FCD636D1CF25AE6D0CFE930DA8DBE93 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D914565E7DA28D3D1B1BBF639B3B0DA3 /* IQUIView+Hierarchy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A37975E01B2EFC8D2ED3E01C330B6B1D /* IQKeyboardManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D32AA2A827BAFB77DAFDDE7411709A /* IQKeyboardManagerConstants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A7D1293D708D895B6B7260B6B089B1FB /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAF1144E71332BDA240606619627081 /* FormView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ABD9B0C662650142C83AB4CA4E2C911D /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2801A1876AA32949531E26E5C31C53 /* IQUIView+IQKeyboardToolbar.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B4DEACFBD3BA19C6AC1680356B8488CB /* TwoTextFieldsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA9819C8C9D62F0DD10EE2EB1940099 /* TwoTextFieldsCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AD7B6F727A0AB1BF99689E93DAC1DE2F /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0FEFA1432490DB07D9231D8BCABCC1 /* FormField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B363031159428847BA1FFF81F4DA2DAA /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE85ECB177359232F5A1ABABF9E854FF /* FormCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BA000E84A0E168C2158E9005C21FF9AF /* FormViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860C9FE51BE8C0A8E5A3C3BBEA9CEC5C /* FormViewCell.xib */; };
+		BA7A561EDDA1DB47E7453AFC5F0BB192 /* FormTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE89AA0AA61E4359F586F027192D091 /* FormTextCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BB481D9FE93D28DB0B403710E3CFEA0F /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1848047CBA3AAAFE50C12F3AEE7AB378 /* TextFieldView.xib */; };
 		BF1D8B913DC48D6F7C70600FA68D3850 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A268DAA5A9B8690148D6D996107E0DB /* IQUIScrollView+Additions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C07AB672015F4916176BE5B79E973A21 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA401E4276B8A7D6E5E18E609F7371E /* ColorExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5EDA495BB6BB0F97DE255A291D14ABC /* FormConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6E78CAEB3C25970475E35AB63B072 /* FormConfigurator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C783E52661BD7085404CE064948864C2 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EDBDF8D65BAF3BA816D27A77DCCAF9 /* TextFieldCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C99B7A3EBFB3641379B9A1E1A8C551F1 /* Pods-RSFormViewExampleApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3E60593D77145317A15F3C0EFD43A5 /* Pods-RSFormViewExampleApp-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CB7D27E960006C89E1AD48D511E3B76F /* RSFormView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61616DC0A1B429402046E71B919CDDCF /* RSFormView-dummy.m */; };
-		D0B179EFA48B898669E7B516403BBA70 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610789A3814696226317BC841E8B94AA /* TextFieldView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D6201068EB5FD474776BCCAA9C26CB93 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD08AA9BEA60937695A94F97FD883C1A /* ViewExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E20AAFD52D5B2E1CA694E3B1B547899F /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FD24222324C7E7EF40FFAE7807089 /* AddressManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E3A3AF2D937F7B7DA923CEF36CCCDD15 /* RSFormView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0CD6FF5E843A618282A2FC81683DCD8 /* RSFormView-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F886635DB8B24AF65559B6EC26B32C65 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2896A26F3CB30FB3CD89BB041B357AAE /* StringExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FEDB766722BA79DF0029D8C2 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB766622BA79DF0029D8C2 /* FormCell.swift */; };
+		C9BC5833CB57A5C7ECA4793C189BC897 /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FD24222324C7E7EF40FFAE7807089 /* AddressManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D0ECF645E8E568CA4C2E1DCC6DBA63BF /* TwoTextFieldsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B4971CB334DEDED4AC31ECE740FF2B4 /* TwoTextFieldsCell.xib */; };
+		E755465C67E734ECC56C49DC02FA7C70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826FFA73109A0B2C99FCBEF5EA1A2D4 /* Constants.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E964BB78AA59EF025BF2F7FFB496AC63 /* RSFormView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61616DC0A1B429402046E71B919CDDCF /* RSFormView-dummy.m */; };
+		FAE3685CB5A4D72251502C18AEF283AB /* TwoTextFieldsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2865829DAF526281F42354334CE12 /* TwoTextFieldsCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FE1A53AC22BBD4AD00873F21 /* TextFieldCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A53AA22BBD49E00873F21 /* TextFieldCellItem.swift */; };
+		FE1A53AE22BBD4D300873F21 /* TwoTextFieldCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A53AD22BBD4D300873F21 /* TwoTextFieldCellItem.swift */; };
+		FE1A53B022BBD4E400873F21 /* TextCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A53AF22BBD4E400873F21 /* TextCellItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		25E27DA283761029E971AEC0393C9664 /* PBXContainerItemProxy */ = {
+		457B95E1F4B18EFA928CA715521E4474 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
-			remoteInfo = IQKeyboardManagerSwift;
+			remoteGlobalIDString = 2E5DD4E11D4CD68C911DBF2AA52F6AE7;
+			remoteInfo = "RSFormView-RSFormView";
 		};
 		6FA6E05F653BBAB0FF6E668252417536 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -75,12 +78,12 @@
 			remoteGlobalIDString = 0835F704938341BB8FED4436F71C8184;
 			remoteInfo = RSFormView;
 		};
-		A01E6046E72903DD2E95980E0B573429 /* PBXContainerItemProxy */ = {
+		B31FC6EF51EC0D1A0851E081EFDBCD96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2E5DD4E11D4CD68C911DBF2AA52F6AE7;
-			remoteInfo = "RSFormView-RSFormView";
+			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
+			remoteInfo = IQKeyboardManagerSwift;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -89,7 +92,6 @@
 		02B79DB1D248E7F6C9E684437DEBC2E9 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		03384C30B673904DB733DB1F22BA9456 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
 		052B77DA674AB279FEFA2C51DA15350F /* Pods-RSFormViewExampleApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RSFormViewExampleApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		0EA9819C8C9D62F0DD10EE2EB1940099 /* TwoTextFieldsCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwoTextFieldsCell.swift; sourceTree = "<group>"; };
 		15172B5F03ED44F2C22F95B7FCF20B7E /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIViewController+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
 		157A478ADD1B929E440B71922E44AF45 /* Pods-RSFormViewExampleApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RSFormViewExampleApp-dummy.m"; sourceTree = "<group>"; };
 		1848047CBA3AAAFE50C12F3AEE7AB378 /* TextFieldView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
@@ -99,31 +101,30 @@
 		1C3E60593D77145317A15F3C0EFD43A5 /* Pods-RSFormViewExampleApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RSFormViewExampleApp-umbrella.h"; sourceTree = "<group>"; };
 		24E6E78CAEB3C25970475E35AB63B072 /* FormConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormConfigurator.swift; sourceTree = "<group>"; };
 		2896A26F3CB30FB3CD89BB041B357AAE /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		28D6DEAFBD05DE94200D967AA62839A3 /* FormViewPrivateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormViewPrivateExtension.swift; sourceTree = "<group>"; };
 		2910B0FACFD4FE2B109E760776650DC9 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
+		2C109E92A70E1FA404124394B40179DE /* FormViewPrivateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormViewPrivateExtension.swift; sourceTree = "<group>"; };
 		2C96E922FAF8B4D830253F474ECD535F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2D929055228486A7E7FBB2C1048122FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		31EDBDF8D65BAF3BA816D27A77DCCAF9 /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		39385EA3D9F06CFC5270DB21D07C4BFC /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
 		3998CBD2832F5EFF0872CDE916FCC249 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
 		3F2801A1876AA32949531E26E5C31C53 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+IQKeyboardToolbar.swift"; path = "IQKeyboardManagerSwift/IQToolbar/IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		40775C37404E0F65E63D1BC2E7329263 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4971CB334DEDED4AC31ECE740FF2B4 /* TwoTextFieldsCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = TwoTextFieldsCell.xib; sourceTree = "<group>"; };
-		610789A3814696226317BC841E8B94AA /* TextFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		61616DC0A1B429402046E71B919CDDCF /* RSFormView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSFormView-dummy.m"; sourceTree = "<group>"; };
 		6BA401E4276B8A7D6E5E18E609F7371E /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
-		76C8F9D51912A2C0239380D1AE98DAF8 /* TextFieldViewPrivateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldViewPrivateExtension.swift; sourceTree = "<group>"; };
+		723B0DFE775304CA5E80CA8B24279518 /* TextFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		7855BDC8658A1B6BC48A930EDB84173E /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
 		79015F1347E5D3EB64F0CD6A7AD689AF /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
 		7B85135B3889F82FBD74792B507E15AF /* Pods-RSFormViewExampleApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RSFormViewExampleApp.modulemap"; sourceTree = "<group>"; };
 		83D32AA2A827BAFB77DAFDDE7411709A /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		860C9FE51BE8C0A8E5A3C3BBEA9CEC5C /* FormViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FormViewCell.xib; sourceTree = "<group>"; };
+		8A7119356F9B1961C83030D181C55AF1 /* TextFieldViewPrivateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldViewPrivateExtension.swift; sourceTree = "<group>"; };
 		8EF4375E559741D38072248EA75F4DFC /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		95F0704E7F1E09778370551A453026DB /* RSFormView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSFormView-prefix.pch"; sourceTree = "<group>"; };
+		976A644BA6D5803B19CCD30C8495842E /* FormView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9826FFA73109A0B2C99FCBEF5EA1A2D4 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9932CD4A6AB7468364076D56A13BBFCD /* FormView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DAF1144E71332BDA240606619627081 /* FormView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		9DE0105E5465C9D3CA2359EA28C4B4A9 /* RSFormView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RSFormView.h; path = RSFormView/Classes/RSFormView.h; sourceTree = "<group>"; };
 		9EBC45F213AB0ECB5911D50DC9C8AC7D /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
 		A0E5E8D23920C32CAB6A2C0408FC30F8 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		A65CED11CBD35096251FBEB17EB27AF6 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
 		A8E950A16D00F649C54FFB30F81D7842 /* libIQKeyboardManagerSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQKeyboardManagerSwift.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD2D192FC8A7E06154AE48D1E236253 /* libRSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRSFormView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE89AA0AA61E4359F586F027192D091 /* FormTextCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormTextCell.swift; sourceTree = "<group>"; };
 		AE2DD504FDDF724A41FD4AA6FC9E3A84 /* RSFormView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RSFormView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSFormView.xcconfig; sourceTree = "<group>"; };
 		AF0CF5BB09D450E20041414E0D144146 /* Pods-RSFormViewExampleApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RSFormViewExampleApp-resources.sh"; sourceTree = "<group>"; };
@@ -139,7 +141,7 @@
 		C10EECFB250C3CB12D8C1F5F58B458B9 /* IQKeyboardManagerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-umbrella.h"; sourceTree = "<group>"; };
 		C5B241B4B094A5BBB650AA403F596142 /* RSFormView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0FEFA1432490DB07D9231D8BCABCC1 /* FormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
-		CCF0CFC4E50D4E0CAE5208F5D134946A /* FormTextCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormTextCell.swift; sourceTree = "<group>"; };
+		CEF2865829DAF526281F42354334CE12 /* TwoTextFieldsCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwoTextFieldsCell.swift; sourceTree = "<group>"; };
 		CFC5FD3BCD80F6466158F18C812E1893 /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
 		D0152DF88910D9BFE6652D201D1B6DA7 /* Pods-RSFormViewExampleApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RSFormViewExampleApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D3ECD083B30EE8F5BA23B0F4DB1E0DE4 /* FormViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
@@ -147,9 +149,13 @@
 		E0797433D8933F3BDD60941109BED250 /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E77CC05D9CDE17C87010AB0A2BB30D6D /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		EB0452F2A998F08149F0E1767834C6D4 /* ResourceBundle-RSFormView-RSFormView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RSFormView-RSFormView-Info.plist"; sourceTree = "<group>"; };
+		EFBBD90F14D763B35EBA314E7EC1E189 /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		FA38505A8720A890F3C0782CCD81B35E /* RSFormView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSFormView.modulemap; sourceTree = "<group>"; };
 		FB22C05F1352D51F007C1DA8DBD7C254 /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
-		FEDB766622BA79DF0029D8C2 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		FE1A53AA22BBD49E00873F21 /* TextFieldCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCellItem.swift; sourceTree = "<group>"; };
+		FE1A53AD22BBD4D300873F21 /* TwoTextFieldCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTextFieldCellItem.swift; sourceTree = "<group>"; };
+		FE1A53AF22BBD4E400873F21 /* TextCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellItem.swift; sourceTree = "<group>"; };
+		FE85ECB177359232F5A1ABABF9E854FF /* FormCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		FEE318700072A1E7F63B02D1B688A93D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManagerSwift/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,7 +167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F94BE0703DAD2CA7454F7D34D5A457E /* Frameworks */ = {
+		5783546FE806788848710EA0223E738E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -175,7 +181,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0208D6DF4990D945C7FCD681DA4732F /* Frameworks */ = {
+		C53A857BBDA19EE45F38174083468152 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,6 +191,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06FC250B5D1882C6CA37AEE640D5797E /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				976A644BA6D5803B19CCD30C8495842E /* FormView.swift */,
+				2C109E92A70E1FA404124394B40179DE /* FormViewPrivateExtension.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		0A33D4F72095B1A7992BFED4804B26A7 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +217,17 @@
 			path = RSFormView/Classes/Views/TextField;
 			sourceTree = "<group>";
 		};
+		20DC1B697974993E0E0868A421EE15AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36DE0CC83F4C4F9EAB00927DBEA4413C /* Cell */,
+				06FC250B5D1882C6CA37AEE640D5797E /* Form */,
+				56424EE1F96CF40BDD73384B33D1955D /* TextField */,
+			);
+			name = Views;
+			path = RSFormView/Classes/Views;
+			sourceTree = "<group>";
+		};
 		2496863BA53A6CF0562E459F9CA4E7A4 /* RSFormView */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +238,7 @@
 				D8414A5FA67DFC615F48A61D9FFF47D5 /* Resources */,
 				C9261A55604E0B3EDF60DAB31DFAC825 /* Support Files */,
 				B218A09992488B395CBEFF485176FEE8 /* ViewModels */,
-				559C470E075FF483793AA2E7916084AD /* Views */,
+				20DC1B697974993E0E0868A421EE15AD /* Views */,
 			);
 			name = RSFormView;
 			path = ../..;
@@ -224,6 +250,17 @@
 				DEDB4C98F74DC0645C0C2CCB65D48C02 /* IQKeyboardManagerSwift */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		36DE0CC83F4C4F9EAB00927DBEA4413C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE85ECB177359232F5A1ABABF9E854FF /* FormCell.swift */,
+				ADE89AA0AA61E4359F586F027192D091 /* FormTextCell.swift */,
+				EFBBD90F14D763B35EBA314E7EC1E189 /* TextFieldCell.swift */,
+				CEF2865829DAF526281F42354334CE12 /* TwoTextFieldsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		44806930E29BA0AE1E747E45C6147387 /* Pod */ = {
@@ -247,24 +284,13 @@
 			path = RSFormView/Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		4D92FC5DDE1DAEC0A7A3F769B7DF7482 /* TextField */ = {
+		56424EE1F96CF40BDD73384B33D1955D /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				610789A3814696226317BC841E8B94AA /* TextFieldView.swift */,
-				76C8F9D51912A2C0239380D1AE98DAF8 /* TextFieldViewPrivateExtension.swift */,
+				723B0DFE775304CA5E80CA8B24279518 /* TextFieldView.swift */,
+				8A7119356F9B1961C83030D181C55AF1 /* TextFieldViewPrivateExtension.swift */,
 			);
 			path = TextField;
-			sourceTree = "<group>";
-		};
-		559C470E075FF483793AA2E7916084AD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6BC4C94B1526B6773FDC7A140FB17FF4 /* Cell */,
-				7E9C5E85E12A1D89F9D25C3EFFA46D71 /* Form */,
-				4D92FC5DDE1DAEC0A7A3F769B7DF7482 /* TextField */,
-			);
-			name = Views;
-			path = RSFormView/Classes/Views;
 			sourceTree = "<group>";
 		};
 		5E33CF77F692D23EC3E8D7A81DE8A041 /* Products */ = {
@@ -278,32 +304,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6BC4C94B1526B6773FDC7A140FB17FF4 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				CCF0CFC4E50D4E0CAE5208F5D134946A /* FormTextCell.swift */,
-				31EDBDF8D65BAF3BA816D27A77DCCAF9 /* TextFieldCell.swift */,
-				0EA9819C8C9D62F0DD10EE2EB1940099 /* TwoTextFieldsCell.swift */,
-				FEDB766622BA79DF0029D8C2 /* FormCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		7BAE7CC16D3CA53193DEC7C642BE612F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				FEE318700072A1E7F63B02D1B688A93D /* IQKeyboardManager.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		7E9C5E85E12A1D89F9D25C3EFFA46D71 /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				9DAF1144E71332BDA240606619627081 /* FormView.swift */,
-				28D6DEAFBD05DE94200D967AA62839A3 /* FormViewPrivateExtension.swift */,
-			);
-			path = Form;
 			sourceTree = "<group>";
 		};
 		809A7D99E2B44398F7B7552D8644F47E /* Pods-RSFormViewExampleApp */ = {
@@ -370,6 +376,9 @@
 				9826FFA73109A0B2C99FCBEF5EA1A2D4 /* Constants.swift */,
 				24E6E78CAEB3C25970475E35AB63B072 /* FormConfigurator.swift */,
 				CB0FEFA1432490DB07D9231D8BCABCC1 /* FormField.swift */,
+				FE1A53AA22BBD49E00873F21 /* TextFieldCellItem.swift */,
+				FE1A53AD22BBD4D300873F21 /* TwoTextFieldCellItem.swift */,
+				FE1A53AF22BBD4E400873F21 /* TextCellItem.swift */,
 			);
 			name = Models;
 			path = RSFormView/Classes/Models;
@@ -463,15 +472,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59004DCE5FB3205FE8D61648C9C360CD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3A3AF2D937F7B7DA923CEF36CCCDD15 /* RSFormView-umbrella.h in Headers */,
-				23509657FCC5A40EB38E10F9B2F588EF /* RSFormView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6B7B49043D03F2CB67DE3CB3DAF8A561 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,23 +480,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D25D20E70DE295979F86CCE2DEFB44A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEB086973F7EFC00999C99FE31BE0A2 /* RSFormView-umbrella.h in Headers */,
+				549E6C07774B5E8A7200EEE492695178 /* RSFormView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0835F704938341BB8FED4436F71C8184 /* RSFormView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A6AFD733DEBD56DF8295C19C54EEDC4 /* Build configuration list for PBXNativeTarget "RSFormView" */;
+			buildConfigurationList = B479CC30C749B31B642237C80A96893A /* Build configuration list for PBXNativeTarget "RSFormView" */;
 			buildPhases = (
-				59004DCE5FB3205FE8D61648C9C360CD /* Headers */,
-				EB3E7ADFCB07AD0D20B7257CB80576D7 /* Sources */,
-				3F94BE0703DAD2CA7454F7D34D5A457E /* Frameworks */,
-				B470BF382CFE6F6B1651211A2F764D8D /* Copy generated compatibility header */,
+				D25D20E70DE295979F86CCE2DEFB44A4 /* Headers */,
+				8E407C3E8378DEF16E650E3FCC57956A /* Sources */,
+				5783546FE806788848710EA0223E738E /* Frameworks */,
+				6F55894C41B89F92A81F1407E8E1EA2B /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				47B1E66F8E977DFCFC15DAF07BC9AD8F /* PBXTargetDependency */,
-				2FB9F173778FDA28CDA5A95DCCD47236 /* PBXTargetDependency */,
+				51C753C443F7BDAB4E63E2963520CCB9 /* PBXTargetDependency */,
+				DC76E7A78E3820DDB710C912241623EA /* PBXTargetDependency */,
 			);
 			name = RSFormView;
 			productName = RSFormView;
@@ -505,11 +514,11 @@
 		};
 		2E5DD4E11D4CD68C911DBF2AA52F6AE7 /* RSFormView-RSFormView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 926E1DBCFAD549748D1CC0F18D417E24 /* Build configuration list for PBXNativeTarget "RSFormView-RSFormView" */;
+			buildConfigurationList = 71EEFAB81C00E4062D30D4C018EDDA00 /* Build configuration list for PBXNativeTarget "RSFormView-RSFormView" */;
 			buildPhases = (
-				1D142CF4704E3A6FE0013EAF76BD7033 /* Sources */,
-				E0208D6DF4990D945C7FCD681DA4732F /* Frameworks */,
-				89416A41BC49478FDD23E207FA58A998 /* Resources */,
+				3CEC4A350C72DD02BD72BD42B1E3194A /* Sources */,
+				C53A857BBDA19EE45F38174083468152 /* Frameworks */,
+				0F54DDC369F09242698A8A01B8F1438E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -587,15 +596,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		89416A41BC49478FDD23E207FA58A998 /* Resources */ = {
+		0F54DDC369F09242698A8A01B8F1438E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9B611CD52EC111A17DD874931DC211 /* FormTextCell.xib in Resources */,
-				1662BD7C00ADA77024A40843502825E5 /* FormView.xib in Resources */,
-				5D010A62E9A3D1A98750108D4DEF7D3D /* FormViewCell.xib in Resources */,
-				768F6125F93EFCA74D4710D4E7E5035C /* TextFieldView.xib in Resources */,
-				5D6931C4C27C073B3DE9DA1899B44604 /* TwoTextFieldsCell.xib in Resources */,
+				247A5D1937C601724226C44E01E49435 /* FormTextCell.xib in Resources */,
+				1E3A54420729BFFE2A4FCF9C31C564CE /* FormView.xib in Resources */,
+				BA000E84A0E168C2158E9005C21FF9AF /* FormViewCell.xib in Resources */,
+				BB481D9FE93D28DB0B403710E3CFEA0F /* TextFieldView.xib in Resources */,
+				D0ECF645E8E568CA4C2E1DCC6DBA63BF /* TwoTextFieldsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,7 +635,7 @@
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/IQKeyboardManagerSwift/IQKeyboardManagerSwift-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-		B470BF382CFE6F6B1651211A2F764D8D /* Copy generated compatibility header */ = {
+		6F55894C41B89F92A81F1407E8E1EA2B /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -653,10 +662,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D142CF4704E3A6FE0013EAF76BD7033 /* Sources */ = {
+		3CEC4A350C72DD02BD72BD42B1E3194A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E407C3E8378DEF16E650E3FCC57956A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BC5833CB57A5C7ECA4793C189BC897 /* AddressManager.swift in Sources */,
+				FE1A53AE22BBD4D300873F21 /* TwoTextFieldCellItem.swift in Sources */,
+				57C0566EE38C8F245DE533A9061383CE /* ColorExtension.swift in Sources */,
+				FE1A53AC22BBD4AD00873F21 /* TextFieldCellItem.swift in Sources */,
+				E755465C67E734ECC56C49DC02FA7C70 /* Constants.swift in Sources */,
+				B363031159428847BA1FFF81F4DA2DAA /* FormCell.swift in Sources */,
+				1192B61263C1FF4924D0038DAA679D68 /* FormConfigurator.swift in Sources */,
+				AD7B6F727A0AB1BF99689E93DAC1DE2F /* FormField.swift in Sources */,
+				BA7A561EDDA1DB47E7453AFC5F0BB192 /* FormTextCell.swift in Sources */,
+				7507822FF483C3A6CE498FCD0FE0B208 /* FormView.swift in Sources */,
+				9476E52CC8D5519235AC50696625B1C5 /* FormViewModel.swift in Sources */,
+				6150D90A3A66374A1A079DCD71CD2820 /* FormViewPrivateExtension.swift in Sources */,
+				E964BB78AA59EF025BF2F7FFB496AC63 /* RSFormView-dummy.m in Sources */,
+				177C86FE8FA3DD49E61511626FF3A862 /* StringExtension.swift in Sources */,
+				2D2FFBAE83D30D8A7A83213E1A1199A4 /* TextFieldCell.swift in Sources */,
+				53E86EF03446D3EF481F8C25033225C8 /* TextFieldView.swift in Sources */,
+				69187A1744506D43A86216F2ACCAFFCA /* TextFieldViewPrivateExtension.swift in Sources */,
+				FE1A53B022BBD4E400873F21 /* TextCellItem.swift in Sources */,
+				FAE3685CB5A4D72251502C18AEF283AB /* TwoTextFieldsCell.swift in Sources */,
+				382CB9097549D9EEF68A1643A45672A5 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,30 +720,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB3E7ADFCB07AD0D20B7257CB80576D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E20AAFD52D5B2E1CA694E3B1B547899F /* AddressManager.swift in Sources */,
-				C07AB672015F4916176BE5B79E973A21 /* ColorExtension.swift in Sources */,
-				56ECEAE0EEB88833E97F101E6669EE97 /* Constants.swift in Sources */,
-				C5EDA495BB6BB0F97DE255A291D14ABC /* FormConfigurator.swift in Sources */,
-				2E92C2D05B59D0208613A58C6B30CE5C /* FormField.swift in Sources */,
-				2E56C0A58569E737C9A37E5ECE2FAE18 /* FormTextCell.swift in Sources */,
-				FEDB766722BA79DF0029D8C2 /* FormCell.swift in Sources */,
-				A7D1293D708D895B6B7260B6B089B1FB /* FormView.swift in Sources */,
-				993B255E0ECF0E480F154F826A6ACDE6 /* FormViewModel.swift in Sources */,
-				3CB08C6EEE5D7028C4345B0F8C1A0261 /* FormViewPrivateExtension.swift in Sources */,
-				CB7D27E960006C89E1AD48D511E3B76F /* RSFormView-dummy.m in Sources */,
-				F886635DB8B24AF65559B6EC26B32C65 /* StringExtension.swift in Sources */,
-				C783E52661BD7085404CE064948864C2 /* TextFieldCell.swift in Sources */,
-				D0B179EFA48B898669E7B516403BBA70 /* TextFieldView.swift in Sources */,
-				9137E846E5EF0F1E3E6762BF1607FDC7 /* TextFieldViewPrivateExtension.swift in Sources */,
-				B4DEACFBD3BA19C6AC1680356B8488CB /* TwoTextFieldsCell.swift in Sources */,
-				D6201068EB5FD474776BCCAA9C26CB93 /* ViewExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FCADAC64F7477BFDEE4FE3B8B34C36CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -719,17 +731,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2FB9F173778FDA28CDA5A95DCCD47236 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "RSFormView-RSFormView";
-			target = 2E5DD4E11D4CD68C911DBF2AA52F6AE7 /* RSFormView-RSFormView */;
-			targetProxy = A01E6046E72903DD2E95980E0B573429 /* PBXContainerItemProxy */;
-		};
-		47B1E66F8E977DFCFC15DAF07BC9AD8F /* PBXTargetDependency */ = {
+		51C753C443F7BDAB4E63E2963520CCB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = 25E27DA283761029E971AEC0393C9664 /* PBXContainerItemProxy */;
+			targetProxy = B31FC6EF51EC0D1A0851E081EFDBCD96 /* PBXContainerItemProxy */;
 		};
 		7185DABB688B0FD839C75C218C8BFE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -743,22 +749,39 @@
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
 			targetProxy = 6FA6E05F653BBAB0FF6E668252417536 /* PBXContainerItemProxy */;
 		};
+		DC76E7A78E3820DDB710C912241623EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RSFormView-RSFormView";
+			target = 2E5DD4E11D4CD68C911DBF2AA52F6AE7 /* RSFormView-RSFormView */;
+			targetProxy = 457B95E1F4B18EFA928CA715521E4474 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		007F58375742842BEFC83712F45079F4 /* Release */ = {
+		0C21887F2D838ED013F3D75000C73993 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RSFormView";
-				INFOPLIST_FILE = "Target Support Files/RSFormView/ResourceBundle-RSFormView-RSFormView-Info.plist";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RSFormView/RSFormView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/RSFormView/RSFormView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RSFormView;
 				PRODUCT_NAME = RSFormView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -875,7 +898,7 @@
 			};
 			name = Debug;
 		};
-		74A290089836B3E7C6D5F14004282E92 /* Debug */ = {
+		8F5117C5672A3F63A9BED097A9F9E10E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
 			buildSettings = {
@@ -888,32 +911,6 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		7A211772CA8C843F293BE33EF55B6EC2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RSFormView/RSFormView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/RSFormView/RSFormView.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RSFormView;
-				PRODUCT_NAME = RSFormView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -941,33 +938,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		9C09548F3C4CCA6BCA6C89600B2CA75A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/RSFormView/RSFormView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MODULEMAP_FILE = Headers/Public/RSFormView/RSFormView.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = RSFormView;
-				PRODUCT_NAME = RSFormView;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1029,6 +999,48 @@
 			};
 			name = Release;
 		};
+		B92ADA32ABDE0A84C51E6022386599C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/RSFormView/RSFormView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/RSFormView/RSFormView.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = RSFormView;
+				PRODUCT_NAME = RSFormView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8C0BDC0424E1932D3B1F4D23C8F06D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3AF06B88E0C23774BEF218C5A996BE /* RSFormView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RSFormView";
+				INFOPLIST_FILE = "Target Support Files/RSFormView/ResourceBundle-RSFormView-RSFormView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = RSFormView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		F579E8536420F76B2F8AA42A74F038F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EF4375E559741D38072248EA75F4DFC /* Pods-RSFormViewExampleApp.release.xcconfig */;
@@ -1065,11 +1077,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A6AFD733DEBD56DF8295C19C54EEDC4 /* Build configuration list for PBXNativeTarget "RSFormView" */ = {
+		71EEFAB81C00E4062D30D4C018EDDA00 /* Build configuration list for PBXNativeTarget "RSFormView-RSFormView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A211772CA8C843F293BE33EF55B6EC2 /* Debug */,
-				9C09548F3C4CCA6BCA6C89600B2CA75A /* Release */,
+				8F5117C5672A3F63A9BED097A9F9E10E /* Debug */,
+				D8C0BDC0424E1932D3B1F4D23C8F06D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1083,11 +1095,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		926E1DBCFAD549748D1CC0F18D417E24 /* Build configuration list for PBXNativeTarget "RSFormView-RSFormView" */ = {
+		B479CC30C749B31B642237C80A96893A /* Build configuration list for PBXNativeTarget "RSFormView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74A290089836B3E7C6D5F14004282E92 /* Debug */,
-				007F58375742842BEFC83712F45079F4 /* Release */,
+				B92ADA32ABDE0A84C51E6022386599C7 /* Debug */,
+				0C21887F2D838ED013F3D75000C73993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

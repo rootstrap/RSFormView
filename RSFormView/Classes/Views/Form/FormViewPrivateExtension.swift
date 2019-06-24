@@ -16,7 +16,8 @@ internal extension FormView {
     
     formTableView.delegate = self
     formTableView.dataSource = self
-    
+    viewModel?.customCellSetup?(formTableView)
+
     let nib = UINib(nibName: "FormViewCell", bundle: Constants.formViewBundle)
     formTableView.register(nib,
                            forCellReuseIdentifier: TextFieldCell.reuseIdentifier)
@@ -45,21 +46,5 @@ internal extension FormView {
     for validationMatch in validationMatches {
       validationMatch.isValid = validationMatch.value == updatedField.value
     }
-  }
-
-  func reuseIdentifier(forRowAt indexPath: IndexPath, with formItem: FormItem?) -> String {
-    guard let formItem = formItem else {
-      return FormTextCell.reuseIdentifier
-    }
-
-    let rowFields = formItem.formFields
-
-    if rowFields.count == 1 && formItem.attributedText == nil {
-      return TextFieldCell.reuseIdentifier
-    } else if rowFields.count == 2 {
-      return TwoTextFieldsCell.reuseIdentifier
-    }
-    
-    return FormTextCell.reuseIdentifier
   }
 }

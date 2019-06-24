@@ -10,15 +10,22 @@ import Foundation
 import RSFormView
 
 class SignupExampleViewModel: FormViewModel {
+  var customCellSetup: ((UITableView?) -> Void)? {
+    return { tableView in
+      tableView?.register(StepperCell.self, forCellReuseIdentifier: StepperCell.reuseIdentifier)
+    }
+  }
+
   var items: [FormItem] = []
   
   init() {
-    items = [emailItem(), nameItem(), birthDateItem(), genderItem(), passwordItem(),
+    items = [emailItem(), nameItem(), birthDateItem(), genderItem(), siblingsItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
              addressItem(), cityStateItem(), zipItem()]
   }
   
   enum FieldName: String {
+    case numberOfSiblings = "NUMBER OF SIBLINGS"
     case firstName = "FIRST NAME"
     case lastName = "LAST NAME"
     case city = "CITY"
@@ -42,9 +49,19 @@ class SignupExampleViewModel: FormViewModel {
     
     return data
   }
+
+  func siblingsItem() -> FormItem {
+    return StepperCellItem(with: FormField(name: FieldName.numberOfSiblings.rawValue, //Identifier for the field
+                          initialValue: "10", //Provide a default value for the field
+                          placeholder: "",
+                          fieldType: .integer, //field type describes the behaviour the field will expect and provide a default validation
+                          isValid: true, //wether is valid in its initial state
+                          errorMessage: "Please enter a value") //message displayed when the value doesn't pass the validation
+                        )
+  }
   
   func nameItem() -> FormItem {
-    return FormItem(firstField: firstNameField(), secondField: lastNameField())
+    return TwoTextFieldCellItem(firstField: firstNameField(), secondField: lastNameField())
   }
   
   func firstNameField() -> FormField {
@@ -69,7 +86,7 @@ class SignupExampleViewModel: FormViewModel {
     
     emailField.capitalizeValue = false
     
-    return FormItem(firstField: emailField)
+    return TextFieldCellItem(with: emailField)
   }
   
   func lastNameField() -> FormField {
@@ -88,7 +105,7 @@ class SignupExampleViewModel: FormViewModel {
   }
   
   func addressHeaderItem() -> FormItem {
-    let item = FormItem()
+    let item = TextCellItem()
     item.contraintsConfigurator.headerLabelTopMargin = CGFloat(50)
     item.contraintsConfigurator.headerLabelBottomMargin = CGFloat(5)
     item.attributedText = NSAttributedString(string: "Enter your address",
@@ -105,7 +122,7 @@ class SignupExampleViewModel: FormViewModel {
                                  isValid: false,
                                  errorMessage: "Please enter an address")
     
-    return FormItem(firstField: addressField)
+    return TextFieldCellItem(with: addressField)
   }
   
   func cityStateItem() -> FormItem {
@@ -123,7 +140,7 @@ class SignupExampleViewModel: FormViewModel {
                                isValid: false,
                                errorMessage: "Please enter a valid state")
     
-    return FormItem(firstField: cityField, secondField: stateField)
+    return TwoTextFieldCellItem(firstField: cityField, secondField: stateField)
   }
   
   func zipItem() -> FormItem {
@@ -134,7 +151,7 @@ class SignupExampleViewModel: FormViewModel {
                              isValid: false,
                              errorMessage: "Please enter a Zip Code")
     
-    return FormItem(firstField: zipField)
+    return TextFieldCellItem(with: zipField)
   }
   
   func birthDateItem() -> FormItem {
@@ -145,7 +162,7 @@ class SignupExampleViewModel: FormViewModel {
                                    isValid: false,
                                    errorMessage: "Please enter a birthdate")
     
-    return FormItem(firstField: birthdateField)
+    return TextFieldCellItem(with: birthdateField)
   }
   
   func genderItem() -> FormItem {
@@ -158,7 +175,7 @@ class SignupExampleViewModel: FormViewModel {
                                 errorMessage: "Please select your gender")
     genderField.options = genderOptions
     
-    return FormItem(firstField: genderField)
+    return TextFieldCellItem(with: genderField)
   }
   
   func passwordItem() -> FormItem {
@@ -170,7 +187,7 @@ class SignupExampleViewModel: FormViewModel {
                                   errorMessage: "Please enter a valid password")
     passwordField.capitalizeValue = false
     
-    return FormItem(firstField: passwordField)
+    return TextFieldCellItem(with: passwordField)
   }
   
   func confirmPasswordItem() -> FormItem {
@@ -182,7 +199,7 @@ class SignupExampleViewModel: FormViewModel {
                                          errorMessage: "Passwords don't match")
     confirmPasswordField.validationMatch = FieldName.password.rawValue
     confirmPasswordField.capitalizeValue = false
-    return FormItem(firstField: confirmPasswordField)
+    return TextFieldCellItem(with: confirmPasswordField)
   }
 }
 

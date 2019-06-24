@@ -17,6 +17,8 @@
 		07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */; };
 		188A7270091AF46617C45335 /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */; };
 		817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F591B22A174BE00723654 /* XCUIAppExtension.swift */; };
+		FEC2657F22BC060A00CD31C5 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657D22BC060A00CD31C5 /* StepperCell.swift */; };
+		FEC2658022BC060A00CD31C5 /* StepperCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AEC9282DDFBB11614C765AB8 /* Pods-RSFormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormView/Pods-RSFormView.release.xcconfig"; sourceTree = "<group>"; };
 		C0FB321B63486FCED2008CDC /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DDF1C68AD1F8912FFD9D980A /* libPods-RSFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC2657D22BC060A00CD31C5 /* StepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
+		FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCellItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				FEC0140822BC05B3004B52B0 /* CustomRows */,
 				071CC80B2278DCAE0023B402 /* AppDelegate.swift */,
 				071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */,
 				071CC80F2278DCAE0023B402 /* Main.storyboard */,
@@ -133,6 +138,15 @@
 				451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEC0140822BC05B3004B52B0 /* CustomRows */ = {
+			isa = PBXGroup;
+			children = (
+				FEC2657D22BC060A00CD31C5 /* StepperCell.swift */,
+				FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */,
+			);
+			path = CustomRows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +324,8 @@
 				071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */,
 				071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */,
 				071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */,
+				FEC2658022BC060A00CD31C5 /* StepperCellItem.swift in Sources */,
+				FEC2657F22BC060A00CD31C5 /* StepperCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
