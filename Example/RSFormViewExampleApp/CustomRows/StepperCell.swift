@@ -104,6 +104,7 @@ class StepperCell: FormTableViewCell {
     titleLabel.font = configurator.titleFont
     titleLabel.textColor = configurator.validTitleColor
     stepper.tintColor = configurator.validTitleColor
+    backgroundColor = configurator.cellsBackgroundColor
   }
 
   @objc func stepperChanged(_ sender: UIStepper) {

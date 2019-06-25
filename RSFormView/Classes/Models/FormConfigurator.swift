@@ -15,6 +15,7 @@ public class FormConfigurator {
   //backgroud colors
   public var formBackgroundColor = UIColor.white
   public var fieldsBackgroundColor = UIColor.clear
+  public var cellsBackgroundColor = UIColor.white
   
   //title colors
   public var validTitleColor = UIColor.darkGray
@@ -60,6 +61,7 @@ public class DarkModeConfigurator: FormConfigurator {
     super.init()
     formBackgroundColor = UIColor.mineShaftGray
     fieldsBackgroundColor = UIColor.tundoraGray
+    cellsBackgroundColor = UIColor.tundoraGray
     
     validLineColor = UIColor.white
     

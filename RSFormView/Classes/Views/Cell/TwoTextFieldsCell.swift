@@ -30,6 +30,7 @@ public class TwoTextFieldsCell: FormTableViewCell {
   
     isAccessibilityElement = false
 
+    contentView.backgroundColor = formConfigurator.cellsBackgroundColor
     update(textFieldView: firstTextField,
            withData: firstFieldData,
            formConfigurator: formConfigurator)

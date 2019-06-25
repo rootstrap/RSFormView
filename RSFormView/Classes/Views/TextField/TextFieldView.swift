@@ -123,6 +123,7 @@ public class TextFieldView: UIView {
   }
   
   func configureColors(_ isValid: Bool) {
+    backgroundColor = formConfigurator.cellsBackgroundColor
     titleLabel.textColor = isValid ?
       titleValidColor() : formConfigurator.invalidTitleColor
     errorLabel.textColor = formConfigurator.errorTextColor

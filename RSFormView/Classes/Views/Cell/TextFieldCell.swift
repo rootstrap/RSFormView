@@ -24,6 +24,7 @@ public class TextFieldCell: FormTableViewCell {
     self.formItem = formItem
     guard let fieldData = formItem.formFields.first else { return }
     
+    contentView.backgroundColor = formConfigurator.cellsBackgroundColor
     textFieldView.update(withData: fieldData, formConfigurator: formConfigurator)
   }
   
