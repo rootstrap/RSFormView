@@ -19,6 +19,7 @@ public class FormTextCell: FormTableViewCell {
   override public func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {
     self.formItem = formItem
     
+    contentView.backgroundColor = formConfigurator.cellsBackgroundColor
     headerLabelTopMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelTopMargin
     headerLabelBottomMarginConstraint.constant = formItem.contraintsConfigurator.headerLabelBottomMargin
     formTextLabel.attributedText = formItem.attributedText
