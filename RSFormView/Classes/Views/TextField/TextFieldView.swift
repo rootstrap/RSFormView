@@ -167,13 +167,7 @@ public class TextFieldView: UIView {
     updatePlaceHolder(withText: data.placeholder)
     textField.clearButtonMode = (data.fieldType == .date || data.fieldType == .picker) ? .never : .whileEditing
     
-    //This doesn't make any sense, but for a project this line:
-    //textField.isSecureTextEntry = data.fieldType == .password, was masking every field :shrug:
-    if data.fieldType == .password {
-      textField.isSecureTextEntry = true
-    } else {
-      textField.isSecureTextEntry = false
-    }
+    textField.isSecureTextEntry = data.fieldType == .password
     textField.textContentType = data.textContentType ?? data.defaultTextContentType
     textField.text = data.value
     titleLabel.text = data.name

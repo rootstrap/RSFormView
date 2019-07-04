@@ -20,6 +20,27 @@ public enum FieldType: Equatable {
   case expiration
   case password
   case picker
+  //if you're adding a new type please update the == function, otherwise bad stuff is going to happen
+  
+  public static func ==(lhs: FieldType, rhs: FieldType) -> Bool {
+    switch (lhs, rhs) {
+    case (.double(let lhsDecimalPlaces), .double(let rhsDecimalPlaces)):
+      return lhsDecimalPlaces == rhsDecimalPlaces
+    case (.email, .email),
+         (.integer, .integer),
+         (.date, .date),
+         (.usState, .usState),
+         (.usPhone, .usPhone),
+         (.fiveDigitZipCode, .fiveDigitZipCode),
+         (.regular, .regular),
+         (.expiration, .expiration),
+         (.password, .password),
+         (.picker, .picker):
+      return true
+    default:
+      return false
+    }
+  }
 }
 
 public enum ValidationType {
