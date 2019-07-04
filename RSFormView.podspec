@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RSFormView"
-  s.version      = "2.0.1"
+  s.version      = "2.0.2"
   s.summary      = "A library to easily create customizable form views to collect user data."
 
   s.description  = "RSFormView allows you to build beutiful forms in a few minutes with out of the box or custom designs."
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/rootstrap/RSFormView.git", :tag => "2.0.1" }
+  s.source = { :git => "https://github.com/rootstrap/RSFormView.git", :tag => "2.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
