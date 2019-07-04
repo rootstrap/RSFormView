@@ -101,6 +101,8 @@ open class FormField {
   /// Source data for *.picker* FormFields
   public var options: [String]?
   
+  public var textContentType: UITextContentType?
+  
   /// The default validation type for a given fieldType, this will be overriden by setting the FormField's *validationType*
   var defaultValidationType: ValidationType {
     var validationType: ValidationType = .none
@@ -130,6 +132,28 @@ open class FormField {
     return validationType
   }
   
+  /// The default textContentType for a given fieldType, this will be overriden by setting the FormField's *textContentType*
+  var defaultTextContentType: UITextContentType? {
+    var contentType: UITextContentType?
+    
+    switch fieldType {
+    case .usPhone:
+      contentType = .telephoneNumber
+    case .password:
+      if #available(iOS 11.0, *) {
+        contentType = .password
+      }
+    case .email:
+      contentType = .emailAddress
+    case .fiveDigitZipCode:
+      contentType = .postalCode
+    default:
+      break
+    }
+    
+    return contentType
+  }
+  
   public init(name: String,
               initialValue: String,
               placeholder: String = "",
@@ -142,5 +166,6 @@ open class FormField {
     self.isValid = isValid
     self.fieldType = fieldType
     self.errorMessage = errorMessage
+    self.capitalizeValue = fieldType != .email && fieldType != .password
   }
 }

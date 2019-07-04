@@ -84,8 +84,6 @@ class SignupExampleViewModel: FormViewModel {
                                isValid: false,
                                errorMessage: "Please enter a valid email")
     
-    emailField.capitalizeValue = false
-    
     return TextFieldCellItem(with: emailField)
   }
   
@@ -185,7 +183,6 @@ class SignupExampleViewModel: FormViewModel {
                                   fieldType: .password,
                                   isValid: false,
                                   errorMessage: "Please enter a valid password")
-    passwordField.capitalizeValue = false
     
     return TextFieldCellItem(with: passwordField)
   }
@@ -198,7 +195,7 @@ class SignupExampleViewModel: FormViewModel {
                                          isValid: false,
                                          errorMessage: "Passwords don't match")
     confirmPasswordField.validationMatch = FieldName.password.rawValue
-    confirmPasswordField.capitalizeValue = false
+
     return TextFieldCellItem(with: confirmPasswordField)
   }
 }
