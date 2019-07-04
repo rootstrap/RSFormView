@@ -44,6 +44,7 @@
 		071CC8152278DCB00023B402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071CC8172278DCB00023B402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewModel.swift; sourceTree = "<group>"; };
+		0725EE3F22CE5564008E8C13 /* RSFormViewExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSFormViewExampleApp.entitlements; sourceTree = "<group>"; };
 		07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
 		451C32AF270D45F13239EB13 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		746099BF600E9A6BA9C13259 /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				0725EE3F22CE5564008E8C13 /* RSFormViewExampleApp.entitlements */,
 				FEC0140822BC05B3004B52B0 /* CustomRows */,
 				071CC80B2278DCAE0023B402 /* AppDelegate.swift */,
 				071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */,
@@ -205,6 +207,11 @@
 					};
 					071CC8082278DCAD0023B402 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -402,6 +409,7 @@
 			baseConfigurationReference = C0FB321B63486FCED2008CDC /* Pods-RSFormViewExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RSFormViewExampleApp/RSFormViewExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9839GT2TL;
 				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
@@ -421,6 +429,7 @@
 			baseConfigurationReference = 746099BF600E9A6BA9C13259 /* Pods-RSFormViewExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RSFormViewExampleApp/RSFormViewExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9839GT2TL;
 				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
