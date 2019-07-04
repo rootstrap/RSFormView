@@ -20,7 +20,7 @@ public enum FieldType: Equatable {
   case expiration
   case password
   case picker
-  //if you're adding a new type please update the == function, otherwise bad stuff is going to happen
+  //if you're adding a new type please update the == function, otherwise when comparing against the new type == will always return false
   
   public static func ==(lhs: FieldType, rhs: FieldType) -> Bool {
     switch (lhs, rhs) {
