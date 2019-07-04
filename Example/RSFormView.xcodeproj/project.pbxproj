@@ -209,7 +209,7 @@
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -409,7 +409,6 @@
 			baseConfigurationReference = C0FB321B63486FCED2008CDC /* Pods-RSFormViewExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RSFormViewExampleApp/RSFormViewExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9839GT2TL;
 				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
@@ -429,7 +428,6 @@
 			baseConfigurationReference = 746099BF600E9A6BA9C13259 /* Pods-RSFormViewExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = RSFormViewExampleApp/RSFormViewExampleApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9839GT2TL;
 				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
