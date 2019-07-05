@@ -183,6 +183,7 @@ class SignupExampleViewModel: FormViewModel {
                                   fieldType: .password,
                                   isValid: false,
                                   errorMessage: "Please enter a valid password")
+    passwordField.minimumTextLength = 8
     
     return TextFieldCellItem(with: passwordField)
   }

@@ -42,6 +42,9 @@ public class FormConfigurator {
   public var borderCornerRadius: CGFloat = 8
   public var borderWidth: CGFloat = 1
   
+  //keyboard appearance
+  public var keyboardAppearance: UIKeyboardAppearance = .default
+  
   //fonts
   public var errorFont = UIFont.systemFont(ofSize: 13)
   public var titleFont = UIFont.boldSystemFont(ofSize: 12)
@@ -69,5 +72,7 @@ public class DarkModeConfigurator: FormConfigurator {
     textColor = UIColor.white
     
     validTitleColor = UIColor.white
+    
+    keyboardAppearance = .dark
   }
 }

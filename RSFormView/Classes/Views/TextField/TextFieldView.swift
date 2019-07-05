@@ -166,7 +166,7 @@ public class TextFieldView: UIView {
   func populateTextView(withData data: FormField) {
     updatePlaceHolder(withText: data.placeholder)
     textField.clearButtonMode = (data.fieldType == .date || data.fieldType == .picker) ? .never : .whileEditing
-    
+    textField.keyboardAppearance = formConfigurator.keyboardAppearance
     textField.isSecureTextEntry = data.fieldType == .password
     textField.textContentType = data.textContentType ?? data.defaultTextContentType
     textField.text = data.value
