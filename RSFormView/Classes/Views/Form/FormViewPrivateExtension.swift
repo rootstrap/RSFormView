@@ -12,7 +12,14 @@ import IQKeyboardManagerSwift
 internal extension FormView {
   func configureViews() {
     IQKeyboardManager.shared.enable = true
-    _ = addNibView(inBundle: Constants.formViewBundle)
+    addSubview(formTableView)
+    
+    NSLayoutConstraint.activate([
+      formTableView.topAnchor.constraint(equalTo: topAnchor),
+      formTableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      formTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      formTableView.trailingAnchor.constraint(equalTo: trailingAnchor)
+      ])
     
     formTableView.delegate = self
     formTableView.dataSource = self

@@ -14,11 +14,17 @@ public protocol FormViewDelegate: class {
 }
 
 @IBDesignable public class FormView: UIView {
-    
-  @IBOutlet weak var formTableView: UITableView!
   
   public weak var delegate: FormViewDelegate?
 
+  lazy var formTableView: UITableView = {
+    let tableView = UITableView(frame: .zero)
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.separatorStyle = .none
+    
+    return tableView
+  }()
+  
   public var viewModel: FormViewModel? {
     didSet {
       viewModel?.customCellSetup?(formTableView)
@@ -43,6 +49,11 @@ public protocol FormViewDelegate: class {
   
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  public override func awakeFromNib() {
+    super.awakeFromNib()
+    
     configureViews()
   }
   
