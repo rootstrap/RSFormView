@@ -14,11 +14,16 @@ public protocol FormViewDelegate: class {
 }
 
 @IBDesignable public class FormView: UIView {
-    
-  @IBOutlet weak var formTableView: UITableView!
   
   public weak var delegate: FormViewDelegate?
 
+  lazy var formTableView: UITableView = {
+    let tableView = UITableView(frame: .zero)
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    
+    return tableView
+  }()
+  
   public var viewModel: FormViewModel? {
     didSet {
       viewModel?.customCellSetup?(formTableView)
