@@ -15,8 +15,8 @@
 		071CC8162278DCB00023B402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC8142278DCB00023B402 /* LaunchScreen.storyboard */; };
 		071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */; };
 		07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */; };
-		4FC55D5191AEE92B376AB431 /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A86EF81014289B85389D50 /* libPods-RSFormViewExampleApp.a */; };
 		817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F591B22A174BE00723654 /* XCUIAppExtension.swift */; };
+		F29BA167BB66708D11BEAD3C /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */; };
 		FEC2657F22BC060A00CD31C5 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657D22BC060A00CD31C5 /* StepperCell.swift */; };
 		FEC2658022BC060A00CD31C5 /* StepperCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */; };
 /* End PBXBuildFile section */
@@ -45,10 +45,10 @@
 		071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewModel.swift; sourceTree = "<group>"; };
 		0725EE3F22CE5564008E8C13 /* RSFormViewExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSFormViewExampleApp.entitlements; sourceTree = "<group>"; };
 		07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
-		15826B9F5B1531F30DD9475B /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
-		25A86EF81014289B85389D50 /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		817F591B22A174BE00723654 /* XCUIAppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIAppExtension.swift; sourceTree = "<group>"; };
-		90C13585C60E791E84DA2E07 /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FEC2657D22BC060A00CD31C5 /* StepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
 		FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCellItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FC55D5191AEE92B376AB431 /* libPods-RSFormViewExampleApp.a in Frameworks */,
+				F29BA167BB66708D11BEAD3C /* libPods-RSFormViewExampleApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +105,8 @@
 				071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */,
 				071067CC228B8551001D97DF /* RSFormViewExampleAppUITests */,
 				072B3CD22278CFFB0056DB8A /* Products */,
-				B2A87F3A44A26471A4B233F2 /* Pods */,
-				C1FB40BA02AD16EC90572256 /* Frameworks */,
+				F3A48058D56247BD4CBB1A7F /* Pods */,
+				9E77EBFEC9C7D43F690C975F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,22 +119,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B2A87F3A44A26471A4B233F2 /* Pods */ = {
+		9E77EBFEC9C7D43F690C975F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				90C13585C60E791E84DA2E07 /* Pods-RSFormViewExampleApp.debug.xcconfig */,
-				15826B9F5B1531F30DD9475B /* Pods-RSFormViewExampleApp.release.xcconfig */,
+				74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3A48058D56247BD4CBB1A7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */,
+				81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C1FB40BA02AD16EC90572256 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				25A86EF81014289B85389D50 /* libPods-RSFormViewExampleApp.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FEC0140822BC05B3004B52B0 /* CustomRows */ = {
@@ -171,11 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071CC8182278DCB00023B402 /* Build configuration list for PBXNativeTarget "RSFormViewExampleApp" */;
 			buildPhases = (
-				6C5F73B73E4CCB3BEDB73615 /* [CP] Check Pods Manifest.lock */,
+				B6DAB55C77F89A8E093D83A2 /* [CP] Check Pods Manifest.lock */,
 				071CC8052278DCAD0023B402 /* Sources */,
 				071CC8062278DCAD0023B402 /* Frameworks */,
 				071CC8072278DCAD0023B402 /* Resources */,
-				89C3FEF36220A77ECA94BE13 /* [CP] Copy Pods Resources */,
+				6A09523AB261112ABF1930DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,7 +250,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6C5F73B73E4CCB3BEDB73615 /* [CP] Check Pods Manifest.lock */ = {
+		6A09523AB261112ABF1930DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6DAB55C77F89A8E093D83A2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,23 +287,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		89C3FEF36220A77ECA94BE13 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -384,7 +384,7 @@
 		};
 		071CC8192278DCB00023B402 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90C13585C60E791E84DA2E07 /* Pods-RSFormViewExampleApp.debug.xcconfig */;
+			baseConfigurationReference = 86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -403,7 +403,7 @@
 		};
 		071CC81A2278DCB00023B402 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15826B9F5B1531F30DD9475B /* Pods-RSFormViewExampleApp.release.xcconfig */;
+			baseConfigurationReference = 81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
