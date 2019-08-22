@@ -20,6 +20,7 @@ public protocol FormViewDelegate: class {
   lazy var formTableView: UITableView = {
     let tableView = UITableView(frame: .zero)
     tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.separatorStyle = .none
     
     return tableView
   }()
@@ -48,6 +49,11 @@ public protocol FormViewDelegate: class {
   
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+  }
+  
+  public override func awakeFromNib() {
+    super.awakeFromNib()
+    
     configureViews()
   }
   
