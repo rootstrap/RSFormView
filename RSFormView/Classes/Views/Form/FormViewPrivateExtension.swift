@@ -25,6 +25,8 @@ internal extension FormView {
     formTableView.dataSource = self
     viewModel?.customCellSetup?(formTableView)
 
+    formTableView.register(SwitchCell.self,
+                           forCellReuseIdentifier: SwitchCell.reuseIdentifier)
     let nib = UINib(nibName: "FormViewCell", bundle: Constants.formViewBundle)
     formTableView.register(nib,
                            forCellReuseIdentifier: TextFieldCell.reuseIdentifier)

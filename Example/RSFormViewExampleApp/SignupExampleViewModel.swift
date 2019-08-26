@@ -21,7 +21,7 @@ class SignupExampleViewModel: FormViewModel {
   init() {
     items = [emailItem(), nameItem(), birthDateItem(), genderItem(), siblingsItem(), passwordItem(),
              confirmPasswordItem(), addressHeaderItem(),
-             addressItem(), cityStateItem(), zipItem()]
+             addressItem(), cityStateItem(), zipItem(), switchItem()]
   }
   
   enum FieldName: String {
@@ -38,6 +38,7 @@ class SignupExampleViewModel: FormViewModel {
     case address = "ADDRESS"
     case age = "AGE"
     case gender = "GENDER"
+    case boludo = "BOLUDO"
   }
   
   var collectedData: String {
@@ -139,6 +140,15 @@ class SignupExampleViewModel: FormViewModel {
                                errorMessage: "Please enter a valid state")
     
     return TwoTextFieldCellItem(firstField: cityField, secondField: stateField)
+  }
+  
+  func switchItem() -> FormItem {
+    let attributedText = NSAttributedString(string: "Enter your address",
+                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.8),
+                                                         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
+    let switchField = SwitchField(isOn: false, attributedTitle: attributedText, name: FieldName.boludo.rawValue)
+    
+    return SwitchItem(switchField: switchField)
   }
   
   func zipItem() -> FormItem {

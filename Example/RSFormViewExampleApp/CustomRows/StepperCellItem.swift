@@ -11,7 +11,7 @@ import RSFormView
 
 final class StepperCellItem: FormItem {
 
-  override var cellIdentifier: String {
+  override public var cellIdentifier: String {
     return StepperCell.reuseIdentifier
   }
 
