@@ -58,7 +58,7 @@ class RSFormViewExampleAppUITests: XCTestCase {
     toolbarNextButton.tap()
     
     let lastNameTextField = app.textField(with: "LAST NAME")
-    lastNameTextField.typeText("German")
+    lastNameTextField.typeText("Stabile")
     
     app.textField(with: "DOB").tap()
     
