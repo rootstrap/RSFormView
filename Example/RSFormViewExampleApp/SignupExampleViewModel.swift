@@ -97,7 +97,7 @@ class SignupExampleViewModel: FormViewModel {
     lastNameField.validationType = .custom(evaluator: { [weak self] value in
       let nameField = self?.fields().first { $0.name == FieldName.firstName.rawValue }
       let nameValue = nameField?.value ?? ""
-      return value.count > 5 && value == nameValue
+      return value.count > 1 && value != nameValue
     })
     return lastNameField
   }
