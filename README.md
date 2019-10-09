@@ -242,6 +242,12 @@ To contribute to this library: fork this repository and create a Pull Request fr
 
 You can also open issues in this repository and our team will tackle them as soon as possible.
 
+## License
+
+RSFormView is available under the MIT license. See the LICENSE file for more info.
+
 ## Credits
 
 **RSFormView** is authored and mantained by [Rootstrap](http://www.rootstrap.com) and [German Stabile](https://github.com/germanStabile) with the help of our [contributors](https://github.com/rootstrap/RSFormView/contributors).
+
+[<img src="https://s3-us-west-1.amazonaws.com/rootstrap.com/img/rs.png" width="100"/>](http://www.rootstrap.com)
