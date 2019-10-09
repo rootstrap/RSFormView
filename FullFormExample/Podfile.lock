@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManagerSwift (6.1.1)
+  - RSFormView (2.1.2):
+    - IQKeyboardManagerSwift (~> 6.1.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift (~> 6.1.1)
+  - RSFormView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+
+EXTERNAL SOURCES:
+  RSFormView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  RSFormView: 95aee765ac6f04a440300a7403d661649538713b
+
+PODFILE CHECKSUM: 6ea732a70ec6ad9677c5bb5f9179648feda19e85
+
+COCOAPODS: 1.8.3

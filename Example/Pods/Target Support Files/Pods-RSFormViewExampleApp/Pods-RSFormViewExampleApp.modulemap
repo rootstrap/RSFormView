@@ -1,6 +1,0 @@
-module Pods_RSFormViewExampleApp {
-  umbrella header "Pods-RSFormViewExampleApp-umbrella.h"
-
-  export *
-  module * { export * }
-}

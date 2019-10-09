@@ -17,7 +17,7 @@ RSFormView is a library that helps you build fully customizable forms for data e
 RSFormView is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
-pod "RSFormView"
+pod 'RSFormView', '~> 2.1.1' 
 ```
 ## Usage
 
@@ -32,13 +32,16 @@ view.addSubview(formView)
 Storyboards:
 Add a `UIView` to your view controller and change the class name to `FormView` and the module to `RSFormView`.
 
+
 2. Set your view controller as FormViewDelegate:
 ```swift
-class YourViewController: FormViewDelegate { ... }
+import RSFormView
+
+class YourViewController: UIViewController, FormViewDelegate { ... }
 ```
 and implement
 ```swift
-func didUpdateFields(allFieldsValid: Bool)
+func didUpdateFields(in formView: FormView, allFieldsValid: Bool)
 ```
 This function will be called any time a user enters any data in the form, so it's a great place to update other views dependent on the entered data.
 
@@ -59,6 +62,90 @@ Out of the box, RSFormView provides the following subclasses of `FormItem`:
 - `TwoTextFieldCellItem`: Two text fields.
 
 You can add your own custom `FormItem`s, check the `Custom Items` section for more information.
+
+## FieldType
+
+`fieldType` is a FormField property that determines the behaviour of the represented TextField.
+
+Cases:
+ - email: Will present the email keyboard when the field is selected and validate that the text entry is in an email format
+ - date: Will present a native date picker when the field is selected and validate that the entry is not empty
+ - integer: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
+ - double: Will present the decimal keyboard when the field is selected and validate that the text entry can be casted to Double, pass the max decimal places as a parameter of this enum case
+ - password: Will mask the text entry in UI and validate that the text entry is not empty
+ - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number format
+
+ Check `FieldType` definition for more supported cases.
+
+ ## ValidationType
+
+ `validationType` is a `FormField` property that determines the validation behaviour of the represented TextField.
+ Different `FieldType`s provide different default validations but the validation can be overriden by setting a `ValidationType` to the `FormField`.
+
+ Cases:
+ - nonEmpty: Will mark the field invalid if the text entry is empty
+ - none: No validation will be made, the field will never be marked invalid unless manually made so
+ - integer: Will mark the field invalid if the text entry is not an integer
+ - double: Will mark the field invalid if the text entry is not a double, max 2 decimal places
+ - usState: Will validate that the text entry matches the name or abbreviation of any of the US states
+ - custom: Pass this case a block with your custom validation.
+
+Custom example:
+```swift
+yourFormField.validationType = .custom(evaluator: { [weak self] updatedValue in
+  let otherFormField = self?.fields().first { $0.name == "OtherFormFieldName" }
+  let otherFormFieldValue = otherFormField?.value ?? ""
+  return updatedValue.count > 5 && updatedValue == otherFormFieldValue
+})
+//In this example the field will be marked valid if the text entry has mora characters than 5 and its text entry is the same as the field with identifier "OtherTextFieldName"
+```
+
+## FormItem
+
+A `FormItem` defines the basic behaviour of a row which is then specialized by subclassing it. You should never use instances of FormItem directly, RSFormView provides the following subclasses of FormItem out of the box:
+
+TextCellItem: A single label, or a "section header"
+TextFieldCellItem: A single text field.
+TwoTextFieldCellItem: Two text fields.
+
+1. One Text Field item:
+
+```swift
+let birthdateField = FormField(name: "Birthdate field", // the identifier of the field, use this to collect the data later
+                               initialValue: "", // the inital value of the field, if its in a date formate it will auto select that date in the picker
+                               placeholder: FieldName.birthdate.rawValue, // The placeholder when there's no value and text field title when there is
+                               fieldType: .date, //The Type of the field, .date will present a native picker view when tapping on the text field
+                               isValid: false, //The initial validation state. The field won't be marked invalid until data is entered or removed
+                               errorMessage: "Please enter a birthdate") //The error message to be displayed when the entry is invalid or empty
+
+let formItem = TextFieldCellItem(with: birthdateField)
+```
+
+2. Two Text Field item:
+
+```swift
+let firstFormField = FormField(...)
+let secondFormField = FormField(...)
+
+let formItem = TwoTextFieldCellItem(firstField: firstFormField, secondField: secondFormField)
+```
+
+3. Text Cell Item (may be used as a section header or text hint):
+```swift
+let attributedString = NSAttributedString(...)
+let formItem = TextCellItem()
+formItem.attributedString = attributedString
+```
+
+As an easy way to test the pod, we provide a the class BasaicFormViewModel. It receives a list of items and will show the form without additional customization. 
+
+```swift
+//  birthdateField defined above
+        
+formView.viewModel = BasicFormViewModel(items: [TextFieldCellItem(with: birthdateField)])
+```
+
+You can see this approach in the VanillaExample folder on this repository. 
 
 1. Configure your form looks
 
@@ -137,79 +224,6 @@ formViewModel.fields().forEach {
 }
 ```
 
-## FieldType
-
-`fieldType` is a FormField property that determines the behaviour of the represented TextField.
-
-Cases:
- - email: Will present the email keyboard when the field is selected and validate that the text entry is in an email format
- - date: Will present a native date picker when the field is selected and validate that the entry is not empty
- - integer: Will present the numeric keyboard when the field is selected and validate that the text entry can be casted to Int
- - double: Will present the decimal keyboard when the field is selected and validate that the text entry can be casted to Double, pass the max decimal places as a parameter of this enum case
- - password: Will mask the text entry in UI and validate that the text entry is not empty
- - usPhone: Will decorate the text entry with slashes (111-111-1111) and validate that the text entry is in a valid US phone number format
-
- Check `FieldType` definition for more supported cases.
-
- ## ValidationType
-
- `validationType` is a `FormField` property that determines the validation behaviour of the represented TextField.
- Different `FieldType`s provide different default validations but the validation can be overriden by setting a `ValidationType` to the `FormField`.
-
- Cases:
- - nonEmpty: Will mark the field invalid if the text entry is empty
- - none: No validation will be made, the field will never be marked invalid unless manually made so
- - integer: Will mark the field invalid if the text entry is not an integer
- - double: Will mark the field invalid if the text entry is not a double, max 2 decimal places
- - usState: Will validate that the text entry matches the name or abbreviation of any of the US states
- - custom: Pass this case a block with your custom validation.
-
-Custom example:
-```swift
-yourFormField.validationType = .custom(evaluator: { [weak self] updatedValue in
-  let otherFormField = self?.fields().first { $0.name == "OtherFormFieldName" }
-  let otherFormFieldValue = otherFormField?.value ?? ""
-  return updatedValue.count > 5 && updatedValue == otherFormFieldValue
-})
-//In this example the field will be marked valid if the text entry has mora characters than 5 and its text entry is the same as the field with identifier "OtherTextFieldName"
-```
-
-## FormItem
-
-A `FormItem` defines the basic behaviour of a row which is then specialized by subclassing it. You should never use instances of FormItem directly, RSFormView provides the following subclasses of FormItem out of the box:
-
-TextCellItem: A single label, or a "section header"
-TextFieldCellItem: A single text field.
-TwoTextFieldCellItem: Two text fields.
-
-1. One Text Field item:
-
-```swift
-let birthdateField = FormField(name: "Birthdate field", // the identifier of the field, use this to collect the data later
-                               initialValue: "", // the inital value of the field, if its in a date formate it will auto select that date in the picker
-                               placeholder: FieldName.birthdate.rawValue, // The placeholder when there's no value and text field title when there is
-                               fieldType: .date, //The Type of the field, .date will present a native picker view when tapping on the text field
-                               isValid: false, //The initial validation state. The field won't be marked invalid until data is entered or removed
-                               errorMessage: "Please enter a birthdate") //The error message to be displayed when the entry is invalid or empty
-
-let formItem = TextFieldCellItem(with: birthdateField)
-```
-
-2. Two Text Field item:
-
-```swift
-let firstFormField = FormField(...)
-let secondFormField = FormField(...)
-
-let formItem = TwoTextFieldCellItem(firstField: firstFormField, secondField: secondFormField)
-```
-
-3. Text Cell Item (may be used as a section header or text hint):
-```swift
-let attributedString = NSAttributedString(...)
-let formItem = TextCellItem()
-formItem.attributedString = attributedString
-```
 
 ## Custom Form Items
 If you need custom fields and the customization possibilities of the `FormConfigurator` are not enough, you can implement your own Fields.
