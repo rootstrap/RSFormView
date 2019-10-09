@@ -14,7 +14,7 @@ before_install:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
   - gem install cocoapods -v '1.7.5'
-  - cd Example
+  - cd FullFormExample
   - pod repo update
 install:
   - bundle install

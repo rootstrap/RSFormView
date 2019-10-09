@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13A856F6E43F2EB25443D5A5 /* Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B0CFE411143ACB63ADBF3C /* Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework */; };
+		7D003693CD483FC6F074D103 /* Pods_RSFormViewVanillaExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2700098B18D5E94938E1C59C /* Pods_RSFormViewVanillaExampleTests.framework */; };
+		9296A248234E54EB0085C2E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296A247234E54EB0085C2E5 /* AppDelegate.swift */; };
+		9296A24A234E54EB0085C2E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296A249234E54EB0085C2E5 /* ViewController.swift */; };
+		9296A24D234E54EB0085C2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9296A24B234E54EB0085C2E5 /* Main.storyboard */; };
+		9296A24F234E54ED0085C2E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9296A24E234E54ED0085C2E5 /* Assets.xcassets */; };
+		9296A252234E54ED0085C2E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9296A250234E54ED0085C2E5 /* LaunchScreen.storyboard */; };
+		9296A25D234E54EE0085C2E5 /* RSFormViewTesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296A25C234E54EE0085C2E5 /* RSFormViewTesterTests.swift */; };
+		9296A268234E54EE0085C2E5 /* RSFormViewTesterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296A267234E54EE0085C2E5 /* RSFormViewTesterUITests.swift */; };
+		9296A276234E56600085C2E5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9296A275234E56600085C2E5 /* Podfile */; };
+		EF05BCA2231AC507D72B0269 /* Pods_RSFormViewVanillaExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D52D2E0AC936E9098139E5 /* Pods_RSFormViewVanillaExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9296A259234E54EE0085C2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9296A23C234E54EB0085C2E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9296A243234E54EB0085C2E5;
+			remoteInfo = RSFormViewTester;
+		};
+		9296A264234E54EE0085C2E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9296A23C234E54EB0085C2E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9296A243234E54EB0085C2E5;
+			remoteInfo = RSFormViewTester;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		186F796C0374AF981AF6CC92 /* Pods-RSFormViewTester-RSFormViewTesterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTester-RSFormViewTesterUITests.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewTester-RSFormViewTesterUITests/Pods-RSFormViewTester-RSFormViewTesterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F465C9CF39FBED1E41A5E91 /* Pods-RSFormViewVanillaExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExampleTests.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExampleTests/Pods-RSFormViewVanillaExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		2700098B18D5E94938E1C59C /* Pods_RSFormViewVanillaExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSFormViewVanillaExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57D6F8C6EE064497932B2A4E /* Pods-RSFormViewVanillaExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExampleTests/Pods-RSFormViewVanillaExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		608371EF6D53B515E07CCCAC /* Pods-RSFormViewVanillaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExample.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExample/Pods-RSFormViewVanillaExample.release.xcconfig"; sourceTree = "<group>"; };
+		66D52D2E0AC936E9098139E5 /* Pods_RSFormViewVanillaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSFormViewVanillaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		681871D4A45A16C00E7C2C30 /* Pods-RSFormViewTesterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTesterTests.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewTesterTests/Pods-RSFormViewTesterTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A47D32EEEEB3521B94E895B /* Pods-RSFormViewTesterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTesterTests.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewTesterTests/Pods-RSFormViewTesterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77001286E868FE4CD082AAAA /* Pods-RSFormViewTester-RSFormViewTesterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTester-RSFormViewTesterUITests.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewTester-RSFormViewTesterUITests/Pods-RSFormViewTester-RSFormViewTesterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A4CDA62E5D687C69064399F /* Pods-RSFormViewTester.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTester.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewTester/Pods-RSFormViewTester.release.xcconfig"; sourceTree = "<group>"; };
+		8C37D15DFF9F26930D4A2154 /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E9C84D4A0DF1590BDC5D506 /* Pods-RSFormViewVanillaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExample.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExample/Pods-RSFormViewVanillaExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9296A244234E54EB0085C2E5 /* RSFormViewVanillaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSFormViewVanillaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9296A247234E54EB0085C2E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9296A249234E54EB0085C2E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9296A24C234E54EB0085C2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9296A24E234E54ED0085C2E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9296A251234E54ED0085C2E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9296A253234E54ED0085C2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9296A258234E54EE0085C2E5 /* RSFormViewVanillaExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormViewVanillaExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9296A25C234E54EE0085C2E5 /* RSFormViewTesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFormViewTesterTests.swift; sourceTree = "<group>"; };
+		9296A25E234E54EE0085C2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9296A263234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormViewVanillaExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9296A267234E54EE0085C2E5 /* RSFormViewTesterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFormViewTesterUITests.swift; sourceTree = "<group>"; };
+		9296A269234E54EE0085C2E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9296A275234E56600085C2E5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E5D363E5B02285F9FC03082 /* Pods-RSFormViewTester.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewTester.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewTester/Pods-RSFormViewTester.debug.xcconfig"; sourceTree = "<group>"; };
+		CA88A83AE8B16489A310504B /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6B0CFE411143ACB63ADBF3C /* Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9296A241234E54EB0085C2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF05BCA2231AC507D72B0269 /* Pods_RSFormViewVanillaExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A255234E54EE0085C2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D003693CD483FC6F074D103 /* Pods_RSFormViewVanillaExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A260234E54EE0085C2E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A856F6E43F2EB25443D5A5 /* Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88CC502E539EAC98F122E8C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66D52D2E0AC936E9098139E5 /* Pods_RSFormViewVanillaExample.framework */,
+				E6B0CFE411143ACB63ADBF3C /* Pods_RSFormViewVanillaExample_RSFormViewVanillaExampleUITests.framework */,
+				2700098B18D5E94938E1C59C /* Pods_RSFormViewVanillaExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9296A23B234E54EB0085C2E5 = {
+			isa = PBXGroup;
+			children = (
+				9296A275234E56600085C2E5 /* Podfile */,
+				9296A246234E54EB0085C2E5 /* RSFormViewVanillaExample */,
+				9296A25B234E54EE0085C2E5 /* RSFormViewVanillaExampleTests */,
+				9296A266234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests */,
+				9296A245234E54EB0085C2E5 /* Products */,
+				DAA117E66382116013D4E97B /* Pods */,
+				88CC502E539EAC98F122E8C7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9296A245234E54EB0085C2E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9296A244234E54EB0085C2E5 /* RSFormViewVanillaExample.app */,
+				9296A258234E54EE0085C2E5 /* RSFormViewVanillaExampleTests.xctest */,
+				9296A263234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9296A246234E54EB0085C2E5 /* RSFormViewVanillaExample */ = {
+			isa = PBXGroup;
+			children = (
+				9296A247234E54EB0085C2E5 /* AppDelegate.swift */,
+				9296A249234E54EB0085C2E5 /* ViewController.swift */,
+				9296A24B234E54EB0085C2E5 /* Main.storyboard */,
+				9296A24E234E54ED0085C2E5 /* Assets.xcassets */,
+				9296A250234E54ED0085C2E5 /* LaunchScreen.storyboard */,
+				9296A253234E54ED0085C2E5 /* Info.plist */,
+			);
+			path = RSFormViewVanillaExample;
+			sourceTree = "<group>";
+		};
+		9296A25B234E54EE0085C2E5 /* RSFormViewVanillaExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9296A25C234E54EE0085C2E5 /* RSFormViewTesterTests.swift */,
+				9296A25E234E54EE0085C2E5 /* Info.plist */,
+			);
+			path = RSFormViewVanillaExampleTests;
+			sourceTree = "<group>";
+		};
+		9296A266234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9296A267234E54EE0085C2E5 /* RSFormViewTesterUITests.swift */,
+				9296A269234E54EE0085C2E5 /* Info.plist */,
+			);
+			path = RSFormViewVanillaExampleUITests;
+			sourceTree = "<group>";
+		};
+		DAA117E66382116013D4E97B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E5D363E5B02285F9FC03082 /* Pods-RSFormViewTester.debug.xcconfig */,
+				7A4CDA62E5D687C69064399F /* Pods-RSFormViewTester.release.xcconfig */,
+				77001286E868FE4CD082AAAA /* Pods-RSFormViewTester-RSFormViewTesterUITests.debug.xcconfig */,
+				186F796C0374AF981AF6CC92 /* Pods-RSFormViewTester-RSFormViewTesterUITests.release.xcconfig */,
+				6A47D32EEEEB3521B94E895B /* Pods-RSFormViewTesterTests.debug.xcconfig */,
+				681871D4A45A16C00E7C2C30 /* Pods-RSFormViewTesterTests.release.xcconfig */,
+				8E9C84D4A0DF1590BDC5D506 /* Pods-RSFormViewVanillaExample.debug.xcconfig */,
+				608371EF6D53B515E07CCCAC /* Pods-RSFormViewVanillaExample.release.xcconfig */,
+				8C37D15DFF9F26930D4A2154 /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.debug.xcconfig */,
+				CA88A83AE8B16489A310504B /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.release.xcconfig */,
+				57D6F8C6EE064497932B2A4E /* Pods-RSFormViewVanillaExampleTests.debug.xcconfig */,
+				1F465C9CF39FBED1E41A5E91 /* Pods-RSFormViewVanillaExampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9296A243234E54EB0085C2E5 /* RSFormViewVanillaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9296A26C234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExample" */;
+			buildPhases = (
+				BCCAF7308343B3D348677E97 /* [CP] Check Pods Manifest.lock */,
+				9296A240234E54EB0085C2E5 /* Sources */,
+				9296A241234E54EB0085C2E5 /* Frameworks */,
+				9296A242234E54EB0085C2E5 /* Resources */,
+				CC62219C51B6D67729B79049 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSFormViewVanillaExample;
+			productName = RSFormViewTester;
+			productReference = 9296A244234E54EB0085C2E5 /* RSFormViewVanillaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9296A257234E54EE0085C2E5 /* RSFormViewVanillaExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9296A26F234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExampleTests" */;
+			buildPhases = (
+				1AF39D9E847DB8ED41C00FED /* [CP] Check Pods Manifest.lock */,
+				9296A254234E54EE0085C2E5 /* Sources */,
+				9296A255234E54EE0085C2E5 /* Frameworks */,
+				9296A256234E54EE0085C2E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9296A25A234E54EE0085C2E5 /* PBXTargetDependency */,
+			);
+			name = RSFormViewVanillaExampleTests;
+			productName = RSFormViewTesterTests;
+			productReference = 9296A258234E54EE0085C2E5 /* RSFormViewVanillaExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9296A262234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9296A272234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExampleUITests" */;
+			buildPhases = (
+				5C90F8CA31087161D546F839 /* [CP] Check Pods Manifest.lock */,
+				9296A25F234E54EE0085C2E5 /* Sources */,
+				9296A260234E54EE0085C2E5 /* Frameworks */,
+				9296A261234E54EE0085C2E5 /* Resources */,
+				FC89344E30AA70C3468F241E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9296A265234E54EE0085C2E5 /* PBXTargetDependency */,
+			);
+			name = RSFormViewVanillaExampleUITests;
+			productName = RSFormViewTesterUITests;
+			productReference = 9296A263234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9296A23C234E54EB0085C2E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Anthony;
+				TargetAttributes = {
+					9296A243234E54EB0085C2E5 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					9296A257234E54EE0085C2E5 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9296A243234E54EB0085C2E5;
+					};
+					9296A262234E54EE0085C2E5 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 9296A243234E54EB0085C2E5;
+					};
+				};
+			};
+			buildConfigurationList = 9296A23F234E54EB0085C2E5 /* Build configuration list for PBXProject "RSFormViewVanillaExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9296A23B234E54EB0085C2E5;
+			productRefGroup = 9296A245234E54EB0085C2E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9296A243234E54EB0085C2E5 /* RSFormViewVanillaExample */,
+				9296A257234E54EE0085C2E5 /* RSFormViewVanillaExampleTests */,
+				9296A262234E54EE0085C2E5 /* RSFormViewVanillaExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9296A242234E54EB0085C2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9296A252234E54ED0085C2E5 /* LaunchScreen.storyboard in Resources */,
+				9296A24F234E54ED0085C2E5 /* Assets.xcassets in Resources */,
+				9296A276234E56600085C2E5 /* Podfile in Resources */,
+				9296A24D234E54EB0085C2E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A256234E54EE0085C2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A261234E54EE0085C2E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AF39D9E847DB8ED41C00FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSFormViewVanillaExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C90F8CA31087161D546F839 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCCAF7308343B3D348677E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSFormViewVanillaExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC62219C51B6D67729B79049 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample/Pods-RSFormViewVanillaExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample/Pods-RSFormViewVanillaExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample/Pods-RSFormViewVanillaExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC89344E30AA70C3468F241E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests/Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9296A240234E54EB0085C2E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9296A24A234E54EB0085C2E5 /* ViewController.swift in Sources */,
+				9296A248234E54EB0085C2E5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A254234E54EE0085C2E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9296A25D234E54EE0085C2E5 /* RSFormViewTesterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9296A25F234E54EE0085C2E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9296A268234E54EE0085C2E5 /* RSFormViewTesterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9296A25A234E54EE0085C2E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9296A243234E54EB0085C2E5 /* RSFormViewVanillaExample */;
+			targetProxy = 9296A259234E54EE0085C2E5 /* PBXContainerItemProxy */;
+		};
+		9296A265234E54EE0085C2E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9296A243234E54EB0085C2E5 /* RSFormViewVanillaExample */;
+			targetProxy = 9296A264234E54EE0085C2E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9296A24B234E54EB0085C2E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9296A24C234E54EB0085C2E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9296A250234E54ED0085C2E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9296A251234E54ED0085C2E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9296A26A234E54EE0085C2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RSFormViewVanillaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = RSFormViewVanillaExample;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9296A26B234E54EE0085C2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RSFormViewVanillaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = RSFormViewVanillaExample;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9296A26D234E54EE0085C2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E9C84D4A0DF1590BDC5D506 /* Pods-RSFormViewVanillaExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewVanillaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9296A26E234E54EE0085C2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608371EF6D53B515E07CCCAC /* Pods-RSFormViewVanillaExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewVanillaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9296A270234E54EE0085C2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D6F8C6EE064497932B2A4E /* Pods-RSFormViewVanillaExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewTesterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample.RSFormViewTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSFormViewVanillaExample.app/RSFormViewVanillaExample";
+			};
+			name = Debug;
+		};
+		9296A271234E54EE0085C2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F465C9CF39FBED1E41A5E91 /* Pods-RSFormViewVanillaExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewTesterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample.RSFormViewTesterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSFormViewVanillaExample.app/RSFormViewVanillaExample";
+			};
+			name = Release;
+		};
+		9296A273234E54EE0085C2E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C37D15DFF9F26930D4A2154 /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewTesterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample.RSFormViewVanillaExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewTester;
+			};
+			name = Debug;
+		};
+		9296A274234E54EE0085C2E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA88A83AE8B16489A310504B /* Pods-RSFormViewVanillaExample-RSFormViewVanillaExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewTesterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.rsformviewvanillaexample.RSFormViewVanillaExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewTester;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9296A23F234E54EB0085C2E5 /* Build configuration list for PBXProject "RSFormViewVanillaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9296A26A234E54EE0085C2E5 /* Debug */,
+				9296A26B234E54EE0085C2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9296A26C234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9296A26D234E54EE0085C2E5 /* Debug */,
+				9296A26E234E54EE0085C2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9296A26F234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9296A270234E54EE0085C2E5 /* Debug */,
+				9296A271234E54EE0085C2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9296A272234E54EE0085C2E5 /* Build configuration list for PBXNativeTarget "RSFormViewVanillaExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9296A273234E54EE0085C2E5 /* Debug */,
+				9296A274234E54EE0085C2E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9296A23C234E54EB0085C2E5 /* Project object */;
+}

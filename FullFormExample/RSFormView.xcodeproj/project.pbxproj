@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071067CE228B8551001D97DF /* RSFormViewExampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */; };
+		071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80B2278DCAE0023B402 /* AppDelegate.swift */; };
+		071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */; };
+		071CC8112278DCAE0023B402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC80F2278DCAE0023B402 /* Main.storyboard */; };
+		071CC8132278DCB00023B402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071CC8122278DCB00023B402 /* Assets.xcassets */; };
+		071CC8162278DCB00023B402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071CC8142278DCB00023B402 /* LaunchScreen.storyboard */; };
+		071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */; };
+		07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */; };
+		817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817F591B22A174BE00723654 /* XCUIAppExtension.swift */; };
+		F29BA167BB66708D11BEAD3C /* libPods-RSFormViewExampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */; };
+		FEC2657F22BC060A00CD31C5 /* StepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657D22BC060A00CD31C5 /* StepperCell.swift */; };
+		FEC2658022BC060A00CD31C5 /* StepperCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071067D0228B8551001D97DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 072B3CC82278CFFB0056DB8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071CC8082278DCAD0023B402;
+			remoteInfo = RSFormViewExampleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSFormViewExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSFormViewExampleAppUITests.swift; sourceTree = "<group>"; };
+		071067CF228B8551001D97DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSFormViewExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071CC80B2278DCAE0023B402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewController.swift; sourceTree = "<group>"; };
+		071CC8102278DCAE0023B402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		071CC8122278DCB00023B402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		071CC8152278DCB00023B402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		071CC8172278DCB00023B402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExampleViewModel.swift; sourceTree = "<group>"; };
+		0725EE3F22CE5564008E8C13 /* RSFormViewExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSFormViewExampleApp.entitlements; sourceTree = "<group>"; };
+		07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElementExtension.swift; sourceTree = "<group>"; };
+		74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSFormViewExampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		817F591B22A174BE00723654 /* XCUIAppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIAppExtension.swift; sourceTree = "<group>"; };
+		81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.release.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSFormViewExampleApp.debug.xcconfig"; path = "Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FEC2657D22BC060A00CD31C5 /* StepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCell.swift; sourceTree = "<group>"; };
+		FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperCellItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071067C8228B8551001D97DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071CC8062278DCAD0023B402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F29BA167BB66708D11BEAD3C /* libPods-RSFormViewExampleApp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071067CC228B8551001D97DF /* RSFormViewExampleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				071067CD228B8551001D97DF /* RSFormViewExampleAppUITests.swift */,
+				071067CF228B8551001D97DF /* Info.plist */,
+				07D10D5C228DCDA90023D36C /* XCUIElementExtension.swift */,
+				817F591B22A174BE00723654 /* XCUIAppExtension.swift */,
+			);
+			path = RSFormViewExampleAppUITests;
+			sourceTree = "<group>";
+		};
+		071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				0725EE3F22CE5564008E8C13 /* RSFormViewExampleApp.entitlements */,
+				FEC0140822BC05B3004B52B0 /* CustomRows */,
+				071CC80B2278DCAE0023B402 /* AppDelegate.swift */,
+				071CC80D2278DCAE0023B402 /* SignupExampleViewController.swift */,
+				071CC80F2278DCAE0023B402 /* Main.storyboard */,
+				071CC8122278DCB00023B402 /* Assets.xcassets */,
+				071CC8142278DCB00023B402 /* LaunchScreen.storyboard */,
+				071CC8172278DCB00023B402 /* Info.plist */,
+				071CC81B2278E1E10023B402 /* SignupExampleViewModel.swift */,
+			);
+			path = RSFormViewExampleApp;
+			sourceTree = "<group>";
+		};
+		072B3CC72278CFFB0056DB8A = {
+			isa = PBXGroup;
+			children = (
+				071CC80A2278DCAE0023B402 /* RSFormViewExampleApp */,
+				071067CC228B8551001D97DF /* RSFormViewExampleAppUITests */,
+				072B3CD22278CFFB0056DB8A /* Products */,
+				F3A48058D56247BD4CBB1A7F /* Pods */,
+				9E77EBFEC9C7D43F690C975F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		072B3CD22278CFFB0056DB8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */,
+				071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E77EBFEC9C7D43F690C975F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74D544EC68D981D690C5330C /* libPods-RSFormViewExampleApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3A48058D56247BD4CBB1A7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */,
+				81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEC0140822BC05B3004B52B0 /* CustomRows */ = {
+			isa = PBXGroup;
+			children = (
+				FEC2657D22BC060A00CD31C5 /* StepperCell.swift */,
+				FEC2657E22BC060A00CD31C5 /* StepperCellItem.swift */,
+			);
+			path = CustomRows;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071067CA228B8551001D97DF /* RSFormViewExampleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071067D4228B8551001D97DF /* Build configuration list for PBXNativeTarget "RSFormViewExampleAppUITests" */;
+			buildPhases = (
+				071067C7228B8551001D97DF /* Sources */,
+				071067C8228B8551001D97DF /* Frameworks */,
+				071067C9228B8551001D97DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071067D1228B8551001D97DF /* PBXTargetDependency */,
+			);
+			name = RSFormViewExampleAppUITests;
+			productName = RSFormViewExampleAppUITests;
+			productReference = 071067CB228B8551001D97DF /* RSFormViewExampleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		071CC8082278DCAD0023B402 /* RSFormViewExampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071CC8182278DCB00023B402 /* Build configuration list for PBXNativeTarget "RSFormViewExampleApp" */;
+			buildPhases = (
+				B6DAB55C77F89A8E093D83A2 /* [CP] Check Pods Manifest.lock */,
+				071CC8052278DCAD0023B402 /* Sources */,
+				071CC8062278DCAD0023B402 /* Frameworks */,
+				071CC8072278DCAD0023B402 /* Resources */,
+				6A09523AB261112ABF1930DD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSFormViewExampleApp;
+			productName = RSFormViewExampleApp;
+			productReference = 071CC8092278DCAD0023B402 /* RSFormViewExampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		072B3CC82278CFFB0056DB8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Rootstrap;
+				TargetAttributes = {
+					071067CA228B8551001D97DF = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 071CC8082278DCAD0023B402;
+					};
+					071CC8082278DCAD0023B402 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 072B3CCB2278CFFB0056DB8A /* Build configuration list for PBXProject "RSFormView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 072B3CC72278CFFB0056DB8A;
+			productRefGroup = 072B3CD22278CFFB0056DB8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071CC8082278DCAD0023B402 /* RSFormViewExampleApp */,
+				071067CA228B8551001D97DF /* RSFormViewExampleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071067C9228B8551001D97DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071CC8072278DCAD0023B402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071CC8162278DCB00023B402 /* LaunchScreen.storyboard in Resources */,
+				071CC8132278DCB00023B402 /* Assets.xcassets in Resources */,
+				071CC8112278DCAE0023B402 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A09523AB261112ABF1930DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSFormViewExampleApp/Pods-RSFormViewExampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6DAB55C77F89A8E093D83A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSFormViewExampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071067C7228B8551001D97DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071067CE228B8551001D97DF /* RSFormViewExampleAppUITests.swift in Sources */,
+				07D10D5D228DCDA90023D36C /* XCUIElementExtension.swift in Sources */,
+				817F591C22A174BE00723654 /* XCUIAppExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071CC8052278DCAD0023B402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071CC80E2278DCAE0023B402 /* SignupExampleViewController.swift in Sources */,
+				071CC80C2278DCAE0023B402 /* AppDelegate.swift in Sources */,
+				071CC81C2278E1E10023B402 /* SignupExampleViewModel.swift in Sources */,
+				FEC2658022BC060A00CD31C5 /* StepperCellItem.swift in Sources */,
+				FEC2657F22BC060A00CD31C5 /* StepperCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071067D1228B8551001D97DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071CC8082278DCAD0023B402 /* RSFormViewExampleApp */;
+			targetProxy = 071067D0228B8551001D97DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		071CC80F2278DCAE0023B402 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071CC8102278DCAE0023B402 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		071CC8142278DCB00023B402 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071CC8152278DCB00023B402 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071067D2228B8551001D97DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9839GT2TL;
+				INFOPLIST_FILE = RSFormViewExampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewExampleApp;
+			};
+			name = Debug;
+		};
+		071067D3228B8551001D97DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V9839GT2TL;
+				INFOPLIST_FILE = RSFormViewExampleAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSFormViewExampleApp;
+			};
+			name = Release;
+		};
+		071CC8192278DCB00023B402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86866CB70EB37070321B894A /* Pods-RSFormViewExampleApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		071CC81A2278DCB00023B402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DA92B4EFC698D28CC15FB4 /* Pods-RSFormViewExampleApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2KC44SQKHF;
+				INFOPLIST_FILE = RSFormViewExampleApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rootstrap.RSFormViewExampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		072B3CD72278CFFB0056DB8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		072B3CD82278CFFB0056DB8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071067D4228B8551001D97DF /* Build configuration list for PBXNativeTarget "RSFormViewExampleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071067D2228B8551001D97DF /* Debug */,
+				071067D3228B8551001D97DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071CC8182278DCB00023B402 /* Build configuration list for PBXNativeTarget "RSFormViewExampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071CC8192278DCB00023B402 /* Debug */,
+				071CC81A2278DCB00023B402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		072B3CCB2278CFFB0056DB8A /* Build configuration list for PBXProject "RSFormView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				072B3CD72278CFFB0056DB8A /* Debug */,
+				072B3CD82278CFFB0056DB8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 072B3CC82278CFFB0056DB8A /* Project object */;
+}
