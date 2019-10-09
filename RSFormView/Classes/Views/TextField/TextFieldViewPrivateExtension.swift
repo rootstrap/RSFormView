@@ -167,6 +167,11 @@ internal extension TextFieldView {
       return updatedText
     }
     
+    if updatedText.count > 7 {
+      //if we have more characters than the format mm/yyyy, don't update the text
+      return previousText
+    }
+    
     var resultingText = ""
     switch previousText.count {
     case 0:
