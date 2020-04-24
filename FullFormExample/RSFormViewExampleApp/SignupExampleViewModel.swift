@@ -164,7 +164,7 @@ class SignupExampleViewModel: FormViewModel {
   }
   
   func genderItem() -> FormItem {
-    let genderOptions = ["male", "female"]
+    let genderOptions = ["male", "female", "other"]
     let genderField = FormField(name: FieldName.gender.rawValue,
                                 initialValue: "",
                                 placeholder: FieldName.gender.rawValue,
@@ -172,6 +172,7 @@ class SignupExampleViewModel: FormViewModel {
                                 isValid: false,
                                 errorMessage: "Please select your gender")
     genderField.options = genderOptions
+    genderField.isHalfField = true
     
     return TextFieldCellItem(with: genderField)
   }

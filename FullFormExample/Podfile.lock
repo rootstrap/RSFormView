@@ -1,6 +1,6 @@
 PODS:
   - IQKeyboardManagerSwift (6.1.1)
-  - RSFormView (2.1.2):
+  - RSFormView (2.1.3):
     - IQKeyboardManagerSwift (~> 6.1.1)
 
 DEPENDENCIES:
@@ -17,8 +17,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
-  RSFormView: 95aee765ac6f04a440300a7403d661649538713b
+  RSFormView: bbd37664f0adce2aaca718e8a87dbc0bde256c80
 
 PODFILE CHECKSUM: 6ea732a70ec6ad9677c5bb5f9179648feda19e85
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

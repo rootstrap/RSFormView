@@ -172,8 +172,8 @@ public class TextFieldView: UIView {
     textField.text = data.value
     titleLabel.text = data.name
     errorLabel.text = data.errorMessage
-    titleLabel.isHidden = data.value.isEmpty
-    titleLabelContainerView.isHidden = data.value.isEmpty
+    titleLabel.isHidden = data.value.isEmpty && !data.hasFixedTitle
+    titleLabelContainerView.isHidden = data.value.isEmpty && !data.hasFixedTitle
     if !data.value.isEmpty && data.oneTimeErrorMessage == nil {
       data.shouldDisplayError = true
       validate(with: data.value)
@@ -302,8 +302,9 @@ extension TextFieldView: UITextFieldDelegate {
   }
   
   public func textFieldDidEndEditing(_ textField: UITextField) {
-    titleLabel.isHidden = fieldData?.value ?? "" == ""
-    titleLabelContainerView.isHidden = fieldData?.value ?? "" == ""
+    let shouldHideTitle = fieldData?.value ?? "" == "" && !(fieldData?.hasFixedTitle ?? false)
+    titleLabel.isHidden = shouldHideTitle
+    titleLabelContainerView.isHidden = shouldHideTitle
     updatePlaceHolder(withText: fieldData?.placeholder ?? "")
     updateErrorState()
     setNeedsDisplay()

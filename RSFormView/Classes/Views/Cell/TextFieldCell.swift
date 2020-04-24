@@ -14,15 +14,30 @@ public class TextFieldCell: FormTableViewCell {
   public static let reuseIdentifier = "TextFieldCellIdentifier"
   
   @IBOutlet public weak var textFieldView: TextFieldView!
+  @IBOutlet weak var textFieldViewTrailingConstraint: NSLayoutConstraint!
 
-  override public  func awakeFromNib() {
+  let horizontalMargin: CGFloat = 7
+    
+  override public func awakeFromNib() {
     textFieldView.delegate = self
+  }
+    
+  public override func layoutSubviews() {
+    guard let fieldData = formItem?.formFields.first else {
+      super.layoutSubviews()
+      return
+    }
+    
+    textFieldViewTrailingConstraint.constant =
+      fieldData.isHalfField ? bounds.width / 2 : horizontalMargin
+    super.layoutSubviews()
   }
   
   override public func update(with formItem: FormItem, and formConfigurator: FormConfigurator) {
     isAccessibilityElement = false
     self.formItem = formItem
     guard let fieldData = formItem.formFields.first else { return }
+    
     
     contentView.backgroundColor = formConfigurator.cellsBackgroundColor
     textFieldView.update(withData: fieldData, formConfigurator: formConfigurator)
