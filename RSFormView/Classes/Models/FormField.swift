@@ -69,6 +69,12 @@ open class FormField {
   
   /// Whether the text entry was valid or not
   public var isValid: Bool
+    
+  /// Whether the title should be always shown or only when theres text entered
+  public var hasFixedTitle = false
+  
+  /// Whether the form field would occupy the whole width of the cell or just the half
+  public var isHalfField = false
   
   /// Whether the TextFieldView should show error or not when on invalid state
   /// The var will initially be false and set to true when a change is made to the associated TextFieldView
