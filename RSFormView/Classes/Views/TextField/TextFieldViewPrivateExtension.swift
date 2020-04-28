@@ -38,7 +38,7 @@ internal extension TextFieldView {
     }
   }
   
-  func setCursorPosition(isDeleting: Bool = false) {
+  func setCursorPosition(jump: Int) {
     guard let lastCursorPosition = lastCursorPosition,
       fieldData?.fieldType != .usPhone,
       fieldData?.fieldType != .expiration,
@@ -48,7 +48,7 @@ internal extension TextFieldView {
     }
     
     if let newPosition = textField.position(from: textField.beginningOfDocument,
-                                            offset: lastCursorPosition + (isDeleting ? -1 : 1)) {
+                                            offset: lastCursorPosition + jump) {
       textField.selectedTextRange = textField.textRange(from: newPosition, to: newPosition)
     }
     
@@ -144,13 +144,14 @@ internal extension TextFieldView {
   }
   
   func propagateUpdates(previousText: String, updatedText: String, data: FormField) {
+    guard previousText != updatedText else { return }
     var updatedText = updatedText
     updatedText = data.capitalizeValue ? updatedText.capitalized : updatedText
     updatedText = data.uppercaseValue ? updatedText.uppercased() : updatedText
     if data.fieldType == .usState {
       updatedText = updatedText.count > 2 ? updatedText.capitalized : updatedText.uppercased()
     }
-    let isDeleting = updatedText.count < previousText.count
+    let jump = updatedText.count - previousText.count
     data.oneTimeErrorMessage = nil
     data.value = updatedText
     data.shouldDisplayError = true
@@ -158,7 +159,7 @@ internal extension TextFieldView {
     validate(with: updatedText)
     saveCursorPosition()
     delegate?.didUpdate(textFieldView: self, with: data)
-    setCursorPosition(isDeleting: isDeleting)
+    setCursorPosition(jump: jump)
   }
   
   func processExpirationDate(previousText: String, updatedText: String) -> String {
