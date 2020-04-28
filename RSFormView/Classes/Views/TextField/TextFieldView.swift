@@ -34,7 +34,9 @@ public class TextFieldView: UIView {
   
   var lastCursorPosition: Int?
   
-  weak var delegate: TextFieldDelegate?
+  private var lastEntry: String?
+  
+  public weak var delegate: TextFieldDelegate?
   var fieldData: FormField? {
     didSet {
       configureFormPicker()
@@ -100,9 +102,9 @@ public class TextFieldView: UIView {
   }
   
   /// Updates TextFieldView layout according of the validation state of the related FormField
-  func updateErrorState() {
+  public func updateErrorState() {
     guard let fieldData = fieldData else { return }
-    if fieldData.validationMatch == nil {
+    if fieldData.validationMatch == nil && fieldData.oneTimeErrorMessage == nil {
       //do not override validation match validation
       validate(with: fieldData.value)
     }
@@ -146,7 +148,7 @@ public class TextFieldView: UIView {
    - data: Model that describes the behaviour of the TextFieldView instance
    - formConfigurator: Model that describes the layout of the TextFieldView instance
    */
-  func update(withData data: FormField, formConfigurator: FormConfigurator) {
+  public func update(withData data: FormField, formConfigurator: FormConfigurator) {
     fieldData = data
     self.formConfigurator = formConfigurator
     setAccessibility(withData: data)
@@ -247,13 +249,25 @@ extension TextFieldView: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 extension TextFieldView: UITextFieldDelegate {
-  public func textField(_ textField: UITextField,
-                 shouldChangeCharactersIn range: NSRange,
-                 replacementString string: String) -> Bool {
-    guard let data = fieldData,
-      data.fieldType != .date, data.fieldType != .picker else {
+  public func textField(
+    _ textField: UITextField,
+    shouldChangeCharactersIn range: NSRange,
+    replacementString string: String
+  ) -> Bool {
+    guard
+      let data = fieldData,
+      data.fieldType != .date,
+      data.fieldType != .picker
+    else {
         return false
     }
+    
+    if lastEntry == string && (string.count > 1 || string == " ") {
+      //when using swipe keyboard on iOS 13 we get updates sending the same entered word or spaces a bunch of times
+      return false
+    }
+    
+    lastEntry = string
     
     if let text = textField.text,
       let textRange = Range(range, in: text) {
